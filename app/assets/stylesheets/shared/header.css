@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  width: 100vw;
+  padding: 2vh 10vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: aquamarine;
+}
+
+.animal-connection-icon {
+  width: 250px;
+}
+
+.lists-UserAction {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.user-nickname {
+  display: inline-block;
+  padding: 0.9em 1.7em;
+  text-decoration: none;
+  color: white;
+  background: rgb(255, 182, 122);
+  border-bottom: solid 3px rgb(175, 100, 100);
+  border-radius: 4px;
+  font-weight: bold;
+  margin-right: 1vw;
+}
+
+.logout {
+  display: inline-block;
+  padding: 0.9em 1.7em;
+  text-decoration: none;
+  color: white;
+  background: rgb(255, 182, 122);
+  border-bottom: solid 3px rgb(175, 100, 100);
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.login {
+  display: inline-block;
+  padding: 0.9em 1.7em;
+  text-decoration: none;
+  color: white;
+  background: rgb(255, 182, 122);
+  border-bottom: solid 3px rgb(175, 100, 100);
+  border-radius: 4px;
+  font-weight: bold;
+  margin-right: 1vw;
+}
+
+.sign-up {
+  display: inline-block;
+  padding: 0.9em 1.7em;
+  text-decoration: none;
+  color: white;
+  background: rgb(255, 182, 122);
+  border-bottom: solid 3px rgb(175, 100, 100);
+  border-radius: 4px;
+  font-weight: bold;
+}
