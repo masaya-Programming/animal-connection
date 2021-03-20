@@ -11,7 +11,7 @@
   ユーザー登録をしなくても利用することができます。
   
 # URL
-  デプロイ後に公開URLを記述します。
+  https://animal-connection.herokuapp.com/
   
 # Basic認証
   ユーザー名:animal
