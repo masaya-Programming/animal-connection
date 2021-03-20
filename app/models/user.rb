@@ -8,9 +8,10 @@ class User < ApplicationRecord
   belongs_to :gender
 
   with_options presence: true do
-    validates :nickname, uniqueness: true
+    validates :nickname, uniqueness: true, length: { in: 4..20 }
     validates :gender_id, numericality: { other_than: 0 }
   end
   validates :email, uniqueness: true
+  validates :password, format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/ }
 
 end
