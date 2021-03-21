@@ -1,0 +1,11 @@
+<%# CSS・・・assets/stylesheets/facilities/search.css %>
+<%= render "shared/header" %>
+<div class='main'>
+ 
+  <%= render partial: 'facility', collection: @facility %>
+  <% if @facility.length == 0 %>
+     <h3>情報がありません</h3>
+  <% end %>
+
+</div>
+<%= render "shared/footer" %>

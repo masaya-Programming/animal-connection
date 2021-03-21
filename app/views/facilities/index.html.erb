@@ -12,5 +12,28 @@
       その[思い出]を記録することができます。
     </p>
   </div>  
+
+  <%= form_with model: @facility, url: search_facilities_path, method: :get, class: "search-form", local: true do |f| %>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">動物園 or 水族館</label>
+        <span class="indispensable">任意選択</span>
+      </div>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"category"}) %>
+    </div>
+
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">都道府県</label>
+        <span class="indispensable">任意選択</span>
+      </div>
+      <%= f.collection_select(:prefectures_id, Prefectures.all, :id, :name, {}, {class:"select-box", id:"prefectures"}) %>
+    </div>
+    
+    <div class='register-btn'>
+      <%= f.submit "スポット検索", class: "register-red-btn" %>
+    </div>
+  <% end %>
+
 </div>
 <%= render "shared/footer" %>

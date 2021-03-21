@@ -11,4 +11,13 @@ class Facility < ApplicationRecord
     validates :address
   end
 
+  def self.search(category_id, prefectures_id)
+    if prefectures_id == '0'
+      Facility.where(category_id: category_id)
+    elsif category_id == '0'
+      Facility.where(prefectures_id: prefectures_id)
+    else
+      Facility.where(category_id: category_id).where(prefectures_id: prefectures_id)
+    end
+  end
 end

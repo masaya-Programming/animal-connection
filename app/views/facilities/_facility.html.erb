@@ -1,0 +1,18 @@
+<li class='list'>
+  <%# link_to facility_path(facility.id) do %>
+    <div class='item-info'>
+      <h3 class='item-name'>
+        <%= facility.name %>
+      </h3>
+      <h3 class='item-name'>
+        <%= facility.kananame %>
+      </h3>
+      <h3 class='item-name'>
+        <%= facility.category.name %>
+      </h3>
+      <h3 class='item-name'>
+        <%= facility.prefectures.name %>
+      </h3>
+    </div>
+  <%# end %>
+</li>
