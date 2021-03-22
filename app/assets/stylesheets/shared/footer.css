@@ -4,3 +4,21 @@
   background-color: rgb(223, 235, 230);
   text-align: center;
 }
+
+.footer-form {
+  width: 50%;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+
+.footer-form-btn {
+  width: 100%;
+  background: #837d7d;
+  border-radius: 10px;
+  padding: 6px;
+  color: #fff;
+  line-height: 48px;
+  font-size: 23px;
+  cursor: pointer;
+  text-decoration: none;
+}

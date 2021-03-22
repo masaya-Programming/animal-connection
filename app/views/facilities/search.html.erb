@@ -1,11 +1,33 @@
 <%# CSS・・・assets/stylesheets/facilities/search.css %>
 <%= render "shared/header" %>
-<div class='main'>
- 
-  <%= render partial: 'facility', collection: @facility %>
-  <% if @facility.length == 0 %>
-     <h3>情報がありません</h3>
-  <% end %>
+<div class='search-main'>
+  <div class='search-wrap'>
+    <div calss='search-header'>
+      <% if @facility.length != 0 %>
+        <% if @prefectures_id == '0' %>
+          <h2 class='search-top-text'>日本全国の<%= @category_name %>一覧</h2>
+        <% elsif @category_id == '0' %>
+          <h2 class='search-top-text'><%= @prefectures_name %>のスポット一覧</h2>
+        <% else %>
+          <h2 class='search-top-text'><%= @prefectures_name %>の<%= @category_name %>一覧</h2>
+        <% end %>
+      <% end %>
+      <h2 class='search-top-text'>
+        検索結果 <%= @facility.length %>件
+      </h2>
+    </div>
+    <div calss='non-search'>
+    <% if @facility.length == 0 %>
+        <h2 class='non-search-text1'>情報が見つかりませんでした。</h2>
+        <h2 class='non-search-text2'>不備がある場合は、情報提供をお願いいたします。</h2>
+    <% end %>
+    </div>
 
+    <%= render partial: 'facility', collection: @facility %>
+
+    <div class='again-search-btn-area'>
+        <%= link_to "別の条件で検索", "/", class: "again-search-btn" %>
+    </div>
+  </div>
 </div>
 <%= render "shared/footer" %>
