@@ -1,0 +1,77 @@
+.show-main {
+  background-color: white;
+}
+
+.show-facility-list-zoo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2% 25% 0% 25%;
+  background-color: rgb(9, 156, 100);
+  border-radius: 20px;
+}
+
+.show-facility-list-aquarium {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2% 25% 0% 25%;
+  background-color: rgb(10, 138, 197);
+  border-radius: 20px;
+}
+
+.show-facility-texts {
+  font-size: 30px;
+  color: #FFF;
+  margin-left: 1vw;
+}
+
+.first-show {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 20vw;
+}
+
+.show-content-zoo {
+  margin: 3% 0% 1% 0%;
+  font-size: 35px;
+  background: linear-gradient(transparent 60%, #baebba 0%);
+}
+
+.show-content-aquarium {
+  margin: 3% 0% 1% 0%;
+  font-size: 35px;
+  background: linear-gradient(transparent 60%, #93d5e6 0%);
+}
+
+.show-contents-kana {
+  font-size: 25px;
+  margin-left: 1vw;
+}
+
+.show-contents {
+  font-size: 30px;
+  margin-left: 1vw;
+}
+
+.upper-content {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.official-btn {
+  background: linear-gradient(to left, #b3ffab, #12fff7);
+  padding: 15px;
+  margin: 20px 0px;
+  line-height: 32px;
+  border-radius: 10px;
+  font-size: 21px;
+  font-weight: bold;
+  color: rgb(104, 92, 92);
+  cursor: pointer;
+  text-decoration: none;
+}

@@ -1,3 +1,7 @@
+* {
+  text-decoration:none
+}
+
 .search-main {
   width: 100vw;
   height: auto;
@@ -14,10 +18,17 @@
   border-radius: 10px;
 }
 
-.search-top-text {
+.search-top-text1 {
   line-height: 50px;
   font-size: 30px;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.search-top-text2 {
+  line-height: 50px;
+  font-size: 30px;
   display: flex;
   justify-content: center;
 }
@@ -48,7 +59,8 @@
 
 .facility-list-zoo {
   display: flex;
-  margin: 1% 20% 1% 20%;
+  align-items: center;
+  margin: 1.2% 23% 1.2% 23%;
   background-color: rgb(9, 156, 100);
   border: 3px solid rgb(112, 207, 171);
   border-radius: 20px;
@@ -56,22 +68,30 @@
 
 .facility-list-aquarium {
   display: flex;
-  margin: 1% 20% 1% 20%;
+  align-items: center;
+  margin: 1.2% 23% 1.2% 23%;
   background-color: rgb(10, 138, 197);
   border: 3px solid rgb(123, 194, 226);
   border-radius: 20px;
 }
 
-.facility-textbox {
+.facility-text-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .facility-text {
-  font-size: 23px;
+  font-size: 21px;
   color: #FFF;
   margin-left: 1vw;
+}
+
+.facility-texts {
+  font-size: 25px;
+  color: #FFF;
+  margin-top: 0.2vw;
+  margin-left: 2vw;
 }
 
 .again-search-btn-area {

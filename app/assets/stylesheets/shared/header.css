@@ -7,7 +7,7 @@
   padding: 2vh 10vw;
   display: flex;
   justify-content: space-between;
-  background-color: rgb(174, 243, 220);
+  background: linear-gradient(to left, #b3ffab, #12fff7);
 }
 
 .animal-connection-icon {
@@ -21,14 +21,38 @@
   align-items: flex-end;
 }
 
-.user-nickname {
+.user-nickname-men {
   display: inline-block;
   padding: 0.9em 1.7em;
   text-decoration: none;
   color: white;
-  background: rgb(255, 182, 122);
-  border-bottom: solid 3px rgb(175, 100, 100);
-  border-radius: 4px;
+  background: rgb(49, 78, 204);
+  border-bottom: solid 3px rgb(17, 36, 119);
+  border-radius: 30px;
+  font-weight: bold;
+  margin-right: 1vw;
+}
+
+.user-nickname-woman {
+  display: inline-block;
+  padding: 0.9em 1.7em;
+  text-decoration: none;
+  color: white;
+  background: rgb(243, 73, 73);
+  border-bottom: solid 3px rgb(192, 27, 27);
+  border-radius: 30px;
+  font-weight: bold;
+  margin-right: 1vw;
+}
+
+.user-nickname-other {
+  display: inline-block;
+  padding: 0.9em 1.7em;
+  text-decoration: none;
+  color: white;
+  background: rgb(200, 39, 233);
+  border-bottom: solid 3px rgb(143, 23, 167);
+  border-radius: 30px;
   font-weight: bold;
   margin-right: 1vw;
 }
@@ -65,4 +89,11 @@
   border-bottom: solid 3px rgb(175, 100, 100);
   border-radius: 4px;
   font-weight: bold;
+}
+
+.header-second {
+  width: 100vw;
+  padding: 3vh 0;
+  background-color: rgb(223, 235, 230);
+  text-align: center;
 }

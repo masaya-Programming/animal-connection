@@ -3,7 +3,13 @@
   <%= link_to image_tag("animal-connection-rogo.png", class:"animal-connection-icon"), "/" %>
   <ul class='lists-UserAction'>
     <% if user_signed_in? %>
-      <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
+      <% if current_user.gender_id == 1 %>
+        <li><%= link_to current_user.nickname, "#", class: "user-nickname-men" %></li>
+      <% elsif  current_user.gender_id == 2 %>
+        <li><%= link_to current_user.nickname, "#", class: "user-nickname-woman" %></li>
+      <% else %>
+        <li><%= link_to current_user.nickname, "#", class: "user-nickname-other" %></li>
+      <% end %>
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
     <% else %>
       <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>

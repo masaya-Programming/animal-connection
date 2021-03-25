@@ -2,6 +2,10 @@ class FacilitiesController < ApplicationController
   def index
   end
 
+  def show
+    @facility = Facility.find(params[:id])
+  end
+
   def search
     @category_id = params[:category_id]
     @prefectures_id = params[:prefectures_id]
