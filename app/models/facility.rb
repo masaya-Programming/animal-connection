@@ -20,4 +20,7 @@ class Facility < ApplicationRecord
       Facility.where(category_id: category_id).where(prefectures_id: prefectures_id)
     end
   end
+
+  has_many :comments
+  has_many :pictures
 end

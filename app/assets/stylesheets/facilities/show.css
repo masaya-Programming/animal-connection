@@ -56,6 +56,12 @@
   margin-left: 1vw;
 }
 
+.map-area {
+  padding: 200px 200px;
+  margin-left: 1vw;
+  background-color: cyan;
+}
+
 .upper-content {
   height: auto;
   display: flex;
@@ -74,4 +80,16 @@
   color: rgb(104, 92, 92);
   cursor: pointer;
   text-decoration: none;
+}
+
+.second-show {
+  width: 100vw;
+  padding: 200px 200px;
+  background-color: rgb(15, 168, 97);
+}
+
+.third-show {
+  width: 100vw;
+  padding: 200px 200px;
+  background-color: rgb(155, 114, 39);
 }

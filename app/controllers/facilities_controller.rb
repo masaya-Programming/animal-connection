@@ -10,10 +10,10 @@ class FacilitiesController < ApplicationController
     @category_id = params[:category_id]
     @prefectures_id = params[:prefectures_id]
     @facility = Facility.search(params[:category_id], params[:prefectures_id])
-    if @facility.length != 0
-      @category_name = @facility[0].category.name
-      @prefectures_name = @facility[0].prefectures.name 
-    end
+    return true if @facility.empty?
+
+    @category_name = @facility[0].category.name
+    @prefectures_name = @facility[0].prefectures.name
+    true
   end
-  
 end

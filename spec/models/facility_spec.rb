@@ -41,7 +41,7 @@ RSpec.describe Facility, type: :model do
       it 'カテゴリーが0だと情報登録できない' do
         @facility.category_id = 0
         @facility.valid?
-        expect(@facility.errors.full_messages).to include "Category must be other than 0"
+        expect(@facility.errors.full_messages).to include 'Category must be other than 0'
       end
 
       it '都道府県が空だと情報登録できない' do
@@ -53,7 +53,7 @@ RSpec.describe Facility, type: :model do
       it '都道府県が0だと情報登録できない' do
         @facility.prefectures_id = 0
         @facility.valid?
-        expect(@facility.errors.full_messages).to include "Prefectures must be other than 0"
+        expect(@facility.errors.full_messages).to include 'Prefectures must be other than 0'
       end
 
       it '所在地が空だと情報登録できない' do

@@ -24,6 +24,11 @@
       <p class='show-contents'>
         <%= @facility.address %>
       </p>
+      <h3 class='show-content-zoo'>
+        Google Map(実装予定)
+      </h3>
+      <div class='map-area'>
+      </div>
     </div>
   <% else %>
     <div class='show-facility-list-aquarium'>
@@ -48,10 +53,32 @@
       <p class='show-contents'>
         <%= @facility.address %>
       </p>
+      <h3 class='show-content-zoo'>
+        Google Map(実装予定)
+      </h3>
+      <div class='map-area'>
+      </div>
     </div>
   <% end %>
   <div class="upper-content">
     <%= link_to "公式サイトへ (外部リンク)", @facility.official_website, target: :blank, class: "official-btn" %>
   </div>
+
+  <div class='second-show'>
+    <div class='top-comments-show'>
+      <h3 class='top-comments-title'>
+        <%= @facility.name %>のレビュー
+      </h3>
+    </div>
+  </div>
+
+  <div class='third-show'>
+    <div class='top-pictures-show'>
+      <h3 class='top-comments-title'>
+        <%= @facility.name %>でのベストショット
+      </h3>
+    </div>
+  </div>
+
 </div>
 <%= render "shared/footer" %>
