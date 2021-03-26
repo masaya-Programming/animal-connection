@@ -56,10 +56,16 @@
   margin-left: 1vw;
 }
 
+.show-content-map {
+  margin: 3% 0% 1% 0%;
+  font-size: 35px;
+  background: linear-gradient(to left, #b3ffab, #12fff7);
+}
+
 .map-area {
   padding: 200px 200px;
   margin-left: 1vw;
-  background-color: cyan;
+  background: linear-gradient(to left, #b3ffab, #12fff7);
 }
 
 .upper-content {
@@ -75,6 +81,7 @@
   margin: 20px 0px;
   line-height: 32px;
   border-radius: 10px;
+  border: 6px outset #1dc0c0;
   font-size: 21px;
   font-weight: bold;
   color: rgb(104, 92, 92);
@@ -91,5 +98,55 @@
 .third-show {
   width: 100vw;
   padding: 200px 200px;
-  background-color: rgb(155, 114, 39);
+  background-color: rgb(127, 189, 57);
+}
+
+.shoe-btnset {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding: 200px 0px;
+  right: 40px;
+  bottom: 53vh;
+}
+
+.comment-btn {
+  width: 180px;
+  background: #0db498;
+  text-align: center;
+  border-radius: 10%;
+  padding: 5px 12px;
+  margin-bottom: 10px;
+}
+
+.comment-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 17px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.comment-btn-icon {
+  width: 60%;
+}
+
+.picture-btn {
+  width: 180px;
+  background: #0db498;
+  text-align: center;
+  border-radius: 10%;
+  padding: 5px 12px;
+}
+
+.picture-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 17px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.picture-btn-icon {
+  width: 60%;
 }

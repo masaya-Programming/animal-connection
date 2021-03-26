@@ -1,0 +1,48 @@
+<%# CSS・・・assets/stylesheets/comments/new.scss %>
+<%= render "shared/header" %>
+
+<%= form_with model: @comment, url: facility_comments_path, class: 'registration-main', local: true do |f| %>
+  <div class='form-wrap'>
+    <div class='second-form-header'>
+      <% if @facility.category.name == "動物園" %>
+          <%= link_to facility_path(@facility.id) do %>
+          <div class='show-facility-list-zoo'>
+            <%= image_tag "zoo-icon.png" %>
+            <h3 class='show-facility-texts'>
+              <%= @facility.name %>
+            </h3>
+          </div>
+        <% end %>
+      <% else %>
+        <%= link_to facility_path(@facility.id) do %>
+          <div class='show-facility-list-aquarium'>
+            <%= image_tag "aquarium-icon.png" %>
+            <h3 class='show-facility-texts'>
+              <%= @facility.name %>
+            </h3>
+          </div>
+        <% end %>
+      <% end %>
+      <h1 class='second-form-text'>
+        レビュー投稿
+      </h1>
+    </div>
+
+    <%= render 'shared/error_messages-second', model: f.object %>
+
+    <div class="second-form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">レビュー内容</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :text, class:"second-input-default", id:"comment-text", autofocus: true %>
+      <p class='info-text'>※スポット利用後のレビューを入力してください。</p>
+    </div>
+
+    <div class='register-btn'>
+      <%= f.submit "レビュー投稿" ,class:"register-red-btn" %>
+    </div>
+  </div>
+<% end %>
+
+<%= render "shared/footer" %>

@@ -1,9 +1,12 @@
 class FacilitiesController < ApplicationController
   def index
+    @pictures = Picture.order(id: :DESC)
   end
 
   def show
     @facility = Facility.find(params[:id])
+    @comments = Comment.includes(:facility)
+    @pictures = Picture.includes(:facility)
   end
 
   def search

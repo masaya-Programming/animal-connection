@@ -1,9 +1,9 @@
 <%# CSS・・・assets/stylesheets/shared/error_messages.css %>
 <% if model.errors.any? %>
-  <div class="error-alert">
+  <div class="second-error-alert">
     <ul>
       <% model.errors.full_messages.each do |message| %>
-        <li class='error-message'><%= message %></li>
+        <li class='second-error-message'><%= message %></li>
       <% end %>
     </ul>
   </div>

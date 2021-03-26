@@ -5,5 +5,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
+    resources :comments, only: [:new, :create]
+    resources :pictures, only: [:new, :create]
   end
 end
