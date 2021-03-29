@@ -1,0 +1,17 @@
+<%# CSS・・・assets/stylesheets/facilities/search.css %>
+<li class='list'>
+  <%= link_to item_path(item.id) do %>
+  <div class='item-info'>
+    <h3 class='item-name'>
+      <%= item.name %>
+    </h3>
+    <div class='item-price'>
+      <span><%= item.price %>円<br><%= item.delivery_burden.name %></span>
+      <div class='star-btn'>
+        <%= image_tag "star.png", class:"star-icon" %>
+        <span class='star-count'>0</span>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</li>
