@@ -106,12 +106,25 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0.6em 0em;
+  padding: 0.8em 0em;
 }
 
 .show-comment-name {
   font-size: 1.3em;
-  color: rgb(29, 28, 28);
+}
+
+.show-comment-link {
+  background-color: rgb(73, 168, 140);
+  color: #fff;
+  border-radius: 20%;
+  padding: 0.2rem 0.7rem;
+}
+
+.show-my-comment-link {
+  background-color: rgb(194, 80, 65);
+  color: #fff;
+  border-radius: 20%;
+  padding: 0.2rem 0.7rem;
 }
 
 .show-comment-text {
@@ -162,6 +175,20 @@
   font-size: 1.3em;
   color: rgb(29, 28, 28);
   margin-bottom: 0.1em;
+}
+
+.show-picture-link {
+  background-color: rgb(73, 168, 140);
+  color: #fff;
+  border-radius: 20%;
+  padding: 0.2rem 0.7rem;
+}
+
+.show-my-picture-link {
+  background-color: rgb(194, 80, 65);
+  color: #fff;
+  border-radius: 20%;
+  padding: 0.2rem 0.7rem;
 }
 
 .show-picture-title {

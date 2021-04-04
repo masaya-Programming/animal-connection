@@ -4,11 +4,11 @@
   <ul class='lists-UserAction'>
     <% if user_signed_in? %>
       <% if current_user.gender_id == 1 %>
-        <li><%= link_to current_user.nickname, "#", class: "user-nickname-men" %></li>
+        <li><%= link_to current_user.nickname, mypage_user_path(current_user), class: "user-nickname-men" %></li>
       <% elsif  current_user.gender_id == 2 %>
-        <li><%= link_to current_user.nickname, "#", class: "user-nickname-woman" %></li>
+        <li><%= link_to current_user.nickname, mypage_user_path(current_user), class: "user-nickname-woman" %></li>
       <% else %>
-        <li><%= link_to current_user.nickname, "#", class: "user-nickname-other" %></li>
+        <li><%= link_to current_user.nickname, mypage_user_path(current_user), class: "user-nickname-other" %></li>
       <% end %>
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
     <% else %>
