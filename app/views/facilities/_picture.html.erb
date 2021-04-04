@@ -1,17 +1,12 @@
 <%# CSS・・・assets/stylesheets/facilities/search.css %>
-<li class='list'>
-  <%= link_to item_path(item.id) do %>
-  <div class='item-info'>
-    <h3 class='item-name'>
-      <%= item.name %>
+<li>
+  <div class='show-picture-box'>
+    <p class='show-picture-name'>
+      <%= picture.user.nickname %>
+    </p>
+    <%= image_tag picture.image, size: '320x240' %>
+    <h3 class='show-picture-title'>
+      <%= picture.title %>
     </h3>
-    <div class='item-price'>
-      <span><%= item.price %>円<br><%= item.delivery_burden.name %></span>
-      <div class='star-btn'>
-        <%= image_tag "star.png", class:"star-icon" %>
-        <span class='star-count'>0</span>
-      </div>
-    </div>
   </div>
-  <% end %>
 </li>

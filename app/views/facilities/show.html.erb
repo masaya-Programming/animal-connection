@@ -64,29 +64,41 @@
     <%= link_to "公式サイトへ (外部リンク)", @facility.official_website, target: :blank, class: "official-btn" %>
   </div>
 
-  <div class='second-show'>
-    <div class='top-comments-show'>
-      <h3 class='show-contents'>
-        <%= @facility.name %>のレビュー
+  <div class='show-comment-ber'>
+    <h3 class='show-comment-top'>
+      <%= @facility.name %> レビュー
+    </h3>
+    <ul class='show-comment-list'>
+      <%= render partial: 'comment', collection: @comments %>
+    </ul>
+    <% if @comments.length == 0 %>
+      <h3 class='show-comment-picture-nil-text'>
+        投稿されたレビューがありません。
       </h3>
-      <div class=''>
-        <%# render partial: 'comment', collection: @comments %>
-      </div>
-    </div>
+      <h3 class='show-comment-picture-nil-text'>
+        新しい投稿をお待ちしております。
+      </h3>
+    <% end %>
   </div>
 
-  <div class='third-show'>
-    <div class='top-pictures-show'>
-      <h3 class='show-contents'>
-        <%= @facility.name %>でのベストショット
+  <div class='show-picture-ber'>
+    <h3 class='show-picture-top'>
+      <%= @facility.name %> ベストショット
+    </h3>
+    <ul class='show-picture-list'>
+      <%= render partial: 'picture', collection: @pictures %>
+    </ul>
+    <% if @pictures.length == 0 %>
+      <h3 class='show-comment-picture-nil-text'>
+        投稿されたベストショットがありません。
       </h3>
-      <div class=''>
-        <%# render partial: 'picture', collection: @pictures %>
-      </div>
-    </div>
+      <h3 class='show-comment-picture-nil-text'>
+        新しい投稿をお待ちしております。
+      </h3>
+    <% end %>
   </div>
 
-  <div class='shoe-btnset'>
+  <div class='show-btn-set'>
     <%= link_to(new_facility_comment_path(@facility), class: 'comment-btn') do %>
       <span class='comment-btn-text'>レビュー投稿</span>
       <%= image_tag 'review-icon.png' , size: '185x50' ,class: "comment-btn-icon" %>

@@ -5,8 +5,10 @@ class FacilitiesController < ApplicationController
 
   def show
     @facility = Facility.find(params[:id])
-    @comments = Comment.includes(:facility)
-    @pictures = Picture.includes(:facility)
+    @comments = Comment.where(facility_id: @facility.id)
+    @comments = @comments.reverse
+    @pictures = Picture.where(facility_id: @facility.id)
+    @pictures = @pictures.reverse
   end
 
   def search

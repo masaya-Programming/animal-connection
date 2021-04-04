@@ -56,12 +56,6 @@
   margin-left: 1vw;
 }
 
-.show-content-map {
-  margin: 3% 0% 1% 0%;
-  font-size: 35px;
-  background: linear-gradient(to left, #b3ffab, #12fff7);
-}
-
 .map-area {
   padding: 200px 200px;
   margin-left: 1vw;
@@ -89,54 +83,94 @@
   text-decoration: none;
 }
 
-.second-show {
+.show-comment-ber {
   width: 100vw;
-  padding: 200px 200px;
-  background-color: rgb(15, 168, 97);
+  padding: 3% 10%;
+  background-color: rgb(150, 238, 197);
 }
 
-
-
-
-.third-show {
-  width: 100vw;
-  padding: 200px 200px;
-  background-color: rgb(127, 189, 57);
+.show-comment-top {
+  font-size: 2em;
+  margin-bottom: 0.8em;
 }
 
-.item-lists {
+.show-comment-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  margin-left: 1vw;
+}
+
+.show-comment-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.6em 0em;
+}
+
+.show-comment-name {
+  font-size: 1.3em;
+  color: rgb(29, 28, 28);
+}
+
+.show-comment-text {
+  font-size: 1.7em;
+  color: rgb(48, 38, 38);
+  margin-top: 0.2vw;
+  margin-left: 1vw;
+}
+
+.show-comment-picture-nil-text {
+  display: flex;
+  justify-content: center;
+  font-size: 1.7em;
+  color: rgb(48, 38, 38);
+  margin-top: 0.2vw;
+  margin-left: 1vw;
+}
+
+.show-picture-ber {
   width: 100vw;
+  padding: 3% 10%;
+  background-color: rgb(60, 243, 234);
+}
+
+.show-picture-top {
+  font-size: 2em;
+  margin-bottom: 0.8em;
+}
+
+.show-picture-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
+  list-style: none;
 }
 
-.item-lists>.list {
-  width: 37vh;
-  padding: 1vw;
-  background-color: #FFF;
-}
-
-.item-info {
-  background-color: #FFF;
-  color: black;
-  padding: 1vw;
-}
-
-.item-name {
-  font-size: 2.5vh;
-}
-
-.item-price {
-  font-size: 1.5vh;
+.show-picture-box {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(128, 193, 223);
+  margin-bottom: 0.8em;
+  padding: 0.5em;
+  border-radius: 20px;
 }
 
+.show-picture-name {
+  font-size: 1.3em;
+  color: rgb(29, 28, 28);
+  margin-bottom: 0.1em;
+}
 
+.show-picture-title {
+  font-size: 1.5em;
+  color: rgb(48, 38, 38);
+  margin-top: 0.2em;
+}
 
-
-.shoe-btnset {
+.show-btn-set {
   position: fixed;
   display: flex;
   flex-direction: column;

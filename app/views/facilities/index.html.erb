@@ -24,7 +24,7 @@
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">動物園 or 水族館</label>
-          <span class="indispensable">任意選択</span>
+          <span class="indispensable-free">任意選択</span>
         </div>
         <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"category"}) %>
       </div>
@@ -32,7 +32,7 @@
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">都道府県</label>
-          <span class="indispensable">任意選択</span>
+          <span class="indispensable-free">任意選択</span>
         </div>
         <%= f.collection_select(:prefectures_id, Prefectures.all, :id, :name, {}, {class:"select-box", id:"prefectures"}) %>
       </div>
@@ -42,6 +42,23 @@
       </div>
     </div>
   <% end %>
+
+  <div class='top-picture-ber'>
+    <h3 class='top-picture-top'>
+      新規ベストショット
+    </h3>
+    <ul class='top-picture-list'>
+      <%= render partial: 'picture-top', collection: @pictures, as: :new_picture %>
+    </ul>
+    <% if @pictures.length == 0 %>
+      <h3 class='top-picture-nil'>
+        投稿されたベストショットがありません。
+      </h3>
+      <h3 class='top-picture-nil'>
+        新しい投稿をお待ちしております。
+      </h3>
+    <% end %>
+  </div>
 
 </div>
 <%= render "shared/footer" %>

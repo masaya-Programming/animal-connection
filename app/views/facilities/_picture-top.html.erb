@@ -1,0 +1,14 @@
+<%# CSS・・・assets/stylesheets/facilities/search.css %>
+<li>
+  <div class='top-picture-box'>
+    <%= link_to facility_path(new_picture.facility_id) do %>
+      <p class='top-picture-name'>
+        <%= new_picture.facility.name %>
+      </p>
+      <%= image_tag new_picture.image, size: '288x216' %>
+      <h3 class='top-picture-title'>
+        <%= new_picture.title %>
+      </h3>
+    <% end %>
+  </div>
+</li>

@@ -69,7 +69,17 @@
 
 /* 全シート共通 */
 .indispensable {
-  background: #295c29;
+  background: #41a341;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.indispensable-free {
+  background: #5b5e5b;
   margin-left: 8px;
   padding: 3px;
   border-radius: 2px;
