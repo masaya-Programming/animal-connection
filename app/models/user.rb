@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :gender
@@ -12,7 +12,7 @@ class User < ApplicationRecord
     validates :gender_id, numericality: { other_than: 0 }
   end
   validates :email, uniqueness: { case_sensitive: true }
-  validates :password, format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/ }
+  validates :password, format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/ }, on: :create 
 
   has_many :comments
   has_many :pictures

@@ -1,11 +1,14 @@
 <%= render "shared/header" %>
 
 <% if user_signed_in? && @user == current_user %>
+  <h1><%= @user.nickname %></h1>
   <h1>マイページ</h1>
+  <div class='register-btn'>
+    <%= link_to  "ユーザー情報の変更", edit_user_registration_path(current_user), class: "register-red-btn" %>
+  </div>
 <% else %>
+  <h1><%= @user.nickname %>さん</h1>
   <h1>ユーザーページ</h1>
 <% end %>
-
-<h1><%= @user.nickname %>さん</h1>
 
 <%= render "shared/footer" %>
