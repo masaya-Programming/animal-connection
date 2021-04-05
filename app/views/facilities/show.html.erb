@@ -4,7 +4,7 @@
   <% if @facility.category.name == "動物園" %>
     <div class='show-facility-list-zoo'>
       <%= image_tag "zoo-icon.png" %>
-      <h3 class='show-facility-texts'>
+      <h3 class='show-facility-name'>
         <%= @facility.name %>
       </h3>
     </div>
@@ -15,13 +15,13 @@
       <p class='show-contents-kana'>
         <%= @facility.kananame %>
       </p>
-      <p class='show-contents'>
+      <p class='show-contents-name'>
         <%= @facility.name %>
       </p>
       <h3 class='show-content-zoo'>
         所在地
       </h3>
-      <p class='show-contents'>
+      <p class='show-contents-name'>
         <%= @facility.address %>
       </p>
       <h3 class='show-content-zoo'>
@@ -33,7 +33,7 @@
   <% else %>
     <div class='show-facility-list-aquarium'>
       <%= image_tag "aquarium-icon.png" %>
-      <h3 class='show-facility-texts'>
+      <h3 class='show-facility-name'>
         <%= @facility.name %>
       </h3>
     </div>
@@ -44,13 +44,13 @@
       <p class='show-contents-kana'>
         <%= @facility.kananame %>
       </p>
-      <p class='show-contents'>
+      <p class='show-contents-name'>
         <%= @facility.name %>
       </p>
       <h3 class='show-content-aquarium'>
         所在地
       </h3>
-      <p class='show-contents'>
+      <p class='show-contents-name'>
         <%= @facility.address %>
       </p>
       <h3 class='show-content-map'>
@@ -66,7 +66,7 @@
 
   <div class='show-comment-ber'>
     <h3 class='show-comment-top'>
-      <%= @facility.name %> レビュー
+      <%= @facility.name %> レビュー  <%= @comments.length %>件
     </h3>
     <ul class='show-comment-list'>
       <%= render partial: 'comment', collection: @comments %>
@@ -83,7 +83,7 @@
 
   <div class='show-picture-ber'>
     <h3 class='show-picture-top'>
-      <%= @facility.name %> ベストショット
+      <%= @facility.name %> ベストショット <%= @comments.length %>件
     </h3>
     <ul class='show-picture-list'>
       <%= render partial: 'picture', collection: @pictures %>
@@ -100,11 +100,13 @@
 
   <div class='show-btn-set'>
     <%= link_to(new_facility_comment_path(@facility), class: 'comment-btn') do %>
-      <span class='comment-btn-text'>レビュー投稿</span>
+      <span class='comment-btn-text'>レビュー</span>
+      <span class='comment-btn-text'>投稿</span>
       <%= image_tag 'review-icon.png' , size: '185x50' ,class: "comment-btn-icon" %>
     <% end %>
     <%= link_to(new_facility_picture_path(@facility), class: 'picture-btn') do %>
-      <span class='picture-btn-text'>ベストショット投稿</span>
+      <span class='picture-btn-text'>ベストショット</span>
+      <span class='picture-btn-text'>投稿</span>
       <%= image_tag 'picture-icon.png' , size: '185x50' ,class: "picture-btn-icon" %>
     <% end %>
   </div>

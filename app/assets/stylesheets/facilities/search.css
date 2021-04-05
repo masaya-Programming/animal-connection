@@ -11,40 +11,38 @@
 }
 
 .search-wrap {
-  width: 75vw;
+  width: 70vw;
   background-color: white;
-  padding-bottom: 30px;
-  border: 10px solid white;
-  border-radius: 10px;
+  padding-bottom: 2.5rem;
+  border: 0.5rem solid white;
+  border-radius: 5rem;
 }
 
-.search-top-text1 {
-  line-height: 50px;
-  font-size: 30px;
+.search-top-text {
+  line-height: 6rem;
+  font-size: 2rem;
   font-weight: bold;
   display: flex;
   justify-content: center;
 }
 
-.search-top-text2 {
-  line-height: 50px;
-  font-size: 30px;
+.search-sab-text {
+  line-height: 1.5rem;
+  font-size: 1.8rem;
   display: flex;
   justify-content: center;
 }
 
-.non-search-text1 {
-  padding-top: 28px;
-  line-height: 30px;
-  font-size: 23px;
-  font-weight: bold;
+.search-non-top-text {
+  line-height: 6rem;
+  font-size: 1.8rem;
   display: flex;
   justify-content: center;
 }
 
-.non-search-text2 {
-  line-height: 30px;
-  font-size: 23px;
+.search-non-sab-text {
+  line-height: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -60,19 +58,19 @@
 .facility-list-zoo {
   display: flex;
   align-items: center;
-  margin: 1.2% 23% 1.2% 23%;
+  margin: 1.2% 18% 1.2% 18%;
   background-color: rgb(9, 156, 100);
   border: 3px solid rgb(112, 207, 171);
-  border-radius: 20px;
+  border-radius: 1.5rem;
 }
 
 .facility-list-aquarium {
   display: flex;
   align-items: center;
-  margin: 1.2% 23% 1.2% 23%;
+  margin: 1.2% 18% 1.2% 18%;
   background-color: rgb(10, 138, 197);
   border: 3px solid rgb(123, 194, 226);
-  border-radius: 20px;
+  border-radius: 1.5rem;
 }
 
 .facility-text-box {
@@ -81,37 +79,36 @@
   justify-content: center;
 }
 
-.facility-text {
-  font-size: 21px;
+.facility-prefectures-text {
+  font-size: 1.3rem;
   color: #FFF;
   margin-left: 1vw;
 }
 
-.facility-texts {
-  font-size: 25px;
+.facility-name-text {
+  font-size: 1.6rem;
   color: #FFF;
   margin-top: 0.2vw;
   margin-left: 2vw;
 }
 
-.again-search-btn-area {
-  width: 40%;
-  padding-top: 40px;
-  margin: 0 auto;
+.again-search-box {
   display: flex;
   justify-content: center;
+  width: 35%;
+  padding-top: 2rem;
+  margin: 0 auto;
 }
 
 .again-search-btn {
-  width: 100%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
-  border-radius: 10px;
-  color: #fff;
-  line-height: 48px;
-  font-size: 25px;
-  cursor: pointer;
   display: flex;
   justify-content: center;
-  text-decoration: none;
+  width: 100%;
+  background: #ea352d;
+  border: 0.5rem solid #ea352d;
+  border-radius: 1rem;
+  color: #fff;
+  line-height: 2.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
 }

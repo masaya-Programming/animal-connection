@@ -3,7 +3,7 @@
 
 <%= form_with model: @comment, url: facility_comments_path, class: 'registration-main', local: true do |f| %>
   <div class='form-wrap'>
-    <div class='second-form-header'>
+    <div class='comments-form-header'>
       <% if @facility.category.name == "動物園" %>
           <%= link_to facility_path(@facility.id) do %>
           <div class='show-facility-list-zoo'>
@@ -23,19 +23,19 @@
           </div>
         <% end %>
       <% end %>
-      <h1 class='second-form-text'>
+      <h1 class='comments-form-text'>
         レビュー投稿
       </h1>
     </div>
 
-    <%= render 'shared/error_messages-second', model: f.object %>
+    <%= render 'shared/error_messages', model: f.object %>
 
-    <div class="second-form-group">
-      <div class='form-text-wrap'>
+    <div class="comments-form-group">
+      <div>
         <label class="form-text">レビュー内容</label>
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :text, class:"second-input-default", id:"comment-text", autofocus: true %>
+      <%= f.text_area :text, class:"comments-input-default", id:"comment-text", autofocus: true %>
       <p class='info-text'>※スポット利用後のレビューを入力してください。</p>
     </div>
 

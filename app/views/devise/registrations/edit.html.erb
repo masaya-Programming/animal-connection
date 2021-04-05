@@ -1,3 +1,4 @@
+<%# CSS・・・assets/stylesheets/devise/registrations.css %>
 <%= render "shared/header" %>
 
 <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
@@ -11,16 +12,16 @@
     <%= render 'shared/error_messages', model: f.object %>
 
     <div class="form-group">
-      <div class='form-text-wrap'>
+      <div>
         <label class="form-text">ニックネーム</label>
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"3~12文字のニックネーム", maxlength:"20", autofocus: true %>
+      <%= f.text_area :nickname, class:"input-default-nickname", id:"nickname", placeholder:"3~12文字のニックネーム", maxlength:"20", autofocus: true %>
       <p class='info-text'>※全角半角どちらでも登録できます。</p>
     </div>
 
     <div class="form-group">
-      <div class='form-text-wrap'>
+      <div>
         <label class="form-text">性別</label>
         <span class="indispensable">必須</span>
       </div>
@@ -28,7 +29,7 @@
     </div>
 
     <div class="form-group">
-      <div class='form-text-wrap'>
+      <div>
         <label class="form-text">メールアドレス</label>
         <span class="indispensable">必須</span>
       </div>
@@ -37,24 +38,24 @@
     </div>
 
     <div class="form-group">
-      <div class='form-text-wrap'>
+      <div>
         <label class="form-text">新しいパスワード</label>
-        <span class="indispensable">任意</span>
+        <span class="indispensable-free">任意</span>
       </div>
-      <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の英字と数字を両方含めたパスワード" %>
+      <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の英字と数字を両方含めた新しいパスワード" %>
       <p class='info-text'>※全て半角で入力してください。</p>
     </div>
     
     <div class="form-group">
-      <div class='form-text-wrap'>
+      <div>
         <label class="form-text">新しいパスワード(再入力)</label>
-        <span class="indispensable">任意</span>
+        <span class="indispensable-free">任意</span>
       </div>
-      <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
+      <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じ新しいパスワードを入力して下さい" %>
     </div>
 
     <div class="form-group">
-      <div class='form-text-wrap'>
+      <div>
         <label class="form-text">現在のパスワード</label>
         <span class="indispensable">必須</span>
       </div>
@@ -66,8 +67,8 @@
       <%= f.submit "ユーザー情報の変更" ,class:"register-red-btn" %>
     </div>
 
-    <div class='register-btn'>
-      <%= link_to  "マイページへ戻る", mypage_user_path(current_user), class: "register-red-btn" %>
+    <div class='mypage-Back-box'>
+      <%= link_to  "マイページへ戻る", mypage_user_path(current_user), class: "mypage-Back-btn" %>
     </div>
   </div>
 <% end %>

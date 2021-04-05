@@ -1,4 +1,4 @@
-.top-page-footer {
+.footer-main {
   width: 100vw;
   padding: 3vh 0;
   background-color: rgb(223, 235, 230);
@@ -7,18 +7,17 @@
 
 .footer-form {
   width: 50%;
-  padding-bottom: 20px;
+  padding-bottom: 1.8rem;
   margin: 0 auto;
 }
 
 .footer-form-btn {
   width: 100%;
   background: #837d7d;
-  border-radius: 10px;
-  padding: 12px;
+  border-radius: 1rem;
+  padding: 0.5rem;
   color: #fff;
-  line-height: 48px;
-  font-size: 23px;
+  font-size: 1.2rem;
   cursor: pointer;
   text-decoration: none;
 }

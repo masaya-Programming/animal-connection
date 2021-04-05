@@ -3,7 +3,7 @@
 
 <%= form_with model: @picture, url: facility_pictures_path, class: 'registration-main', local: true do |f| %>
   <div class='form-wrap'>
-    <div class='second-form-header'>
+    <div class='picture-form-header'>
       <% if @facility.category.name == "動物園" %>
           <%= link_to facility_path(@facility.id) do %>
           <div class='show-facility-list-zoo'>
@@ -23,39 +23,39 @@
           </div>
         <% end %>
       <% end %>
-      <h1 class='second-form-text'>
+      <h1 class='picture-form-text'>
         ベストショット投稿
       </h1>
     </div>
 
-    <%= render 'shared/error_messages-second', model: f.object %>
+    <%= render 'shared/error_messages', model: f.object %>
 
-    <div class="form-group">
-      <div class="form-text-wrap">
+    <div class="picture-form-group">
+      <div>
         <label class="form-text">ベストショット</label>
         <span class="indispensable">必須</span>
       </div>
       <div class="click-upload">
-        <%= f.file_field :image, class:"input-default", id:"picture-image" %>
+        <%= f.file_field :image, class:"picture-input-default-image", id:"picture-image" %>
         <p class='info-text'>※クリックしてファイルをアップロードしてください。</p>
       </div>
     </div>
 
-    <div class="form-group">
-      <div class='form-text-wrap'>
+    <div class="picture-form-group">
+      <div>
         <label class="form-text">タイトル</label>
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :title, class:"input-default", id:"picture-title", autofocus: true %>
+      <%= f.text_area :title, class:"picture-input-default-title", id:"picture-title", autofocus: true %>
       <p class='info-text'>※投稿する画像のタイトルを入力してください。</p>
     </div>
 
-    <div class="second-form-group">
-      <div class='form-text-wrap'>
+    <div class="picture-form-group">
+      <div>
         <label class="form-text">画像説明文</label>
         <span class="indispensable-free">任意</span>
       </div>
-      <%= f.text_area :description, class:"second-input-default", id:"picture-description" %>
+      <%= f.text_area :description, class:"picture-input-default-text", id:"picture-description" %>
       <p class='info-text'>※投稿する画像の説明文を入力してください。</p>
     </div>
 

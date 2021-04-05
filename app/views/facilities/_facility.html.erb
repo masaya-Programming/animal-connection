@@ -4,10 +4,10 @@
     <%= link_to facility_path(facility.id), class: 'facility-list-zoo' do %>
       <%= image_tag "zoo-icon.png" %>
       <div class='facility-text-box'>
-        <p class='facility-text'>
+        <p class='facility-prefectures-text'>
           <%= facility.prefectures.name %>
         </p>
-        <h3 class='facility-texts'>
+        <h3 class='facility-name-text'>
           <%= facility.name %>
         </h3>
       </div>
@@ -16,10 +16,10 @@
     <%= link_to facility_path(facility.id), class: 'facility-list-aquarium' do %>
       <%= image_tag "aquarium-icon.png" %>
       <div class='facility-text-box'>
-        <p class='facility-text'>
+        <p class='facility-prefectures-text'>
           <%= facility.prefectures.name %>
         </p>
-        <h3 class='facility-texts'>
+        <h3 class='facility-name-text'>
           <%= facility.name %>
         </h3>
       </div>

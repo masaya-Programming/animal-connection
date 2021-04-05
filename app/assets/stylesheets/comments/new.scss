@@ -1,94 +1,30 @@
-.second-form-header {
+.comments-form-header {
   width: 100%;
-  height: 80px;
   text-align: center;
-  font-size: 30px;
 }
 
-.second-form-text {
-  line-height: 70px;
-  border-bottom: 1px solid #f5f5f5;
+.comments-form-text {
+  line-height: 4rem;
   font-weight: bold;
+  font-size: 1.8rem;
 }
 
-.second-form-group {
+.comments-form-group {
   width: 50%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding-top: 70px;
+  padding-top: 2rem;
 }
 
-.form-group:first-child {
-  padding: 0;
-}
-
-.form-text-wrap {
+.comments-input-default {
   width: 100%;
-  height: 20%;
-}
-
-.form-text {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.second-input-default {
-  width: 100%;
-  height: 250px;
-  margin: 5px 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 9px 16px 7px;
-  background: #f5f5f5e8;
-  font-size: 17px;
-  resize: none;
-}
-
-.info-text {
-  color: #888;
-  font-size: 15px;
-  margin-top: 3px;
-}
-
-/* 全シート共通 */
-.indispensable {
-  background: #295c29;
-  margin-left: 8px;
-  padding: 3px;
-  border-radius: 2px;
-  color: #fff;
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.select-box {
-  width: 100%;
-  height: 48px;
-  margin: 5px 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 9px 16px 7px;
+  height: 15rem;
+  margin: 0.2rem 0.4rem;
+  padding: 0.2rem 0.5rem;
+  border: 0.2rem solid #ccc;
+  border-radius: 0.5rem;
   background-color: #f5f5f5e8;
-  font-size: 17px;
-  font-weight: bold;
-}
-
-/* /全シート共通 */
-
-.register-btn {
-  width: 50%;
-  padding-top: 60px;
-  margin: 0 auto;
-}
-
-.register-red-btn {
-  width: 100%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
-  border-radius: 10px;
-  color: #fff;
-  line-height: 48px;
-  font-size: 20px;
-  cursor: pointer;
+  font-size: 1.5rem;
+  resize: none;
 }

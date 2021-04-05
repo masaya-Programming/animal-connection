@@ -13,21 +13,22 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 5vh 10vw;
+  padding: 3vh 10vw;
   color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
 .top-message {
-  font-size: 3vh;
-  height: 5vh;
+  font-size: 1.8rem;
+  height: 2rem;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  margin-bottom: 1rem;
 }
 
 .top-explain {
-  font-size: 2vh;
-  height: 3vh;
+  font-size: 1.5rem;
+  height: 1.8rem;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  margin-left: 1rem;
 }
 
 .top-picture-ber {
@@ -41,8 +42,8 @@
 .top-picture-top {
   display: flex;
   justify-content: center;
-  font-size: 2.3em;
-  margin-bottom: 0.8em;
+  font-size: 2.3rem;
+  margin-bottom: 0.8rem;
 }
 
 .top-picture-list {
@@ -57,27 +58,27 @@
   flex-direction: column;
   justify-content: center;
   background-color: rgb(90, 218, 201);
-  margin-bottom: 0.8em;
-  padding: 0.5em;
-  border-radius: 20px;
+  margin-bottom: 0.8rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
 }
 
 .top-picture-name {
-  font-size: 1.3em;
+  font-size: 1.3rem;
   color: rgb(29, 28, 28);
-  margin-bottom: 0.1em;
+  margin-bottom: 0.1rem;
 }
 
 .top-picture-title {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: rgb(48, 38, 38);
-  margin-top: 0.2em;
+  margin-top: 0.2rem;
 }
 
 .top-picture-nil {
   display: flex;
   justify-content: center;
-  font-size: 1.7em;
+  font-size: 1.7rem;
   color: rgb(48, 38, 38);
   margin-top: 0.2vw;
   margin-left: 1vw;
