@@ -10,7 +10,7 @@
     </p>
     <%= image_tag picture.image, size: '320x240' %>
     <h3 class='show-picture-title'>
-      <%= picture.title %>
+      <%= truncate(picture.title, length: 10, separator: '・') %>
     </h3>
   </div>
 </li>
