@@ -8,18 +8,18 @@
           <%= link_to facility_path(@facility.id) do %>
           <div class='show-facility-list-zoo'>
             <%= image_tag "zoo-icon.png" %>
-            <h3 class='show-facility-texts'>
+            <h1 class='show-facility-texts'>
               <%= @facility.name %>
-            </h3>
+            </h1>
           </div>
         <% end %>
       <% else %>
         <%= link_to facility_path(@facility.id) do %>
           <div class='show-facility-list-aquarium'>
             <%= image_tag "aquarium-icon.png" %>
-            <h3 class='show-facility-texts'>
+            <h1 class='show-facility-texts'>
               <%= @facility.name %>
-            </h3>
+            </h1>
           </div>
         <% end %>
       <% end %>

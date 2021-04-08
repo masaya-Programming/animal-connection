@@ -44,19 +44,19 @@
   <% end %>
 
   <div class='top-picture-ber'>
-    <h3 class='top-picture-top'>
+    <h1 class='top-picture-top'>
       新規ベストショット
-    </h3>
+    </h1>
     <ul class='top-picture-list'>
       <%= render partial: 'picture-top', collection: @pictures, as: :new_picture %>
     </ul>
     <% if @pictures.length == 0 %>
-      <h3 class='top-picture-nil'>
+      <p class='top-picture-nil'>
         投稿されたベストショットがありません。
-      </h3>
-      <h3 class='top-picture-nil'>
+      </p>
+      <p class='top-picture-nil'>
         新しい投稿をお待ちしております。
-      </h3>
+      </p>
     <% end %>
   </div>
 

@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       get 'mypage'
     end
     resources :comments, only: [:edit, :update, :destroy]
-    resources :pictures, only: [:edit, :update, :destroy]
+    resources :pictures, only: [:show, :edit, :update, :destroy]
   end
 
   resources :facilities, only: [:index, :show] do

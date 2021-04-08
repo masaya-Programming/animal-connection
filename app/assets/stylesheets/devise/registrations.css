@@ -145,3 +145,85 @@
   font-size: 1.2rem;
   cursor: pointer;
 }
+
+.delete-main {
+  width: 100vw;
+  height: auto;
+  background-color: rgb(223, 235, 230);
+  display: flex;
+  justify-content: center;
+}
+
+.delete-form-wrap {
+  width: 50vw;
+  background-color: white;
+  padding-bottom: 2.5rem;
+  border: 0.5rem solid rgb(202, 84, 84);
+  border-radius: 3rem;
+}
+
+.delete-form-header {
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.delete-form-top-text {
+  line-height: 6rem;
+  font-weight: bold;
+  color: rgb(202, 84, 84);
+}
+
+.delete-form-text {
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.delete-text {
+  line-height: 2rem;
+  font-weight: bold;
+  color: rgb(202, 84, 84);
+}
+
+.delete-btn {
+  display: flex;
+  justify-content: center;
+  width: 36%;
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+
+.delete-red-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: rgb(202, 84, 84);
+  border: 0.5rem solid rgb(202, 84, 84);
+  border-radius: 1rem;
+  color: #fff;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.delete-mypage-Back-box {
+  display: flex;
+  justify-content: center;
+  width: 47%;
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+
+.delete-mypage-Back-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #837d7d;
+  border: 0.5rem solid #837d7d;
+  border-radius: 1rem;
+  color: #fff;
+  line-height: 2.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}

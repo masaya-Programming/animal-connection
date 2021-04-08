@@ -1,0 +1,14 @@
+<%# CSS・・・assets/stylesheets/users/show.css %>
+<li>
+  <p class='mypage-picture-name'>
+    <%= link_to truncate(picture.facility.name, length: 10, separator: '・'), facility_path(picture.facility_id), class: "mypage-picture-link" %>
+  </p>
+  <div class='mypage-picture-box'>
+    <%= link_to user_picture_path(picture.id) do %>
+      <%= image_tag picture.image, size: '320x240' %>
+      <h2 class='mypage-picture-title'>
+        <%= truncate(picture.title, length: 10, separator: '・') %>
+      </h2>
+    <% end %>
+  </div>
+</li>

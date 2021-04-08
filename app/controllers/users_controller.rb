@@ -7,11 +7,16 @@ class UsersController < ApplicationController
   end
 
   def show
+    @comments = Comment.where(user_id: @user.id)
+    @comments = @comments.reverse
+    @pictures = Picture.where(user_id: @user.id)
+    @pictures = @pictures.reverse
   end
 
   def destroy
     if current_user.id == @user.id
       @user.destroy
+      redirect_to root_path
     else
       redirect_to user_path(@user)
     end

@@ -8,8 +8,8 @@
         <%= link_to comment.user.nickname, user_path(comment.user_id), class: "show-comment-link" %>
       <% end %>
     </p>
-    <h3 class='show-comment-text'>
+    <h2 class='show-comment-text'>
       <%= simple_format(comment.text) %>
-    </h3>
+    </h2>
   </div>
 </li>

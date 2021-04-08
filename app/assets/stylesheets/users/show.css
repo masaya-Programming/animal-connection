@@ -1,0 +1,177 @@
+.mypage-main {
+  background-color: white;
+}
+
+.mypage-header {
+  width: 100vw;
+  padding: 2% 0% 1% 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mypage-top-nickname-men {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 0 0.8px 0 #ccc, 0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
+  background: rgb(49, 78, 204);
+  margin-bottom: 0.8rem;
+  border-radius: 1rem;
+  padding: 0.8rem 1.2rem;
+}
+
+.mypage-top-nickname-woman {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 0 0.8px 0 #ccc, 0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
+  background: rgb(243, 73, 73);
+  margin-bottom: 0.8rem;
+  border-radius: 1rem;
+  padding: 0.8rem 1.2rem;
+}
+
+.mypage-top-nickname-other {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 0 0.8px 0 #ccc, 0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
+  background: rgb(200, 39, 233);
+  margin-bottom: 0.8rem;
+  border-radius: 1rem;
+  padding: 0.8rem 1.2rem;
+}
+
+.mypage-top-text {
+  font-size: 1.5rem;
+}
+
+.mypage-comment-ber {
+  width: 100vw;
+  padding: 3% 10%;
+  background-color: rgb(150, 238, 197);
+}
+
+.mypage-comment-top {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.mypage-comment-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  margin-left: 1vw;
+}
+
+.mypage-comment-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.8rem 0rem;
+}
+
+.mypage-comment-name {
+  font-size: 1.3rem;
+  display: flex;
+}
+
+.mypage-comment-facility-link {
+  background-color: rgb(73, 168, 140);
+  color: #fff;
+  border-radius: 20%;
+  padding: 0.2rem 0.7rem;
+}
+
+.mypage-comment-edit-link {
+  background-color: #ea352d;
+  color: #fff;
+  border-radius: 20%;
+  padding: 0.2rem 0.7rem;
+  margin-left: 2vw;
+}
+
+.mypage-comment-text {
+  font-size: 1.7rem;
+  color: rgb(48, 38, 38);
+  margin-top: 0.2vw;
+  margin-left: 1vw;
+}
+
+.mypage-comment-picture-nil-text {
+  display: flex;
+  justify-content: center;
+  font-size: 1.7rem;
+  color: rgb(48, 38, 38);
+  margin-top: 0.2vw;
+  margin-left: 1vw;
+}
+
+.mypage-picture-ber {
+  width: 100vw;
+  padding: 3% 10%;
+  background-color: rgb(60, 243, 234);
+}
+
+.mypage-picture-top {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.mypage-picture-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.mypage-picture-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(128, 193, 223);
+  margin-bottom: 0.8rem;
+  padding: 0.5rem;
+  border-radius: 20px;
+}
+
+.mypage-picture-name {
+  font-size: 1.3rem;
+  color: rgb(29, 28, 28);
+  margin-bottom: 0.1em;
+}
+
+.mypage-picture-link {
+  background-color: rgb(73, 168, 140);
+  color: #fff;
+  border-radius: 20%;
+  padding: 0.2rem 0.7rem;
+}
+
+.mypage-picture-title {
+  font-size: 1.5rem;
+  color: rgb(48, 38, 38);
+  margin-top: 0.2rem;
+}
+
+.user-edit-btn {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding-top: 1.5rem;
+  margin: 0 auto;
+  background: rgb(223, 235, 230);
+}
+
+.user-edit-red-btn {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  background: #ea352d;
+  border: 0.5rem solid #ea352d;
+  border-radius: 1rem;
+  color: #fff;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}

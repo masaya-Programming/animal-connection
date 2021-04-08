@@ -14,6 +14,6 @@ class User < ApplicationRecord
   validates :email, uniqueness: { case_sensitive: true }
   validates :password, format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/ }, on: :create 
 
-  has_many :comments
-  has_many :pictures
+  has_many :comments, dependent: :destroy
+  has_many :pictures, dependent: :destroy
 end

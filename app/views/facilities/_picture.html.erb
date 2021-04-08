@@ -1,16 +1,18 @@
 <%# CSS・・・assets/stylesheets/facilities/search.css %>
 <li>
+  <p class='show-picture-name'>
+    <% if user_signed_in? && picture.user.nickname == current_user.nickname %>
+      <%= link_to picture.user.nickname, user_path(picture.user_id), class: "show-my-picture-link" %>
+    <% else %>
+      <%= link_to picture.user.nickname, user_path(picture.user_id), class: "show-picture-link" %>
+    <% end %>
+  </p>
   <div class='show-picture-box'>
-    <p class='show-picture-name'>
-      <% if user_signed_in? && picture.user.nickname == current_user.nickname %>
-        <%= link_to picture.user.nickname, user_path(picture.user_id), class: "show-my-picture-link" %>
-      <% else %>
-        <%= link_to picture.user.nickname, user_path(picture.user_id), class: "show-picture-link" %>
-      <% end %>
-    </p>
-    <%= image_tag picture.image, size: '320x240' %>
-    <h3 class='show-picture-title'>
-      <%= truncate(picture.title, length: 10, separator: '・') %>
-    </h3>
+    <%= link_to user_picture_path(picture.id) do %>
+      <%= image_tag picture.image, size: '320x240' %>
+      <h2 class='show-picture-title'>
+        <%= truncate(picture.title, length: 10, separator: '・') %>
+      </h2>
+    <% end %>
   </div>
 </li>

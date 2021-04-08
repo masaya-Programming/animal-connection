@@ -6,9 +6,9 @@
         <%= truncate(new_picture.facility.name, length: 10, separator: '・') %>
       </p>
       <%= image_tag new_picture.image, size: '288x216' %>
-      <h3 class='top-picture-title'>
+      <h2 class='top-picture-title'>
         <%= truncate(new_picture.title, length: 10, separator: '・') %>
-      </h3>
+      </h2>
     <% end %>
   </div>
 </li>
