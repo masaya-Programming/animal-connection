@@ -1,114 +1,92 @@
 <%# CSS・・・assets/stylesheets/pictures/show.css %>
 <%= render "shared/header" %>
-<div calss='show-main'>
+<div calss='show-picture-main'>
   <% if @facility.category.name == "動物園" %>
-    <div class='show-facility-list-zoo'>
-      <%= image_tag "zoo-icon.png" %>
-      <h1 class='show-facility-name'>
-        <%= @facility.name %>
-      </h1>
-    </div>
-    <div class='first-show'>
-      <h2 class='show-content-zoo'>
-        スポット名称
-      </h2>
-      <p class='show-contents-kana'>
-        <%= @facility.kananame %>
-      </p>
-      <p class='show-contents-name'>
-        <%= @facility.name %>
-      </p>
-      <h2 class='show-content-zoo'>
-        所在地
-      </h2>
-      <p class='show-contents-name'>
-        <%= @facility.address %>
-      </p>
-      <h2 class='show-content-zoo'>
-        Google Map(実装予定)
-      </h2>
-      <div class='map-area'>
+    <%= link_to facility_path(@facility.id) do %>
+      <div class='show-picture-list-zoo'>
+        <%= image_tag "zoo-icon.png" %>
+        <h1 class='show-picture-facility-name'>
+          <%= @facility.name %>
+        </h1>
       </div>
+    <% end %>
+    <div class='first-show-picture'>
+      <div class='show-picture-image-box'>
+        <%= image_tag @picture.image, class: 'show-picture-zoo', size: '640x480' %>
+      </div>
+      <h2 class='show-picture-content-zoo'>
+        タイトル
+      </h2>
+      <p class='show-picture-contents-title'>
+        <%= @picture.title %>
+      </p>
+      <h2 class='show-picture-content-zoo'>
+        説明文
+      </h2>
+      <p>
+        <% if @picture.description == "" %>
+          <p class='show-picture-contents-non-description'>この投稿に説明はありません。</p>
+        <% else %>
+          <%= simple_format(@picture.description, class: 'show-picture-contents-description') %>
+        <% end %>
+      </p>
+      <h2 class='show-picture-content-zoo'>
+        ベストショット投稿者
+      </h2>
+      <% if @user.gender.name == "男性" %>
+        <%= link_to @user.nickname, user_path(@picture.user_id), class: 'show-picture-content-nickname-men' %>
+      <% elsif @user.gender.name == "女性" %>
+        <%= link_to @user.nickname, user_path(@picture.user_id), class: 'show-picture-content-nickname-woman' %>
+      <% else %>
+        <%= link_to @user.nickname, user_path(@picture.user_id), class: 'show-picture-content-nickname-other' %>
+      <% end %>
     </div>
   <% else %>
-    <div class='show-facility-list-aquarium'>
-      <%= image_tag "aquarium-icon.png" %>
-      <h1 class='show-facility-name'>
-        <%= @facility.name %>
-      </h1>
-    </div>
-    <div class='first-show'>
-      <h2 class='show-content-aquarium'>
-        スポット名称
-      </h2>
-      <p class='show-contents-kana'>
-        <%= @facility.kananame %>
-      </p>
-      <p class='show-contents-name'>
-        <%= @facility.name %>
-      </p>
-      <h2 class='show-content-aquarium'>
-        所在地
-      </h2>
-      <p class='show-contents-name'>
-        <%= @facility.address %>
-      </p>
-      <h2 class='show-content-aquarium'>
-        Google Map(実装予定)
-      </h2>
-      <div class='map-area'>
+    <%= link_to facility_path(@facility.id) do %>
+      <div class='show-picture-list-aquarium'>
+        <%= image_tag "aquarium-icon.png" %>
+        <h1 class='show-picture-facility-name'>
+          <%= @facility.name %>
+        </h1>
       </div>
+    <% end %>
+    <div class='first-show-picture'>
+      <div class='show-picture-image-box'>
+        <%= image_tag @picture.image, class: 'show-picture-aquarium', size: '640x480' %>
+      </div>
+      <h2 class='show-picture-content-aquarium'>
+        タイトル
+      </h2>
+      <p class='show-picture-contents-title'>
+        <%= @picture.title %>
+      </p>
+      <h2 class='show-picture-content-aquarium'>
+        説明文
+      </h2>
+      <p>
+        <% if @picture.description == "" %>
+          <p class='show-picture-contents-non-description'>この投稿に説明はありません。</p>
+        <% else %>
+          <%= simple_format(@picture.description, class: 'show-picture-contents-description') %>
+        <% end %>
+      </p>
+      <h2 class='show-picture-content-aquarium'>
+        ベストショット投稿者
+      </h2>
+      <% if @user.gender.name == "男性" %>
+        <%= link_to @user.nickname, user_path(@picture.user_id), class: 'show-picture-content-nickname-men' %>
+      <% elsif @user.gender.name == "女性" %>
+        <%= link_to @user.nickname, user_path(@picture.user_id), class: 'show-picture-content-nickname-woman' %>
+      <% else %>
+        <%= link_to @user.nickname, user_path(@picture.user_id), class: 'show-picture-content-nickname-other' %>
+      <% end %>
     </div>
   <% end %>
-  <div class="upper-content">
-    <%= link_to "公式サイトへ (外部リンク)", @facility.official_website, target: :blank, class: "official-btn" %>
-  </div>
 
-  <div class='show-comment-ber'>
-    <h1 class='show-comment-top'>
-      <%= @facility.name %> レビュー  <%= @comments.length %>件
-    </h1>
-    <ul class='show-comment-list'>
-      <%= render partial: 'comment', collection: @comments %>
-    </ul>
-    <% if @comments.length == 0 %>
-      <p class='show-comment-picture-nil-text'>
-        投稿されたレビューがありません。
-      </p>
-      <p class='show-comment-picture-nil-text'>
-        新しい投稿をお待ちしております。
-      </p>
-    <% end %>
-  </div>
+  <% if user_signed_in? && @picture.user_id == current_user.id %>
+    <div class='picture-edit-btn'>
+      <%= link_to  "ベストショット情報の編集 / 削除", edit_user_picture_path(@picture.user, @picture), class: "picture-edit-red-btn" %>
+    </div>
+  <% end %>
 
-  <div class='show-picture-ber'>
-    <h1 class='show-picture-top'>
-      <%= @facility.name %> ベストショット <%= @pictures.length %>件
-    </h1>
-    <ul class='show-picture-list'>
-      <%= render partial: 'picture', collection: @pictures %>
-    </ul>
-    <% if @pictures.length == 0 %>
-      <p class='show-comment-picture-nil-text'>
-        投稿されたベストショットがありません。
-      </p>
-      <p class='show-comment-picture-nil-text'>
-        新しい投稿をお待ちしております。
-      </p>
-    <% end %>
-  </div>
-
-  <div class='show-btn-set'>
-    <%= link_to(new_facility_comment_path(@facility), class: 'comment-btn') do %>
-      <span class='comment-btn-text'>レビュー</span>
-      <span class='comment-btn-text'>投稿</span>
-      <%= image_tag 'review-icon.png' , size: '185x50' ,class: "comment-btn-icon" %>
-    <% end %>
-    <%= link_to(new_facility_picture_path(@facility), class: 'picture-btn') do %>
-      <span class='picture-btn-text'>ベストショット</span>
-      <span class='picture-btn-text'>投稿</span>
-      <%= image_tag 'picture-icon.png' , size: '185x50' ,class: "picture-btn-icon" %>
-    <% end %>
-  </div>
-</div>
 <%= render "shared/footer" %>

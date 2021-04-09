@@ -5,7 +5,7 @@
   <div class='form-wrap'>
     <div class='comments-form-header'>
       <% if @facility.category.name == "動物園" %>
-          <%= link_to facility_path(@facility.id) do %>
+        <%= link_to facility_path(@facility.id) do %>
           <div class='show-facility-list-zoo'>
             <%= image_tag "zoo-icon.png" %>
             <h1 class='show-facility-name'>

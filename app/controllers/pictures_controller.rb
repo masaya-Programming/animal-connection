@@ -2,6 +2,7 @@ class PicturesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
   before_action :set_facility, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show]
 
   def new
     @picture = Picture.new
@@ -65,6 +66,10 @@ class PicturesController < ApplicationController
 
   def set_facility
     @facility = Facility.find(@picture.facility_id)
+  end
+
+  def set_user
+    @user = User.find(@picture.user_id)
   end
 
 end

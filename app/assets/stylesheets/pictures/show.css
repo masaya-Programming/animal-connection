@@ -1,0 +1,134 @@
+.show-picture-main {
+  background-color: white;
+}
+
+.show-picture-list-zoo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2% 25% 0% 25%;
+  background-color: rgb(9, 156, 100);
+  border-radius: 1.5rem;
+}
+
+.show-picture-list-aquarium {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2% 25% 0% 25%;
+  background-color: rgb(10, 138, 197);
+  border-radius: 1.5rem;
+}
+
+.show-picture-facility-name {
+  font-size: 2.1rem;
+  color: #FFF;
+  margin-left: 1vw;
+}
+
+.first-show-picture {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2% 18%;
+}
+
+.show-picture-image-box {
+  margin: auto;
+}
+
+.show-picture-zoo {
+  background-color: rgb(158, 221, 197);
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.show-picture-aquarium {
+  background-color: rgb(155, 204, 226);
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+
+.show-picture-content-zoo {
+  margin: 3% 0% 1% 0%;
+  font-size: 2.2rem;
+  background: linear-gradient(transparent 60%, #baebba 0%);
+}
+
+.show-picture-content-aquarium {
+  margin: 3% 0% 1% 0%;
+  font-size: 2.2rem;
+  background: linear-gradient(transparent 60%, #93d5e6 0%);
+}
+
+.show-picture-contents-title {
+  font-size: 2rem;
+  margin-left: 1vw;
+  font-weight: 600;
+}
+
+.show-picture-contents-description {
+  font-size: 2rem;
+  margin-left: 1vw;
+}
+
+.show-picture-contents-non-description {
+  color: rgb(122, 124, 126);
+  font-size: 1.7rem;
+  margin-left: 1vw;
+  font-weight: 500;
+}
+
+.show-picture-content-nickname-men {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 0 0.8px 0 #ccc, 0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
+  background: rgb(49, 78, 204);
+  border-radius: 1rem;
+  margin-left: 1vw;
+  padding: 0.4rem 0.6rem;
+}
+
+.show-picture-content-nickname-woman {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 0 0.8px 0 #ccc, 0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
+  background: rgb(243, 73, 73);
+  border-radius: 1rem;
+  margin-left: 1vw;
+  padding: 0.4rem 0.6rem;
+}
+
+.show-picture-content-nickname-other {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 0 0.8px 0 #ccc, 0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
+  background: rgb(200, 39, 233);
+  border-radius: 1rem;
+  margin-left: 1vw;
+  padding: 0.4rem 0.6rem;
+}
+
+.picture-edit-btn {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding-top: 1.5rem;
+  margin: 0 auto;
+  background: rgb(223, 235, 230);
+}
+
+.picture-edit-red-btn {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  background: #ea352d;
+  border: 0.5rem solid #ea352d;
+  border-radius: 1rem;
+  color: #fff;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
