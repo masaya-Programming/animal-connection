@@ -50,5 +50,7 @@ test:
 production:
   <<: *default
   database: animal_connection_production
-  username: animal_connection
-  password: <%= ENV['ANIMAL_CONNECTION_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
+  
