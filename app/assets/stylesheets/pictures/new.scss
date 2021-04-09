@@ -54,3 +54,91 @@
   font-size: 1.5rem;
   resize: none;
 }
+
+.edit-picture-image-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.edit-picture-zoo {
+  background-color: rgb(158, 221, 197);
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.edit-picture-aquarium {
+  background-color: rgb(155, 204, 226);
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.picture-show-Back-box {
+  display: flex;
+  justify-content: center;
+  width: 35%;
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+
+.picture-show-Back-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #837d7d;
+  border: 0.5rem solid #837d7d;
+  border-radius: 1rem;
+  color: #fff;
+  line-height: 2.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.delete-picture-show-text {
+  line-height: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(202, 84, 84);
+}
+
+.delete-picture-show-btn {
+  display: flex;
+  justify-content: center;
+  width: 36%;
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+
+.delete-picture-show-red-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: rgb(202, 84, 84);
+  border: 0.5rem solid rgb(202, 84, 84);
+  border-radius: 1rem;
+  color: #fff;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.delete-picture-show-Back-box {
+  display: flex;
+  justify-content: center;
+  width: 47%;
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+
+.delete-picture-show-Back-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #837d7d;
+  border: 0.5rem solid #837d7d;
+  border-radius: 1rem;
+  color: #fff;
+  line-height: 2.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}

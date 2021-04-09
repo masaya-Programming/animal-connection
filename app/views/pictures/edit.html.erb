@@ -1,74 +1,69 @@
-<%# CSS・・・assets/stylesheets/pictures/edit.css %>
+<%# CSS・・・assets/stylesheets/pictures/new.scss %>
 <%= render "shared/header" %>
 
-<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+<%= form_with model: @picture, url: user_picture_path(current_user.id, @picture.id), method: :put, class: 'registration-main', local: true do |f| %>
   <div class='form-wrap'>
-    <div class='form-header'>
-      <h1 class='form-top-text'>
-        アカウント情報の変更
+    <div class='picture-form-header'>
+      <% if @facility.category.name == "動物園" %>
+          <%= link_to facility_path(@facility.id) do %>
+          <div class='show-facility-list-zoo'>
+            <%= image_tag "zoo-icon.png" %>
+            <h1 class='show-facility-name'>
+              <%= @facility.name %>
+            </h1>
+          </div>
+        <% end %>
+      <% else %>
+        <%= link_to facility_path(@facility.id) do %>
+          <div class='show-facility-list-aquarium'>
+            <%= image_tag "aquarium-icon.png" %>
+            <h1 class='show-facility-name'>
+              <%= @facility.name %>
+            </h1>
+          </div>
+        <% end %>
+      <% end %>
+      <h1 class='picture-form-text'>
+        ベストショットの編集
       </h1>
     </div>
 
     <%= render 'shared/error_messages', model: f.object %>
 
-    <div class="form-group">
+    <% if @facility.category.name == "動物園" %>
+      <div class='edit-picture-image-box'>
+        <%= image_tag @picture.image, class: 'edit-picture-zoo', size: '320x240' %>
+      </div>
+    <% else %>
+      <div class='edit-picture-image-box'>
+        <%= image_tag @picture.image, class: 'edit-picture-aquarium', size: '320x240' %>
+      </div>
+    <% end %>
+
+    <div class="picture-form-group">
       <div>
-        <label class="form-text">ニックネーム</label>
+        <label class="form-text">タイトル</label>
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :nickname, class:"input-default-nickname", id:"nickname", placeholder:"3~12文字のニックネーム", maxlength:"20", autofocus: true %>
-      <p class='info-text'>※全角半角どちらでも登録できます。</p>
+      <%= f.text_area :title, class:"picture-input-default-title", id:"picture-title", autofocus: true %>
+      <p class='info-text'>※更新する画像のタイトルを入力してください。</p>
     </div>
 
-    <div class="form-group">
+    <div class="picture-form-group">
       <div>
-        <label class="form-text">性別</label>
-        <span class="indispensable">必須</span>
-      </div>
-      <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box", id:"gender"}) %>
-    </div>
-
-    <div class="form-group">
-      <div>
-        <label class="form-text">メールアドレス</label>
-        <span class="indispensable">必須</span>
-      </div>
-      <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可" %>
-      <p class='info-text'>※全て半角で入力してください。</p>
-    </div>
-
-    <div class="form-group">
-      <div>
-        <label class="form-text">新しいパスワード</label>
+        <label class="form-text">画像説明文</label>
         <span class="indispensable-free">任意</span>
       </div>
-      <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の英字と数字を両方含めた新しいパスワード" %>
-      <p class='info-text'>※全て半角で入力してください。</p>
-    </div>
-    
-    <div class="form-group">
-      <div>
-        <label class="form-text">新しいパスワード(再入力)</label>
-        <span class="indispensable-free">任意</span>
-      </div>
-      <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じ新しいパスワードを入力して下さい" %>
-    </div>
-
-    <div class="form-group">
-      <div>
-        <label class="form-text">現在のパスワード</label>
-        <span class="indispensable">必須</span>
-      </div>
-      <%= f.password_field :current_password, class:"input-default", id:"password", placeholder:"6文字以上の英字と数字を両方含めたパスワード" %>
-      <p class='info-text'>※アカウント情報の変更には入力が必要です。</p>
+      <%= f.text_area :description, class:"picture-input-default-text", id:"picture-description" %>
+      <p class='info-text'>※更新する画像の説明文を入力してください。</p>
     </div>
 
     <div class='register-btn'>
-      <%= f.submit "アカウント情報の変更" ,class:"register-red-btn" %>
+      <%= f.submit "ベストショット更新" ,class:"register-red-btn" %>
     </div>
 
-    <div class='mypage-Back-box'>
-      <%= link_to  "マイページへ戻る", mypage_user_path(current_user), class: "mypage-Back-btn" %>
+    <div class='picture-show-Back-box'>
+      <%= link_to  "詳細ページへ戻る", user_picture_path(@picture.user, @picture), class: "picture-show-Back-btn" %>
     </div>
   </div>
 <% end %>
@@ -77,25 +72,25 @@
   <div class="delete-form-wrap">
     <div class='delete-form-header'>
       <h1 class='delete-form-top-text'>
-        アカウント情報の削除
+        ベストショットの削除
       </h1>
     </div>
 
     <div class='delete-form-text'>
-      <p class='delete-text'>
-        <%=current_user.nickname%>の情報を削除することができます。
+      <p class='delete-picture-show-text'>
+        上記のベストショットを削除することができます。
       </p>
-      <p class='delete-text'>
-        これまでの投稿内容も全て削除されます。
+      <p class='delete-picture-show-text'>
+        ベストショットに関する全ての情報が削除されます。
       </p>
     </div>
 
-    <div class='delete-btn'>
-      <%= link_to  "アカウント削除", user_path(current_user), method: :delete, class: "delete-red-btn" %>
+    <div class='delete-picture-show-btn'>
+      <%= link_to  "ベストショット削除", user_picture_path(current_user.id, @picture.id), method: :delete, class: "delete-picture-show-red-btn" %>
     </div>
 
-    <div class='delete-mypage-Back-box'>
-      <%= link_to  "マイページへ戻る", mypage_user_path(current_user), class: "delete-mypage-Back-btn" %>
+    <div class='delete-picture-show-Back-box'>
+      <%= link_to  "詳細ページへ戻る", user_picture_path(@picture.user, @picture), class: "delete-picture-show-Back-btn" %>
     </div>
   </div>
 </div>

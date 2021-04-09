@@ -1,4 +1,4 @@
-<%# CSS・・・assets/stylesheets/comments/edit.css %>
+<%# CSS・・・assets/stylesheets/comments/new.scss %>
 <%= render "shared/header" %>
 
 <%= form_with model: @comment, url: user_comment_path(current_user.id, @comment.id), method: :put, class: 'registration-main', local: true do |f| %>

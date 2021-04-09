@@ -46,7 +46,7 @@ class PicturesController < ApplicationController
       redirect_to user_picture_path(@picture.user, @picture)
     else
       @picture.destroy
-      redirect_to user_picture_path(@picture.user, @picture) 
+      redirect_to user_path(@picture.user_id) 
     end
   end
 
