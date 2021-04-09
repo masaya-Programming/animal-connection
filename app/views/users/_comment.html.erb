@@ -4,7 +4,7 @@
     <p class='mypage-comment-name'>
       <%= link_to truncate(comment.facility.name, length: 15, separator: '・'), facility_path(comment.facility_id), class: "mypage-comment-facility-link" %>
       <% if user_signed_in? && comment.user_id == current_user.id %>
-        <%= link_to "レビュー編集 / 削除", edit_user_comment_path(comment.id), class: "mypage-comment-edit-link" %>
+        <%= link_to "レビュー編集 / 削除", edit_user_comment_path(comment.user, comment), class: "mypage-comment-edit-link" %>
       <% end %>
     </p>
     <h2 class='mypage-comment-text'>

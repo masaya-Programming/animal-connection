@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :set_comment, only: [:edit, :update, :destroy]
+  before_action :set_facility, only: [:edit, :update, :destroy]
 
   def new
     @comment = Comment.new
@@ -18,18 +20,48 @@ class CommentsController < ApplicationController
   end
 
   def edit
+    unless user_signed_in? && @current_user.id == @comment.user_id
+      redirect_to user_path(@comment.user_id)
+    end
   end
 
   def update
+    unless user_signed_in? && @current_user.id == @comment.user_id
+      redirect_to user_path(@comment.user_id)
+    else
+      if @comment.update(comment_edit_params)
+        redirect_to user_path(@comment.user_id)
+      else
+        render :edit
+      end
+    end
   end
 
   def destroy
+    unless user_signed_in? && @current_user.id == @comment.user_id
+      redirect_to user_path(@comment.user_id)
+    else
+      @comment.destroy
+      redirect_to user_path(@comment.user_id)  
+    end
   end
 
   private
 
   def comment_params
     params.require(:comment).permit(:text).merge(user_id: current_user.id, facility_id: params[:facility_id])
+  end
+
+  def comment_edit_params
+    params.require(:comment).permit(:text).merge(user_id: @comment.user_id, facility_id: @comment.facility_id)
+  end
+
+  def set_comment
+    @comment = Comment.find(params[:id])
+  end
+
+  def set_facility
+    @facility = Facility.find(@comment.facility_id)
   end
 
 end

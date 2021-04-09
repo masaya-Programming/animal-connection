@@ -8,7 +8,7 @@
     <% end %>
   </p>
   <div class='show-picture-box'>
-    <%= link_to user_picture_path(picture.id) do %>
+    <%= link_to user_picture_path(picture.user, picture) do %>
       <%= image_tag picture.image, size: '320x240' %>
       <h2 class='show-picture-title'>
         <%= truncate(picture.title, length: 10, separator: '・') %>
