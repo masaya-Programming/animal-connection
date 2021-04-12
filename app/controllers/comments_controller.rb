@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new
     @facility = Facility.find(params[:facility_id])
   end
-  
+
   def create
     @facility = Facility.find(params[:facility_id])
     @comment = Comment.new(comment_params)
@@ -20,30 +20,23 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    unless user_signed_in? && @current_user.id == @comment.user_id
-      redirect_to user_path(@comment.user_id)
-    end
+    redirect_to user_path(@comment.user_id) unless user_signed_in? && @current_user.id == @comment.user_id
   end
 
   def update
-    unless user_signed_in? && @current_user.id == @comment.user_id
-      redirect_to user_path(@comment.user_id)
-    else
+    if user_signed_in? && @current_user.id == @comment.user_id
       if @comment.update(comment_edit_params)
         redirect_to user_path(@comment.user_id)
       else
         render :edit
       end
     end
+    redirect_to user_path(@comment.user_id)
   end
 
   def destroy
-    unless user_signed_in? && @current_user.id == @comment.user_id
-      redirect_to user_path(@comment.user_id)
-    else
-      @comment.destroy
-      redirect_to user_path(@comment.user_id)  
-    end
+    @comment.destroy if user_signed_in? && @current_user.id == @comment.user_id
+    redirect_to user_path(@comment.user_id)
   end
 
   private
@@ -63,5 +56,4 @@ class CommentsController < ApplicationController
   def set_facility
     @facility = Facility.find(@comment.facility_id)
   end
-
 end

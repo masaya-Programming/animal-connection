@@ -24,40 +24,35 @@ class PicturesController < ApplicationController
   end
 
   def edit
-    unless user_signed_in? && @current_user.id == @picture.user_id
-      redirect_to user_picture_path(@picture.user, @picture)
-    end
+    redirect_to user_picture_path(@picture.user, @picture) unless user_signed_in? && @current_user.id == @picture.user_id
   end
 
   def update
-    unless user_signed_in? && @current_user.id == @picture.user_id
-      redirect_to user_picture_path(@picture.user, @picture)
-    else
+    if user_signed_in? && @current_user.id == @picture.user_id
       if @picture.update(comment_edit_params)
         redirect_to user_picture_path(@picture.user, @picture)
       else
         render :edit
       end
     end
+    redirect_to user_picture_path(@picture.user, @picture)
   end
 
   def destroy
-    unless user_signed_in? && @current_user.id == @picture.user_id
-      redirect_to user_picture_path(@picture.user, @picture)
-    else
-      @picture.destroy
-      redirect_to user_path(@picture.user_id) 
-    end
+    @picture.destroy if user_signed_in? && @current_user.id == @picture.user_id
+    redirect_to user_picture_path(@picture.user, @picture)
   end
 
   private
 
   def picture_params
-    params.require(:picture).permit(:title, :description, :image).merge(user_id: current_user.id, facility_id: params[:facility_id])
+    params.require(:picture).permit(:title, :description, :image).merge(user_id: current_user.id,
+                                                                        facility_id: params[:facility_id])
   end
 
   def comment_edit_params
-    params.require(:picture).permit(:title, :description, :image).merge(user_id: @picture.user_id, facility_id: @picture.facility_id)
+    params.require(:picture).permit(:title, :description, :image).merge(user_id: @picture.user_id,
+                                                                        facility_id: @picture.facility_id)
   end
 
   def set_picture
@@ -71,5 +66,4 @@ class PicturesController < ApplicationController
   def set_user
     @user = User.find(@picture.user_id)
   end
-
 end
