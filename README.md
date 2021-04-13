@@ -94,9 +94,9 @@
 | Column             | Type    | Options     | Options2     |
 | ------------------ | ------- | ----------- | ------------ |
 | nickname           | string  | null: false | unique: true |
-| email              | string  | null: false | unique: true |
-| encrypted_password | string  | null: false |              |
 | gender_id          | integer | null: false |              |
+| email              | string  | null: false | unique: true |
+| password           | string  | null: false |              |
   ### usersテーブルのAssociation
 - has_many : comments
 - has_many : pictures

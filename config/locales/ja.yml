@@ -1,0 +1,30 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+      facility: 施設
+      comment: レビュー投稿
+      picture: ベストショット投稿
+    attributes:
+      user:
+        nickname: ニックネーム
+        gender_id: 性別
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード(再入力)
+        current_password: 現在のパスワード
+        must be other than 0: を選択してください
+      facility:
+        name: 施設名
+        kananame: フリガナ
+        category_id: カテゴリー
+        prefectures_id: 都道府県
+        address: 所在地
+        official_website: 公式URL
+        must be other than 0: を選択してください
+      comment:
+        text: レビュー内容
+      picture:
+        title: タイトル
+        description: 画像説明文
+        image: ベストショット

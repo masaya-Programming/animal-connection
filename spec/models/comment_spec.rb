@@ -20,19 +20,19 @@ RSpec.describe Comment, type: :model do
       it 'コメント本文が空だとコメント投稿できない' do
         @comment.text = ''
         @comment.valid?
-        expect(@comment.errors.full_messages).to include "Text can't be blank"
+        expect(@comment.errors.full_messages).to include "レビュー内容を入力してください"
       end
 
       it 'user_idが空だとコメント投稿できない' do
         @comment.user_id = ''
         @comment.valid?
-        expect(@comment.errors.full_messages).to include "User can't be blank"
+        expect(@comment.errors.full_messages).to include "Userを入力してください"
       end
 
       it 'facility_idが空だとコメント投稿できない' do
         @comment.facility_id = ''
         @comment.valid?
-        expect(@comment.errors.full_messages).to include "Facility can't be blank"
+        expect(@comment.errors.full_messages).to include "Facilityを入力してください"
       end
     end
   end

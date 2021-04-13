@@ -6,8 +6,8 @@ class Facility < ApplicationRecord
   with_options presence: true do
     validates :name
     validates :kananame
-    validates :category_id, numericality: { other_than: 0 }
-    validates :prefectures_id, numericality: { other_than: 0 }
+    validates :category_id, numericality: { other_than: 0, message: "を選択してください" }
+    validates :prefectures_id, numericality: { other_than: 0, message: "を選択してください" }
     validates :address
   end
 
