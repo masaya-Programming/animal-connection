@@ -20,23 +20,28 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    redirect_to user_path(@comment.user_id) unless user_signed_in? && @current_user.id == @comment.user_id
+    redirect_to user_path(@comment.user_id) unless user_signed_in? && current_user.id == @comment.user_id
   end
 
   def update
-    if user_signed_in? && @current_user.id == @comment.user_id
+    if current_user.id == @comment.user_id
       if @comment.update(comment_edit_params)
-        redirect_to user_path(@comment.user_id)
+        redirect_to mypage_user_path(@current_user.id)
       else
         render :edit
       end
+    else
+      redirect_to root_path
     end
-    redirect_to user_path(@comment.user_id)
   end
 
   def destroy
-    @comment.destroy if user_signed_in? && @current_user.id == @comment.user_id
-    redirect_to user_path(@comment.user_id)
+    if current_user.id == @comment.user_id
+      @comment.destroy
+      redirect_to mypage_user_path(@current_user.id)
+    else
+      redirect_to root_path
+    end
   end
 
   private

@@ -24,23 +24,28 @@ class PicturesController < ApplicationController
   end
 
   def edit
-    redirect_to user_picture_path(@picture.user, @picture) unless user_signed_in? && @current_user.id == @picture.user_id
+    redirect_to user_picture_path(@picture.user_id, @picture.id) unless user_signed_in? && current_user.id == @picture.user_id
   end
 
   def update
-    if user_signed_in? && @current_user.id == @picture.user_id
-      if @picture.update(comment_edit_params)
-        redirect_to user_picture_path(@picture.user, @picture)
+    if current_user.id == @picture.user_id
+      if @picture.update(picture_edit_params)
+        redirect_to user_picture_path(@current_user.id, @picture.id)
       else
         render :edit
       end
+    else
+      redirect_to root_path
     end
-    redirect_to user_picture_path(@picture.user, @picture)
   end
 
   def destroy
-    @picture.destroy if user_signed_in? && @current_user.id == @picture.user_id
-    redirect_to user_picture_path(@picture.user, @picture)
+    if current_user.id == @picture.user_id
+      @picture.destroy
+      redirect_to mypage_user_path(@current_user.id)
+    else
+      redirect_to root_path  
+    end
   end
 
   private
@@ -50,7 +55,7 @@ class PicturesController < ApplicationController
                                                                         facility_id: params[:facility_id])
   end
 
-  def comment_edit_params
+  def picture_edit_params
     params.require(:picture).permit(:title, :description, :image).merge(user_id: @picture.user_id,
                                                                         facility_id: @picture.facility_id)
   end
