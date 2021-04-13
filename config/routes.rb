@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :destroy] do
     member do
-      get 'mypage'
+      get "mypage"
     end
     resources :comments, only: [:edit, :update, :destroy]
     resources :pictures, only: [:show, :edit, :update, :destroy]
@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   resources :facilities, only: [:index, :show] do
     collection do
-      get 'search'
+      get "search"
     end
     resources :comments, only: [:new, :create]
     resources :pictures, only: [:new, :create]

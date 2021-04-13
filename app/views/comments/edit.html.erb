@@ -1,34 +1,34 @@
 <%# CSS・・・assets/stylesheets/comments/new.scss %>
 <%= render "shared/header" %>
 
-<%= form_with model: @comment, url: user_comment_path(current_user.id, @comment.id), method: :put, class: 'registration-main', local: true do |f| %>
-  <div class='form-wrap'>
-    <div class='form-header'>
+<%= form_with model: @comment, url: user_comment_path(current_user.id, @comment.id), method: :put, class: "registration-main", local: true do |f| %>
+  <div class="form-wrap">
+    <div class="form-header">
         <% if @facility.category.name == "動物園" %>
           <%= link_to facility_path(@facility.id) do %>
-          <div class='show-facility-list-zoo'>
+          <div class="show-facility-list-zoo">
             <%= image_tag "zoo-icon.png" %>
-            <h1 class='show-facility-name'>
+            <h1 class="show-facility-name">
               <%= @facility.name %>
             </h1>
           </div>
         <% end %>
       <% else %>
         <%= link_to facility_path(@facility.id) do %>
-          <div class='show-facility-list-aquarium'>
+          <div class="show-facility-list-aquarium">
             <%= image_tag "aquarium-icon.png" %>
-            <h1 class='show-facility-name'>
+            <h1 class="show-facility-name">
               <%= @facility.name %>
             </h1>
           </div>
         <% end %>
       <% end %>
-      <h1 class='form-top-text'>
+      <h1 class="form-top-text">
         レビューの編集
       </h1>
     </div>
 
-    <%= render 'shared/error_messages', model: f.object %>
+    <%= render "shared/error_messages", model: f.object %>
 
     <div class="comments-form-group">
       <div>
@@ -36,14 +36,14 @@
         <span class="indispensable">必須</span>
       </div>
       <%= f.text_area :text, class:"comments-input-default", id:"comment-text", autofocus: true %>
-      <p class='info-text'>※スポット利用後のレビューを入力してください。</p>
+      <p class="info-text">※スポット利用後のレビューを入力してください。</p>
     </div>
 
-    <div class='register-btn'>
+    <div class="register-btn">
       <%= f.submit "レビュー更新" ,class:"register-red-btn" %>
     </div>
 
-    <div class='mypage-Back-box'>
+    <div class="mypage-Back-box">
       <%= link_to  "マイページへ戻る", mypage_user_path(current_user), class: "mypage-Back-btn" %>
     </div>
   </div>
@@ -51,26 +51,26 @@
 
 <div class="delete-main">
   <div class="delete-form-wrap">
-    <div class='delete-form-header'>
-      <h1 class='delete-form-top-text'>
+    <div class="delete-form-header">
+      <h1 class="delete-form-top-text">
         レビューの削除
       </h1>
     </div>
 
-    <div class='delete-form-text'>
-      <p class='delete-text'>
+    <div class="delete-form-text">
+      <p class="delete-text">
         上記のレビューを削除することができます。
       </p>
-      <p class='delete-text'>
+      <p class="delete-text">
         レビューに関する全ての情報が削除されます。
       </p>
     </div>
 
-    <div class='delete-btn'>
+    <div class="delete-btn">
       <%= link_to  "レビュー削除", user_comment_path(current_user.id, @comment.id), method: :delete, class: "delete-red-btn" %>
     </div>
 
-    <div class='delete-mypage-Back-box'>
+    <div class="delete-mypage-Back-box">
       <%= link_to  "マイページへ戻る", mypage_user_path(current_user), class: "delete-mypage-Back-btn" %>
     </div>
   </div>

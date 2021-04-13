@@ -1,15 +1,15 @@
 <%# CSS・・・assets/stylesheets/devise/registrations.css %>
 <%= render "shared/header" %>
 
-<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
-  <div class='form-wrap'>
-    <div class='form-header'>
-      <h1 class='form-top-text'>
+<%= form_with model: @user, url: user_registration_path, class: "registration-main", local: true do |f| %>
+  <div class="form-wrap">
+    <div class="form-header">
+      <h1 class="form-top-text">
         アカウント情報の変更
       </h1>
     </div>
 
-    <%= render 'shared/error_messages', model: f.object %>
+    <%= render "shared/error_messages", model: f.object %>
 
     <div class="form-group">
       <div>
@@ -17,7 +17,7 @@
         <span class="indispensable">必須</span>
       </div>
       <%= f.text_area :nickname, class:"input-default-nickname", id:"nickname", placeholder:"3~12文字のニックネーム", maxlength:"20", autofocus: true %>
-      <p class='info-text'>※全角半角どちらでも登録できます。</p>
+      <p class="info-text">※全角半角どちらでも登録できます。</p>
     </div>
 
     <div class="form-group">
@@ -34,7 +34,7 @@
         <span class="indispensable">必須</span>
       </div>
       <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可" %>
-      <p class='info-text'>※全て半角で入力してください。</p>
+      <p class="info-text">※全て半角で入力してください。</p>
     </div>
 
     <div class="form-group">
@@ -43,7 +43,7 @@
         <span class="indispensable-free">任意</span>
       </div>
       <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の英字と数字を両方含めた新しいパスワード" %>
-      <p class='info-text'>※全て半角で入力してください。</p>
+      <p class="info-text">※全て半角で入力してください。</p>
     </div>
     
     <div class="form-group">
@@ -60,14 +60,14 @@
         <span class="indispensable">必須</span>
       </div>
       <%= f.password_field :current_password, class:"input-default", id:"password", placeholder:"6文字以上の英字と数字を両方含めたパスワード" %>
-      <p class='info-text'>※アカウント情報の変更には入力が必要です。</p>
+      <p class="info-text">※アカウント情報の変更には入力が必要です。</p>
     </div>
 
-    <div class='register-btn'>
+    <div class="register-btn">
       <%= f.submit "アカウント更新" ,class:"register-red-btn" %>
     </div>
 
-    <div class='mypage-Back-box'>
+    <div class="mypage-Back-box">
       <%= link_to  "マイページへ戻る", mypage_user_path(current_user), class: "mypage-Back-btn" %>
     </div>
   </div>
@@ -75,26 +75,26 @@
 
 <div class="delete-main">
   <div class="delete-form-wrap">
-    <div class='delete-form-header'>
-      <h1 class='delete-form-top-text'>
+    <div class="delete-form-header">
+      <h1 class="delete-form-top-text">
         アカウント情報の削除
       </h1>
     </div>
 
-    <div class='delete-form-text'>
-      <p class='delete-text'>
+    <div class="delete-form-text">
+      <p class="delete-text">
         <%=current_user.nickname%>の情報を削除することができます。
       </p>
-      <p class='delete-text'>
+      <p class="delete-text">
         これまでの投稿内容も全て削除されます。
       </p>
     </div>
 
-    <div class='delete-btn'>
+    <div class="delete-btn">
       <%= link_to  "アカウント削除", user_path(current_user), method: :delete, class: "delete-red-btn" %>
     </div>
 
-    <div class='delete-mypage-Back-box'>
+    <div class="delete-mypage-Back-box">
       <%= link_to  "マイページへ戻る", mypage_user_path(current_user), class: "delete-mypage-Back-btn" %>
     </div>
   </div>

@@ -1,90 +1,90 @@
 <%# CSS・・・assets/stylesheets/pictures/show.css %>
 <%= render "shared/header" %>
-<div calss='show-picture-main'>
+<div calss="show-picture-main">
   <% if @facility.category.name == "動物園" %>
     <%= link_to facility_path(@facility.id) do %>
-      <div class='show-picture-list-zoo'>
+      <div class="show-picture-list-zoo">
         <%= image_tag "zoo-icon.png" %>
-        <h1 class='show-picture-facility-name'>
+        <h1 class="show-picture-facility-name">
           <%= @facility.name %>
         </h1>
       </div>
     <% end %>
-    <div class='first-show-picture'>
-      <div class='show-picture-image-box'>
-        <%= image_tag @picture.image, class: 'show-picture-zoo', size: '640x480' %>
+    <div class="first-show-picture">
+      <div class="show-picture-image-box">
+        <%= image_tag @picture.image, class: "show-picture-zoo", size: "640x480" %>
       </div>
-      <h2 class='show-picture-content-zoo'>
+      <h2 class="show-picture-content-zoo">
         タイトル
       </h2>
-      <p class='show-picture-contents-title'>
+      <p class="show-picture-contents-title">
         <%= @picture.title %>
       </p>
-      <h2 class='show-picture-content-zoo'>
+      <h2 class="show-picture-content-zoo">
         説明文
       </h2>
       <p>
         <% if @picture.description == "" %>
-          <p class='show-picture-contents-non-description'>この投稿に説明はありません。</p>
+          <p class="show-picture-contents-non-description">この投稿に説明はありません。</p>
         <% else %>
-          <%= simple_format(@picture.description, class: 'show-picture-contents-description') %>
+          <%= simple_format(@picture.description, class: "show-picture-contents-description") %>
         <% end %>
       </p>
-      <h2 class='show-picture-content-zoo'>
+      <h2 class="show-picture-content-zoo">
         ベストショット投稿者
       </h2>
       <% if @user.gender.name == "男性" %>
-        <%= link_to @user.nickname, user_path(@picture.user_id), class: 'show-picture-content-nickname-men' %>
+        <%= link_to @user.nickname, user_path(@picture.user_id), class: "show-picture-content-nickname-men" %>
       <% elsif @user.gender.name == "女性" %>
-        <%= link_to @user.nickname, user_path(@picture.user_id), class: 'show-picture-content-nickname-woman' %>
+        <%= link_to @user.nickname, user_path(@picture.user_id), class: "show-picture-content-nickname-woman" %>
       <% else %>
-        <%= link_to @user.nickname, user_path(@picture.user_id), class: 'show-picture-content-nickname-other' %>
+        <%= link_to @user.nickname, user_path(@picture.user_id), class: "show-picture-content-nickname-other" %>
       <% end %>
     </div>
   <% else %>
     <%= link_to facility_path(@facility.id) do %>
-      <div class='show-picture-list-aquarium'>
+      <div class="show-picture-list-aquarium">
         <%= image_tag "aquarium-icon.png" %>
-        <h1 class='show-picture-facility-name'>
+        <h1 class="show-picture-facility-name">
           <%= @facility.name %>
         </h1>
       </div>
     <% end %>
-    <div class='first-show-picture'>
-      <div class='show-picture-image-box'>
-        <%= image_tag @picture.image, class: 'show-picture-aquarium', size: '640x480' %>
+    <div class="first-show-picture">
+      <div class="show-picture-image-box">
+        <%= image_tag @picture.image, class: "show-picture-aquarium", size: "640x480" %>
       </div>
-      <h2 class='show-picture-content-aquarium'>
+      <h2 class="show-picture-content-aquarium">
         タイトル
       </h2>
-      <p class='show-picture-contents-title'>
+      <p class="show-picture-contents-title">
         <%= @picture.title %>
       </p>
-      <h2 class='show-picture-content-aquarium'>
+      <h2 class="show-picture-content-aquarium">
         説明文
       </h2>
       <p>
         <% if @picture.description == "" %>
-          <p class='show-picture-contents-non-description'>この投稿に説明はありません。</p>
+          <p class="show-picture-contents-non-description">この投稿に説明はありません。</p>
         <% else %>
-          <%= simple_format(@picture.description, class: 'show-picture-contents-description') %>
+          <%= simple_format(@picture.description, class: "show-picture-contents-description") %>
         <% end %>
       </p>
-      <h2 class='show-picture-content-aquarium'>
+      <h2 class="show-picture-content-aquarium">
         ベストショット投稿者
       </h2>
       <% if @user.gender.name == "男性" %>
-        <%= link_to @user.nickname, user_path(@picture.user_id), class: 'show-picture-content-nickname-men' %>
+        <%= link_to @user.nickname, user_path(@picture.user_id), class: "show-picture-content-nickname-men" %>
       <% elsif @user.gender.name == "女性" %>
-        <%= link_to @user.nickname, user_path(@picture.user_id), class: 'show-picture-content-nickname-woman' %>
+        <%= link_to @user.nickname, user_path(@picture.user_id), class: "show-picture-content-nickname-woman" %>
       <% else %>
-        <%= link_to @user.nickname, user_path(@picture.user_id), class: 'show-picture-content-nickname-other' %>
+        <%= link_to @user.nickname, user_path(@picture.user_id), class: "show-picture-content-nickname-other" %>
       <% end %>
     </div>
   <% end %>
 
   <% if user_signed_in? && @picture.user_id == current_user.id %>
-    <div class='picture-edit-btn'>
+    <div class="picture-edit-btn">
       <%= link_to  "ベストショット情報の編集 / 削除", edit_user_picture_path(@picture.user, @picture), class: "picture-edit-red-btn" %>
     </div>
   <% end %>

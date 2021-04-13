@@ -1,14 +1,14 @@
 <%# CSS・・・assets/stylesheets/facilities/show.css %>
 <li>
-  <div class='show-comment-box'>
-    <p class='show-comment-name'>
+  <div class="show-comment-box">
+    <p class="show-comment-name">
       <% if user_signed_in? && comment.user.nickname == current_user.nickname %>
         <%= link_to comment.user.nickname, user_path(comment.user_id), class: "show-my-comment-link" %>
       <% else %>
         <%= link_to comment.user.nickname, user_path(comment.user_id), class: "show-comment-link" %>
       <% end %>
     </p>
-    <h2 class='show-comment-text'>
+    <h2 class="show-comment-text">
       <%= simple_format(comment.text) %>
     </h2>
   </div>

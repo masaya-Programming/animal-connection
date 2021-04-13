@@ -1,62 +1,62 @@
 <%# CSS・・・assets/stylesheets/users/show.css %>
 <%= render "shared/header" %>
-<div class='mypage-main'>
-  <div class='mypage-header'>
+<div class="mypage-main">
+  <div class="mypage-header">
     <% if user_signed_in? && @user == current_user %>
       <% if @user.gender.name == "男性" %>
-        <h1 class='mypage-top-nickname-men'><%= @user.nickname %></h1>
-        <h1 class='mypage-top-text'>マイページ</h1>
+        <h1 class="mypage-top-nickname-men"><%= @user.nickname %></h1>
+        <h1 class="mypage-top-text">マイページ</h1>
       <% elsif @user.gender.name == "女性" %>
-        <h1 class='mypage-top-nickname-woman'><%= @user.nickname %></h1>
-        <h1 class='mypage-top-text'>マイページ</h1>
+        <h1 class="mypage-top-nickname-woman"><%= @user.nickname %></h1>
+        <h1 class="mypage-top-text">マイページ</h1>
       <% else %>
-        <h1 class='mypage-top-nickname-other'><%= @user.nickname %></h1>
-        <h1 class='mypage-top-text'>マイページ</h1>
+        <h1 class="mypage-top-nickname-other"><%= @user.nickname %></h1>
+        <h1 class="mypage-top-text">マイページ</h1>
       <% end %>
     <% else %>
       <% if @user.gender.name == "男性" %>
-        <h1 class='mypage-top-nickname-men'><%= @user.nickname %></h1>
-        <h1 class='mypage-top-text'>ユーザーページ</h1>
+        <h1 class="mypage-top-nickname-men"><%= @user.nickname %></h1>
+        <h1 class="mypage-top-text">ユーザーページ</h1>
       <% elsif @user.gender.name == "女性" %>
-        <h1 class='mypage-top-nickname-woman'><%= @user.nickname %></h1>
-        <h1 class='mypage-top-text'>ユーザーページ</h1>
+        <h1 class="mypage-top-nickname-woman"><%= @user.nickname %></h1>
+        <h1 class="mypage-top-text">ユーザーページ</h1>
       <% else %>
-        <h1 class='mypage-top-nickname-other'><%= @user.nickname %></h1>
-        <h1 class='mypage-top-text'>ユーザーページ</h1>
+        <h1 class="mypage-top-nickname-other"><%= @user.nickname %></h1>
+        <h1 class="mypage-top-text">ユーザーページ</h1>
       <% end %>
     <% end %>
   </div>
 
-  <div class='mypage-comment-ber'>
-    <h1 class='mypage-comment-top'>
+  <div class="mypage-comment-ber">
+    <h1 class="mypage-comment-top">
       投稿レビュー <%= @comments.length %>件
     </h1>
-    <ul class='mypage-comment-list'>
-      <%= render partial: 'comment', collection: @comments %>
+    <ul class="mypage-comment-list">
+      <%= render partial: "comment", collection: @comments %>
     </ul>
     <% if @comments.length == 0 %>
-      <p class='mypage-comment-picture-nil-text'>
+      <p class="mypage-comment-picture-nil-text">
         <%= @user.nickname %>の投稿レビューはありません。
       </p>
     <% end %>
   </div>
 
-  <div class='mypage-picture-ber'>
-    <h1 class='mypage-picture-top'>
+  <div class="mypage-picture-ber">
+    <h1 class="mypage-picture-top">
       投稿ベストショット <%= @pictures.length %>件
     </h1>
-    <ul class='mypage-picture-list'>
-      <%= render partial: 'picture', collection: @pictures %>
+    <ul class="mypage-picture-list">
+      <%= render partial: "picture", collection: @pictures %>
     </ul>
     <% if @pictures.length == 0 %>
-      <p class='mypage-comment-picture-nil-text'>
+      <p class="mypage-comment-picture-nil-text">
         <%= @user.nickname %>の投稿ベストショットはありません。
       </p>
     <% end %>
   </div>
 
   <% if user_signed_in? && @user == current_user %>
-    <div class='user-edit-btn'>
+    <div class="user-edit-btn">
       <%= link_to  "アカウント情報の変更 / 削除", edit_user_registration_path(current_user), class: "user-edit-red-btn" %>
     </div>
   <% end %>

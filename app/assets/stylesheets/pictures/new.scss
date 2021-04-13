@@ -30,6 +30,16 @@
   font-size: 1.1rem;
 }
 
+.preview-list {
+  display: flex;
+  justify-content: center;
+}
+
+.picture-preview {
+  margin-top: 0.4rem;
+  width: 18rem;
+}
+
 .picture-input-default-title {
   display: flex;
   justify-content: center;

@@ -1,22 +1,22 @@
 <%# CSS・・・assets/stylesheets/facilities/index.scss %>
 <%= render "shared/header" %>
-<div class='main'>
-  <div class='top-contents'>
-    <h1 class='top-message'>
+<div class="main">
+  <div class="top-contents">
+    <h1 class="top-message">
       あにまるコネクションへようこそ‼︎
     </h1>
-    <p class='top-explain'>
+    <p class="top-explain">
       多種多様な生物との出会いをつくり、
     </p>
-    <p class='top-explain'>
+    <p class="top-explain">
       その[思い出]を記録することができます。
     </p>
   </div>  
 
   <%= form_with model: @facility, url: search_facilities_path, method: :get, class: "registration-main", local: true do |f| %>
-    <div class='form-wrap'>
-      <div class='form-header'>
-        <h1 class='form-top-text'>
+    <div class="form-wrap">
+      <div class="form-header">
+        <h1 class="form-top-text">
           動物園・水族館 検索
         </h1>
       </div>
@@ -37,24 +37,24 @@
         <%= f.collection_select(:prefectures_id, Prefectures.all, :id, :name, {}, {class:"select-box", id:"prefectures"}) %>
       </div>
       
-      <div class='register-btn'>
+      <div class="register-btn">
         <%= f.submit "スポット検索", class: "register-red-btn" %>
       </div>
     </div>
   <% end %>
 
-  <div class='top-picture-ber'>
-    <h1 class='top-picture-top'>
+  <div class="top-picture-ber">
+    <h1 class="top-picture-top">
       新規ベストショット
     </h1>
-    <ul class='top-picture-list'>
-      <%= render partial: 'picture-top', collection: @pictures, as: :new_picture %>
+    <ul class="top-picture-list">
+      <%= render partial: "picture-top", collection: @pictures, as: :new_picture %>
     </ul>
     <% if @pictures.length == 0 %>
-      <p class='top-picture-nil'>
+      <p class="top-picture-nil">
         投稿されたベストショットがありません。
       </p>
-      <p class='top-picture-nil'>
+      <p class="top-picture-nil">
         新しい投稿をお待ちしております。
       </p>
     <% end %>

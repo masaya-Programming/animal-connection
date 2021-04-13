@@ -1,15 +1,15 @@
 <%# CSS・・・assets/stylesheets/devise/registrations.css %>
 <%= render "shared/header-second"%>
 
-<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
-  <div class='form-wrap'>
-    <div class='form-header'>
-      <h1 class='form-top-text'>
+<%= form_with model: @user, url: user_registration_path, class: "registration-main", local: true do |f| %>
+  <div class="form-wrap">
+    <div class="form-header">
+      <h1 class="form-top-text">
         ユーザーの新規登録
       </h1>
     </div>
 
-    <%= render 'shared/error_messages', model: f.object %>
+    <%= render "shared/error_messages", model: f.object %>
 
     <div class="form-group">
       <div>
@@ -17,7 +17,7 @@
         <span class="indispensable">必須</span>
       </div>
       <%= f.text_area :nickname, class:"input-default-nickname", id:"nickname", placeholder:"3~12文字のニックネーム", maxlength:"20", autofocus: true %>
-      <p class='info-text'>※全角半角どちらでも登録できます。</p>
+      <p class="info-text">※全角半角どちらでも登録できます。</p>
     </div>
 
     <div class="form-group">
@@ -34,7 +34,7 @@
         <span class="indispensable">必須</span>
       </div>
       <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可" %>
-      <p class='info-text'>※全て半角で入力してください。</p>
+      <p class="info-text">※全て半角で入力してください。</p>
     </div>
 
     <div class="form-group">
@@ -43,7 +43,7 @@
         <span class="indispensable">必須</span>
       </div>
       <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の英字と数字を両方含めたパスワード" %>
-      <p class='info-text'>※全て半角で入力してください。</p>
+      <p class="info-text">※全て半角で入力してください。</p>
     </div>
     
     <div class="form-group">
@@ -54,7 +54,7 @@
       <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
     </div>
 
-    <div class='register-btn'>
+    <div class="register-btn">
       <%= f.submit "ユーザー登録" ,class:"register-red-btn" %>
     </div>
   </div>

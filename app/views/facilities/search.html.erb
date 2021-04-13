@@ -1,30 +1,30 @@
 <%# CSS・・・assets/stylesheets/facilities/search.css %>
 <%= render "shared/header" %>
-<div class='search-main'>
-  <div class='search-wrap'>
+<div class="search-main">
+  <div class="search-wrap">
     <% if @facility.length != 0 %>
-      <% if @prefectures_id == '0' %>
-        <h1 class='search-top-text'>日本全国の<%= @category_name %>一覧</h1>
-      <% elsif @category_id == '0' %>
-        <h1 class='search-top-text'><%= @prefectures_name %>のスポット一覧</h1>
+      <% if @prefectures_id == "0" %>
+        <h1 class="search-top-text">日本全国の<%= @category_name %>一覧</h1>
+      <% elsif @category_id == "0" %>
+        <h1 class="search-top-text"><%= @prefectures_name %>のスポット一覧</h1>
       <% else %>
-        <h1 class='search-top-text'><%= @prefectures_name %>の<%= @category_name %>一覧</h1>
+        <h1 class="search-top-text"><%= @prefectures_name %>の<%= @category_name %>一覧</h1>
       <% end %>
-      <p class='search-sab-text'>検索結果 <%= @facility.length %>件</p>
+      <p class="search-sab-text">検索結果 <%= @facility.length %>件</p>
     <% end%>
     
-    <div calss='non-search'>
+    <div calss="non-search">
       <% if @facility.length == 0 %>
-          <h1 class='search-non-top-text'>検索結果 <%= @facility.length %>件</h1>
-          <p class='search-non-sab-text'>情報が見つかりませんでした。</p>
-          <p class='search-non-sab-text'>不備がある場合は、情報提供をお願いいたします。</p>
+          <h1 class="search-non-top-text">検索結果 <%= @facility.length %>件</h1>
+          <p class="search-non-sab-text">情報が見つかりませんでした。</p>
+          <p class="search-non-sab-text">不備がある場合は、情報提供をお願いいたします。</p>
       <% end %>
     </div>
-    <ul class='facilities-list'>
-      <%= render partial: 'facility', collection: @facility %>
+    <ul class="facilities-list">
+      <%= render partial: "facility", collection: @facility %>
     </ul>
 
-    <div class='again-search-box'>
+    <div class="again-search-box">
       <%= link_to "別の条件で探す", "/", class: "again-search-btn" %>
     </div>
   </div>

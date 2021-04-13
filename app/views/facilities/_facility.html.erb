@@ -1,25 +1,25 @@
 <%# CSS・・・assets/stylesheets/facilities/search.css %>
 <li>
   <% if facility.category.name == "動物園" %>
-    <%= link_to facility_path(facility.id), class: 'facility-list-zoo' do %>
+    <%= link_to facility_path(facility.id), class: "facility-list-zoo" do %>
       <%= image_tag "zoo-icon.png" %>
-      <div class='facility-text-box'>
-        <p class='facility-prefectures-text'>
+      <div class="facility-text-box">
+        <p class="facility-prefectures-text">
           <%= facility.prefectures.name %>
         </p>
-        <h2 class='facility-name-text'>
+        <h2 class="facility-name-text">
           <%= facility.name %>
         </h2>
       </div>
     <% end %>
   <% else %>
-    <%= link_to facility_path(facility.id), class: 'facility-list-aquarium' do %>
+    <%= link_to facility_path(facility.id), class: "facility-list-aquarium" do %>
       <%= image_tag "aquarium-icon.png" %>
-      <div class='facility-text-box'>
-        <p class='facility-prefectures-text'>
+      <div class="facility-text-box">
+        <p class="facility-prefectures-text">
           <%= facility.prefectures.name %>
         </p>
-        <h2 class='facility-name-text'>
+        <h2 class="facility-name-text">
           <%= facility.name %>
         </h2>
       </div>

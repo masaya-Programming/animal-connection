@@ -1,15 +1,15 @@
 <%# CSS・・・assets/stylesheets/devise/sessions.css %>
 <%= render "shared/header-second"%>
 
-<%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
-  <div class='form-wrap'>
-    <div class='form-header'>
-      <h1 class='form-top-text'>
+<%= form_with model: @user, url: user_session_path, class: "registration-main", local: true do |f| %>
+  <div class="form-wrap">
+    <div class="form-header">
+      <h1 class="form-top-text">
         ログイン
       </h1>
     </div>
 
-    <div class='login-flash-message'>
+    <div class="login-flash-message">
       <%= flash[:notice] %>
       <%= flash[:alert] %>
     </div>
@@ -30,7 +30,7 @@
       <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の英字と数字を両方含めたパスワード" %>
     </div>
 
-    <div class='login-btn'>
+    <div class="login-btn">
       <%= f.submit "ユーザーログイン" ,class:"login-red-btn" %>
     </div>
   </div>
