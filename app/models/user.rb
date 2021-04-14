@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   with_options presence: true do
     validates :nickname, uniqueness: { case_sensitive: true }, length: { in: 3..12 }
-    validates :gender_id, numericality: { other_than: 0, message: "を選択してください" }
+    validates :gender_id, numericality: { other_than: 0, message: 'を選択してください' }
     validates :email, uniqueness: { case_sensitive: true }, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
     validates :password, confirmation: true, format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/ }, on: :create
     validates :password_confirmation, format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/ }, on: :create

@@ -1,4 +1,4 @@
-require "rails_helper"
+require 'rails_helper'
 
 RSpec.describe Picture, type: :model do
   before do
@@ -26,25 +26,25 @@ RSpec.describe Picture, type: :model do
       it '画像タイトルが空だと画像投稿できない' do
         @picture.title = ''
         @picture.valid?
-        expect(@picture.errors.full_messages).to include "タイトルを入力してください"
+        expect(@picture.errors.full_messages).to include 'タイトルを入力してください'
       end
 
       it '画像ファイルが空だと画像投稿できない' do
         @picture.image = nil
         @picture.valid?
-        expect(@picture.errors.full_messages).to include "ベストショットを選択してください"
+        expect(@picture.errors.full_messages).to include 'ベストショットを選択してください'
       end
 
       it 'user_idが空だと画像投稿できない' do
         @picture.user_id = ''
         @picture.valid?
-        expect(@picture.errors.full_messages).to include "Userを入力してください"
+        expect(@picture.errors.full_messages).to include 'Userを入力してください'
       end
 
       it 'facility_idが空だと画像投稿できない' do
         @picture.facility_id = ''
         @picture.valid?
-        expect(@picture.errors.full_messages).to include "Facilityを入力してください"
+        expect(@picture.errors.full_messages).to include 'Facilityを入力してください'
       end
     end
   end

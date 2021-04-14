@@ -7,7 +7,7 @@ FactoryBot.define do
     association :facility
 
     after(:build) do |picture|
-      picture.image.attach(io: File.open("public/images/test_image.png"), filename: "test_image.png")
+      picture.image.attach(io: File.open('public/images/test_image.png'), filename: 'test_image.png')
     end
   end
 end

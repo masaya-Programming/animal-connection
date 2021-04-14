@@ -6,15 +6,15 @@ class Facility < ApplicationRecord
   with_options presence: true do
     validates :name
     validates :kananame
-    validates :category_id, numericality: { other_than: 0, message: "を選択してください" }
-    validates :prefectures_id, numericality: { other_than: 0, message: "を選択してください" }
+    validates :category_id, numericality: { other_than: 0, message: 'を選択してください' }
+    validates :prefectures_id, numericality: { other_than: 0, message: 'を選択してください' }
     validates :address
   end
 
   def self.search(category_id, prefectures_id)
-    if prefectures_id == "0"
+    if prefectures_id == '0'
       Facility.where(category_id: category_id)
-    elsif category_id == "0"
+    elsif category_id == '0'
       Facility.where(prefectures_id: prefectures_id)
     else
       Facility.where(category_id: category_id).where(prefectures_id: prefectures_id)

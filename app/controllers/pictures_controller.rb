@@ -44,7 +44,7 @@ class PicturesController < ApplicationController
       @picture.destroy
       redirect_to mypage_user_path(@current_user.id)
     else
-      redirect_to root_path  
+      redirect_to root_path
     end
   end
 

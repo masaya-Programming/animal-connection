@@ -14,12 +14,8 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    if current_user.id == @user.id
-      @user.destroy
-      redirect_to root_path
-    else
-      redirect_to root_path
-    end
+    @user.destroy if current_user.id == @user.id
+    redirect_to root_path
   end
 
   private
