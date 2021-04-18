@@ -18,9 +18,12 @@ ja:
         name: 施設名
         kananame: フリガナ
         category_id: カテゴリー
+        region_id: 地方
         prefectures_id: 都道府県
         address: 所在地
         official_website: 公式URL
+        latitude: 緯度
+        longitude: 経度
         must be other than 0: を選択してください
       comment:
         text: レビュー内容

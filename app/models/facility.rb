@@ -1,14 +1,18 @@
 class Facility < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
+  belongs_to :region
   belongs_to :prefectures
 
   with_options presence: true do
     validates :name
     validates :kananame
     validates :category_id, numericality: { other_than: 0, message: 'を選択してください' }
+    validates :region_id, numericality: { other_than: 0, message: 'を選択してください' }
     validates :prefectures_id, numericality: { other_than: 0, message: 'を選択してください' }
     validates :address
+    validates :latitude
+    validates :longitude
   end
 
   def self.search(category_id, prefectures_id)
