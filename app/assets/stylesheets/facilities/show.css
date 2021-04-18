@@ -56,12 +56,6 @@
   margin-left: 1vw;
 }
 
-.map-area {
-  padding: 10rem;
-  margin-left: 3vw;
-  background: linear-gradient(to left, #b3ffab, #12fff7);
-}
-
 .upper-content {
   height: auto;
   display: flex;

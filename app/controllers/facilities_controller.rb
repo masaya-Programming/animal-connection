@@ -9,6 +9,7 @@ class FacilitiesController < ApplicationController
     @comments = @comments.reverse
     @pictures = Picture.where(facility_id: @facility.id)
     @pictures = @pictures.reverse
+    @google_key = ENV['GMP_API_KEY']
   end
 
   def search
