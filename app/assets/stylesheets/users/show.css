@@ -79,14 +79,14 @@
 .mypage-comment-facility-link {
   background-color: rgb(73, 168, 140);
   color: #fff;
-  border-radius: 20%;
+  border-radius: 10%;
   padding: 0.2rem 0.7rem;
 }
 
 .mypage-comment-edit-link {
   background-color: #ea352d;
   color: #fff;
-  border-radius: 20%;
+  border-radius: 10%;
   padding: 0.2rem 0.7rem;
   margin-left: 2vw;
 }
@@ -144,7 +144,7 @@
 .mypage-picture-link {
   background-color: rgb(73, 168, 140);
   color: #fff;
-  border-radius: 20%;
+  border-radius: 10%;
   padding: 0.2rem 0.7rem;
 }
 
@@ -168,7 +168,6 @@
   justify-content: center;
   width: 40%;
   background: #ea352d;
-  border: 0.5rem solid #ea352d;
   border-radius: 1rem;
   color: #fff;
   line-height: 2rem;

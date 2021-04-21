@@ -110,14 +110,14 @@
 .show-comment-link {
   background-color: rgb(73, 168, 140);
   color: #fff;
-  border-radius: 20%;
+  border-radius: 10%;
   padding: 0.2rem 0.7rem;
 }
 
 .show-my-comment-link {
   background-color: rgb(194, 80, 65);
   color: #fff;
-  border-radius: 20%;
+  border-radius: 10%;
   padding: 0.2rem 0.7rem;
 }
 
@@ -174,14 +174,14 @@
 .show-picture-link {
   background-color: rgb(73, 168, 140);
   color: #fff;
-  border-radius: 20%;
+  border-radius: 10%;
   padding: 0.2rem 0.7rem;
 }
 
 .show-my-picture-link {
   background-color: rgb(194, 80, 65);
   color: #fff;
-  border-radius: 20%;
+  border-radius: 10%;
   padding: 0.2rem 0.7rem;
 }
 

@@ -117,7 +117,6 @@
 .register-red-btn {
   width: 100%;
   background: #ea352d;
-  border: 0.5rem solid #ea352d;
   border-radius: 1rem;
   color: #fff;
   line-height: 3rem;
@@ -199,7 +198,6 @@
   justify-content: center;
   width: 100%;
   background: rgb(202, 84, 84);
-  border: 0.5rem solid rgb(202, 84, 84);
   border-radius: 1rem;
   color: #fff;
   line-height: 1.5rem;

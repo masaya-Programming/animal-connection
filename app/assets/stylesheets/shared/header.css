@@ -30,8 +30,8 @@
   border-bottom: solid 3px rgb(17, 36, 119);
   border-radius: 2rem;
   font-weight: bold;
-  font-size: 1.2rem;
-  text-shadow:1px 0 2px black;
+  font-size: 1.4rem;
+  text-shadow:1px 0 1px black;
   margin-right: 1vw;
 }
 
@@ -44,8 +44,8 @@
   border-bottom: solid 3px rgb(192, 27, 27);
   border-radius: 2rem;
   font-weight: bold;
-  font-size: 1.2rem;
-  text-shadow:1px 0 2px black;
+  font-size: 1.4rem;
+  text-shadow:1px 0 1px black;
   margin-right: 1vw;
 }
 
@@ -58,8 +58,8 @@
   border-bottom: solid 3px rgb(143, 23, 167);
   border-radius: 2rem;
   font-weight: bold;
-  font-size: 1.2rem;
-  text-shadow:1px 0 2px black;
+  font-size: 1.4rem;
+  text-shadow:1px 0 1px black;
   margin-right: 1vw;
 }
 
@@ -72,8 +72,8 @@
   border-bottom: solid 3px rgb(175, 100, 100);
   border-radius: 2rem;
   font-weight: bold;
-  font-size: 1.2rem;
-  text-shadow:1px 0 2px black;
+  font-size: 1.4rem;
+  text-shadow:1px 0 1px black;
 }
 
 .login {
@@ -85,8 +85,8 @@
   border-bottom: solid 3px rgb(175, 100, 100);
   border-radius: 2rem;
   font-weight: bold;
-  font-size: 1.2rem;
-  text-shadow:1px 0 2px black;
+  font-size: 1.4rem;
+  text-shadow:1px 0 1px black;
   margin-right: 1vw;
 }
 
@@ -98,8 +98,8 @@
   background: rgb(255, 182, 122);
   border-bottom: solid 3px rgb(175, 100, 100);
   border-radius: 2rem;
-  font-size: 1.2rem;
-  text-shadow:1px 0 2px black;
+  font-size: 1.4rem;
+  text-shadow:1px 0 1px black;
   font-weight: bold;
 }
 
