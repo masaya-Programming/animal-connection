@@ -1,29 +1,32 @@
 <%# CSS・・・assets/stylesheets/users/show.css %>
 <%= render "shared/header" %>
+<% if user_signed_in? && @user == current_user %>
+  <% breadcrumb :mypage %>
+<% else %>
+  <% breadcrumb :userpage %>
+<% end %>
+<%= breadcrumbs separator:" &#x27A4; ", class: "logo" %>
+
 <div class="mypage-main">
   <div class="mypage-header">
     <% if user_signed_in? && @user == current_user %>
       <% if @user.gender.name == "男性" %>
         <h1 class="mypage-top-nickname-men"><%= @user.nickname %></h1>
-        <h1 class="mypage-top-text">マイページ</h1>
       <% elsif @user.gender.name == "女性" %>
         <h1 class="mypage-top-nickname-woman"><%= @user.nickname %></h1>
-        <h1 class="mypage-top-text">マイページ</h1>
       <% else %>
         <h1 class="mypage-top-nickname-other"><%= @user.nickname %></h1>
-        <h1 class="mypage-top-text">マイページ</h1>
       <% end %>
+      <h1 class="mypage-top-text">マイページ</h1>
     <% else %>
       <% if @user.gender.name == "男性" %>
         <h1 class="mypage-top-nickname-men"><%= @user.nickname %></h1>
-        <h1 class="mypage-top-text">ユーザーページ</h1>
       <% elsif @user.gender.name == "女性" %>
         <h1 class="mypage-top-nickname-woman"><%= @user.nickname %></h1>
-        <h1 class="mypage-top-text">ユーザーページ</h1>
       <% else %>
         <h1 class="mypage-top-nickname-other"><%= @user.nickname %></h1>
-        <h1 class="mypage-top-text">ユーザーページ</h1>
       <% end %>
+      <h1 class="mypage-top-text">ユーザーページ</h1>
     <% end %>
   </div>
 

@@ -1,5 +1,8 @@
 <%# CSS・・・assets/stylesheets/facilities/show.css %>
 <%= render "shared/header" %>
+<% breadcrumb :show_facility, @facility %>
+<%= breadcrumbs separator: " &#x27A4; ", class: "logo" %>
+
 <script type="text/javascript">
   function initMap() {
     const coordinate = {lat: <%= @facility.latitude %>, lng: <%= @facility.longitude %>};
@@ -10,7 +13,7 @@
   }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= @google_key %>&callback=initMap" async defer></script>
-<div calss="show-main">
+<div class="show-main">
   <% if @facility.category.name == "動物園" %>
     <div class="show-facility-list-zoo">
       <%= image_tag "zoo-icon.png" %>

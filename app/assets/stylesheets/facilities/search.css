@@ -3,7 +3,7 @@
 }
 
 .search-main {
-  width: 100vw;
+  width: 100%;
   height: auto;
   background-color: rgb(223, 235, 230);
   display: flex;

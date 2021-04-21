@@ -1,0 +1,19 @@
+.logo {
+  padding: 0.5vw 9vw;
+  background: linear-gradient(to left, #b3ffab, #12fff7);
+}
+
+.logo a {
+  font-size: 1.1rem;
+  margin: 0vw 0.3vw;
+}
+
+.current {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0vw 0.3vw;
+}
+
+.logo a:hover {
+  color: rgb(236, 147, 73);
+}
