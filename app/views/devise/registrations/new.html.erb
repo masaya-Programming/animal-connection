@@ -1,5 +1,7 @@
 <%# CSS・・・assets/stylesheets/devise/registrations.css %>
 <%= render "shared/header-second"%>
+<% breadcrumb :new_user %>
+<%= breadcrumbs separator:" &#x27A4; ", class: "logo" %>
 
 <%= form_with model: @user, url: user_registration_path, class: "registration-main", local: true do |f| %>
   <div class="form-wrap">

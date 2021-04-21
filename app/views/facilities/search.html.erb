@@ -1,5 +1,8 @@
 <%# CSS・・・assets/stylesheets/facilities/search.css %>
 <%= render "shared/header" %>
+<% breadcrumb :select_search %>
+<%= breadcrumbs separator:" &#x27A4; ", class: "logo" %>
+
 <div class="search-main">
   <div class="search-wrap">
     <% if @facility.length != 0 %>
@@ -13,7 +16,7 @@
       <p class="search-sab-text">検索結果 <%= @facility.length %>件</p>
     <% end%>
     
-    <div calss="non-search">
+    <div class="non-search">
       <% if @facility.length == 0 %>
           <h1 class="search-non-top-text">検索結果 <%= @facility.length %>件</h1>
           <p class="search-non-sab-text">情報が見つかりませんでした。</p>

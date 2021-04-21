@@ -3,7 +3,7 @@
 }
 
 .top-contents {
-  width: 100vw;
+  width: 100%;
   background-image: image-url('header-ber.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -34,7 +34,7 @@
 .top-picture-ber {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   padding: 3% 18%;
   background-color: rgb(223, 235, 230);
 }

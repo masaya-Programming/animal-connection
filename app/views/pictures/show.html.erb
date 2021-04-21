@@ -1,6 +1,13 @@
 <%# CSS・・・assets/stylesheets/pictures/show.css %>
 <%= render "shared/header" %>
-<div calss="show-picture-main">
+<% if user_signed_in? && @user == current_user %>
+  <% breadcrumb :show_mypicture, @picture %>
+<% else %>
+  <% breadcrumb :show_picture, @picture %>
+<% end %>
+<%= breadcrumbs separator:" &#x27A4; ", class: "logo" %>
+
+<div class="show-picture-main">
   <% if @facility.category.name == "動物園" %>
     <%= link_to facility_path(@facility.id) do %>
       <div class="show-picture-list-zoo">
