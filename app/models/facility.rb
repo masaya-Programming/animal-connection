@@ -7,6 +7,7 @@ class Facility < ApplicationRecord
   with_options presence: true do
     validates :name
     validates :kananame
+    validates :hiraname
     validates :category_id, numericality: { other_than: 0, message: 'を選択してください' }
     validates :region_id, numericality: { other_than: 0, message: 'を選択してください' }
     validates :prefectures_id, numericality: { other_than: 0, message: 'を選択してください' }
@@ -23,6 +24,10 @@ class Facility < ApplicationRecord
     else
       Facility.where(category_id: category_id).where(prefectures_id: prefectures_id)
     end
+  end
+
+  def self.keysearch(keyword)
+    Facility.where(['name LIKE(?) OR kananame LIKE(?) OR hiraname LIKE(?)', "%#{keyword}%", "%#{keyword}%", "%#{keyword}%"])
   end
 
   has_many :comments, dependent: :destroy

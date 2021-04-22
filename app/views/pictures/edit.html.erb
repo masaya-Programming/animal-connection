@@ -47,7 +47,7 @@
         <label class="form-text">タイトル</label>
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :title, class:"picture-input-default-title", id:"picture-title", autofocus: true %>
+      <%= f.text_field :title, class:"picture-input-default-title", id:"picture-title", maxlength:"25", autofocus: true %>
       <p class="info-text">※更新する画像のタイトルを入力してください。</p>
     </div>
 

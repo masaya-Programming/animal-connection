@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_18_002249) do
+ActiveRecord::Schema.define(version: 2021_04_22_022157) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -52,9 +52,14 @@ ActiveRecord::Schema.define(version: 2021_04_18_002249) do
     t.string "official_website"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "region_id", null: false
+    t.integer "region_id", null: false
     t.float "latitude", null: false
     t.float "longitude", null: false
+    t.string "hiraname", null: false
+    t.text "business_data"
+    t.text "closed_data"
+    t.text "animal_data"
+    t.text "attention_point"
   end
 
   create_table "pictures", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

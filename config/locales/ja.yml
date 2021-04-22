@@ -16,7 +16,8 @@ ja:
         must be other than 0: を選択してください
       facility:
         name: 施設名
-        kananame: フリガナ
+        kananame: カタカナ
+        hiraname: ひらがな
         category_id: カテゴリー
         region_id: 地方
         prefectures_id: 都道府県
@@ -24,6 +25,10 @@ ja:
         official_website: 公式URL
         latitude: 緯度
         longitude: 経度
+        business_data: 営業情報
+        closed_data: 休業情報
+        animal_data: いきもの情報
+        attention_point: 注目ポイント
         must be other than 0: を選択してください
       comment:
         text: レビュー内容

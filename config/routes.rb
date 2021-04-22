@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   resources :facilities, only: [:index, :show] do
     collection do
-      get "search"
+      get "search", "keysearch"
     end
     resources :comments, only: [:new, :create]
     resources :pictures, only: [:new, :create]

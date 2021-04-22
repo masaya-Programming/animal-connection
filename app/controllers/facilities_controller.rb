@@ -13,13 +13,23 @@ class FacilitiesController < ApplicationController
   end
 
   def search
-    @category_id = params[:category_id]
-    @prefectures_id = params[:prefectures_id]
-    @facility = Facility.search(params[:category_id], params[:prefectures_id])
-    return true if @facility.empty?
+    if "0" == params[:category_id] && "0" == params[:prefectures_id]
+      redirect_to root_path
+    else
+      @category_id = params[:category_id]
+      @category_name = Category.find(@category_id).name
+      @prefectures_id = params[:prefectures_id]
+      @prefectures_name = Prefectures.find(@prefectures_id).name
+      @facility = Facility.search(params[:category_id], params[:prefectures_id])
+    end
+  end
 
-    @category_name = @facility[0].category.name
-    @prefectures_name = @facility[0].prefectures.name
-    true
+  def keysearch
+    if "" == params[:keyword]
+      redirect_to root_path
+    else
+      @keyword = params[:keyword]
+      @facility = Facility.keysearch(params[:keyword])
+    end
   end
 end

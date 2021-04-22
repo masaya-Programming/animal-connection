@@ -29,7 +29,13 @@ RSpec.describe Facility, type: :model do
       it '施設名(カタカナ)が空だと情報登録できない' do
         @facility.kananame = ''
         @facility.valid?
-        expect(@facility.errors.full_messages).to include 'フリガナを入力してください'
+        expect(@facility.errors.full_messages).to include 'カタカナを入力してください'
+      end
+
+      it '施設名(ひらがな)が空だと情報登録できない' do
+        @facility.hiraname = ''
+        @facility.valid?
+        expect(@facility.errors.full_messages).to include 'ひらがなを入力してください'
       end
 
       it 'カテゴリーが空だと情報登録できない' do

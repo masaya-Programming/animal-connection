@@ -18,7 +18,7 @@
         <label class="form-text">ニックネーム</label>
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :nickname, class:"input-default-nickname", id:"nickname", placeholder:"3~12文字のニックネーム", maxlength:"20", autofocus: true %>
+      <%= f.text_field :nickname, class:"input-default", id:"nickname", placeholder:"3~12文字のニックネーム", maxlength:"20", autofocus: true %>
       <p class="info-text">※全角半角どちらでも登録できます。</p>
     </div>
 
@@ -53,7 +53,7 @@
         <label class="form-text">新しいパスワード(再入力)</label>
         <span class="indispensable-free">任意</span>
       </div>
-      <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じ新しいパスワードを入力して下さい" %>
+      <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じ新しいパスワードを入力してください" %>
     </div>
 
     <div class="form-group">

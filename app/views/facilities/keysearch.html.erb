@@ -5,15 +5,12 @@
 
 <div class="search-main">
   <div class="search-wrap">
-    <% if @prefectures_id == "0" %>
-      <h1 class="search-top-text">日本全国の<%= @category_name %>一覧</h1>
-    <% elsif @category_id == "0" %>
-      <h1 class="search-top-text"><%= @prefectures_name %>のスポット一覧</h1>
-    <% else %>
-      <h1 class="search-top-text"><%= @prefectures_name %>の<%= @category_name %>一覧</h1>
-    <% end %>
+    <div class="key-search-top">
+      <h1>検索キーワード</h1>
+      <h1>【<%= @keyword %>】</h1>
+    </div>
     <p class="search-sab-text">検索結果 <%= @facility.length %>件</p>
-    
+      
     <% if @facility.length == 0 %>
       <p class="search-non-text">情報が見つかりませんでした。</p>
     <% end %>
@@ -23,7 +20,7 @@
     </ul>
 
     <div class="again-search-box">
-      <%= link_to "別のカテゴリーで探す", "/", class: "again-search-btn" %>
+      <%= link_to "別のキーワードで探す", "/", class: "again-search-btn" %>
     </div>
   </div>
 </div>
