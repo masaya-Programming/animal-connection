@@ -34,6 +34,7 @@
 .top-registration-main {
   width: 100%;
   height: auto;
+  padding-top: 1rem;
   background-color: rgb(223, 235, 230);
   display: flex;
   justify-content: center;
@@ -50,6 +51,7 @@
 
 .top-form-top-text {
   font-weight: bold;
+  margin-left: 2rem;
 }
 
 .top-select {
@@ -73,12 +75,45 @@
 .top-search-btn {
   width: 80px;
   cursor: pointer;
+  transition-duration: 0.5s;
 }
 
 .top-search-btn:hover {
   width: 80px;
-  padding: 0.3rem;
   cursor: pointer;
+  transition-duration: 0.5s;
+  transform: rotate(45deg);
+}
+
+.area-box {
+  display: flex;
+  justify-content: center;
+}
+
+.area-box-image {
+  position:relative;
+}
+
+.area-icon-set {
+  position:absolute; top:60px; left:10px;
+}
+
+.area-icon {
+  width: 90px;
+  background-color: rgb(223, 235, 230);
+  padding: 2px;
+  margin: 5px;
+  border-radius: 10px;
+  transition-duration: 0.5s;
+}
+
+.area-icon:hover {
+  width: 100px;
+  background-color: rgb(223, 235, 230);
+  padding: 2px;
+  margin: 3px;
+  border-radius: 10px;
+  transition-duration: 0.5s;
 }
 
 .top-picture-ber {

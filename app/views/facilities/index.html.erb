@@ -44,17 +44,35 @@
   <div class="top-registration-main" >
     <div class="top-form-wrap">
       <h1 class="top-form-top-text">
-        エリアで探す
+        エリア・地図で探す
       </h1>
-      <div class="top-select">
-        <%= image_submit_tag("top-search-icon.png", {class:"top-search-btn"}) %>
-        <%= image_submit_tag("top-search-icon.png", {class:"top-search-btn"}) %>
-        <%= image_submit_tag("top-search-icon.png", {class:"top-search-btn"}) %>
-      </div>
-      <div class="top-select">
-        <%= image_submit_tag("top-search-icon.png", {class:"top-search-btn"}) %>
-        <%= image_submit_tag("top-search-icon.png", {class:"top-search-btn"}) %>
-        <%= image_submit_tag("top-search-icon.png", {class:"top-search-btn"}) %>
+      <div class="area-box">
+        <div class="area-box-image">
+          <figure><img src="/assets/japan-map.png" usemap="#japan-map" alt="日本地図" /></figure>
+          <map name="japan-map">
+            <area shape="poly" coords="393,8,394,69,374,90,374,113,408,113,408,102,420,102,444,113,472,102,502,100,501,55,481,55,423,8,394,8,394,8" href="/facilities/hokkaidotohoku" alt="hokkaido" />
+            <area shape="poly" coords="371,126,372,260,448,260,448,191,454,186,454,147,450,144,440,142,439,117,414,116,413,133,402,132,401,126,371,126,371,126" href="/facilities/hokkaidotohoku" alt="tohoku" />
+            <area shape="poly" coords="361,260,361,312,381,314,382,327,385,327,386,340,419,341,418,317,423,317,423,332,425,332,424,340,455,340,456,286,448,280,448,260,361,260,361,260" href="/facilities/kanto" alt="kanto" />
+            <area shape="poly" coords="257,288,258,301,302,302,303,342,308,342,308,362,358,362,374,350,375,355,392,355,392,343,385,341,385,329,381,329,381,315,361,313,361,261,371,261,371,218,310,253,310,244,285,244,286,266,268,280,267,288,258,288,257,288" href="/facilities/chubu" alt="chubu" />
+            <area shape="poly" coords="212,288,212,341,242,342,243,382,299,382,299,342,302,342,302,301,257,300,256,288,212,289,212,288" href="/facilities/kinki" alt="kinki" />
+            <area shape="poly" coords="152,287,128,307,128,341,212,341,212,288,153,288,153,288" href="/facilities/chugokushikoku" alt="chugoku" />
+            <area shape="poly" coords="132,358,133,409,173,409,173,399,190,399,191,411,225,411,226,361,240,360,239,345,226,344,226,351,183,351,182,364,173,364,172,350,133,358,133,358" href="/facilities/chugokushikoku" alt="shikoku" />
+            <area shape="poly" coords="39,315,39,358,62,357,63,376,57,377,58,415,82,415,82,405,88,405,87,421,98,420,118,413,118,316,40,315,40,315" href="/facilities/kyushuokinawa" alt="kyushu" />
+            <area shape="poly" coords="8,384,8,420,33,421,32,384,8,383,5,384" href="/facilities/kyushuokinawa" alt="okinawa" />
+            <div class="area-icon-set">
+              <div>
+                <a href="/facilities/chugokushikoku"><img src="/assets/chugoku-shikoku-icon.png" class="area-icon" alt="中国四国" /></a>
+                <a href="/facilities/chubu"><img src="/assets/chubu-icon.png" class="area-icon" alt="中部" /></a>
+                <a href="/facilities/hokkaidotohoku"><img src="/assets/hokkaido-tohoku-icon.png" class="area-icon" alt="北海道東北" /></a>
+              </div>
+              <div>
+                <a href="/facilities/kyushuokinawa"><img src="/assets/kyushu-okinawa-icon.png" class="area-icon" alt="九州沖縄" /></a>
+                <a href="/facilities/kinki"><img src="/assets/kinki-icon.png" class="area-icon" alt="近畿" /></a>
+                <a href="/facilities/kanto"><img src="/assets/kanto-icon.png" class="area-icon" alt="関東" /></a>
+              </div>
+            </div>
+          </map>
+        </div>
       </div>
     </div>
   </div>
@@ -75,6 +93,6 @@
       </p>
     <% end %>
   </div>
-
 </div>
+
 <%= render "shared/footer" %>

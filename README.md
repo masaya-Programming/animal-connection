@@ -127,6 +127,7 @@
 | ---------------- | --------| ----------- |
 | name             | string  | null: false |
 | kananame         | string  | null: false |
+| hiraname         | string  | null: false |
 | category_id      | integer | null: false |
 | region_id        | integer | null: false |
 | prefectures_id   | integer | null: false |
@@ -134,6 +135,10 @@
 | official_website | string  |             |
 | latitude         | float   | null: false |
 | longitude        | float   | null: false |
+| business_data    | text    |             |
+| closed_data      | text    |             |
+| animal_data      | text    |             |
+| attention_point  | text    |             |
   ### facilitiesテーブルのAssociation
 - has_many : comments
 - has_many : pictures

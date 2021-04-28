@@ -51,6 +51,54 @@ crumb :select_search do
   parent :root
 end
 
+crumb :hokkaidotohoku_area do
+  link "北海道・東北エリア", hokkaidotohoku_facilities_path
+  parent :root
+end
+
+crumb :kanto_area do
+  link "関東エリア", kanto_facilities_path
+  parent :root
+end
+
+crumb :chubu_area do
+  link "中部エリア", chubu_facilities_path
+  parent :root
+end
+
+crumb :kinki_area do
+  link "近畿エリア", kinki_facilities_path
+  parent :root
+end
+
+crumb :chugokushikoku_area do
+  link "中国・四国エリア", chugokushikoku_facilities_path
+  parent :root
+end
+
+crumb :kyushuokinawa_area do
+  link "九州・沖縄エリア", kyushuokinawa_facilities_path
+  parent :root
+end
+
+crumb :spot_search do
+  facility = Facility.find(params[:id])
+  link "#{facility.prefectures.name}の#{facility.category.name}"
+  if facility.region_id = "1"
+    parent :hokkaidotohoku_area
+  elsif facility.region_id = "2"
+    parent :kanto_area
+  elsif facility.region_id = "3"
+    parent :chubu_area
+  elsif facility.region_id = "4"
+    parent :kinki_area
+  elsif facility.region_id = "5"
+    parent :chugokushikoku_area
+  elsif facility.region_id = "6"
+    parent :kyushuokinawa_area
+  end
+end
+
 # //施設情報用リスト//
 crumb :region do |facility|
   facility = Facility.find(params[:id])
@@ -60,7 +108,7 @@ end
 
 crumb :prefectures do |facility|
   facility = Facility.find(params[:id])
-  link "#{facility.prefectures.name}", search_facilities_path
+  link "#{facility.prefectures.name}の#{facility.category.name}", search_facilities_path
   parent :region
 end
 
@@ -82,7 +130,7 @@ end
 crumb :picture_prefectures do |picture|
   picture = Picture.find(params[:id])
   facility = Facility.find(picture.facility_id)
-  link "#{facility.prefectures.name}", search_facilities_path
+  link "#{facility.prefectures.name}の#{facility.category.name}", search_facilities_path
   parent :picture_region
 end
 
@@ -109,7 +157,7 @@ end
 
 crumb :new_prefectures do |facility|
   facility = Facility.find(params[:facility_id])
-  link "#{facility.prefectures.name}", search_facilities_path
+  link "#{facility.prefectures.name}の#{facility.category.name}", search_facilities_path
   parent :new_region
 end
 

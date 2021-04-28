@@ -16,9 +16,10 @@ Rails.application.routes.draw do
 
   resources :facilities, only: [:index, :show] do
     collection do
-      get "search", "keysearch"
+      get "search", "keysearch", "hokkaidotohoku", "kanto", "chubu", "kinki", "chugokushikoku", "kyushuokinawa", "spot"
     end
     resources :comments, only: [:new, :create]
     resources :pictures, only: [:new, :create]
   end
+
 end

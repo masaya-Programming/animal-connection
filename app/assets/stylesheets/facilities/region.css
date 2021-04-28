@@ -1,0 +1,68 @@
+.region-main {
+  width: 100%;
+  height: auto;
+  background-color: rgb(223, 235, 230);
+  display: flex;
+  justify-content: center;
+}
+
+.region-wrap {
+  width: 90%;
+  background-color: white;
+  border: 0.5rem solid white;
+  border-radius: 5rem;
+}
+
+.region-map {
+  display: flex;
+  justify-content: center;
+}
+
+.region-box {
+  position:relative;
+}
+
+.region-map-name {
+  position:absolute; top:0px; left:0px;
+  background-color: rgb(223, 235, 230);
+  padding: 2px;
+  border-radius: 10px;
+  width: 100px;
+}
+
+.region-map-prefectures {
+  background-color: rgb(223, 235, 230);
+  padding: 1px;
+  border-radius: 10px;
+  width: 60px;
+}
+
+.fukuoka {position:absolute; top:77px; left:285px;}
+.saga {position:absolute; top:98px; left:203px;}
+.nagasaki {position:absolute; top:113px; left:142px;}
+.kumamoto {position:absolute; top:193px; left:236px;}
+.oita {position:absolute; top:140px; left:318px;}
+.miyazaki {position:absolute; top:220px; left:318px;}
+.kagoshima {position:absolute; top:282px; left:260px;}
+.okinawa {position:absolute; top:300px; left:54px;}
+
+.region-again-search-box {
+  display: flex;
+  justify-content: center;
+  width: 35%;
+  padding: 2rem 0rem;
+  margin: 0 auto;
+}
+
+.region-again-search-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #ea352d;
+  border: 0.5rem solid #ea352d;
+  border-radius: 1rem;
+  color: #fff;
+  line-height: 2.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}

@@ -1,0 +1,31 @@
+<%# CSS・・・assets/stylesheets/facilities/region.css %>
+<%= render "shared/header" %>
+<% breadcrumb :kyushuokinawa_area %>
+<%= breadcrumbs separator: " &#x27A4; ", class: "logo" %>
+
+<div class="region-main">
+  <div class="region-wrap">
+    <div class="region-map">
+      <div class="region-box">
+        <img src="/assets/kyushuokinawa-area.png" alt="九州沖縄マップ" width="467.5px" height="462px" />
+        <div class="region-map-iconset">
+          <img src="/assets/kyushu-okinawa-icon.png" alt="九州沖縄" class="region-map-name" />
+          <img src="/assets/fukuoka.png" alt="福岡" class="region-map-prefectures fukuoka" />
+          <img src="/assets/saga.png" alt="佐賀" class="region-map-prefectures saga" />
+          <img src="/assets/nagasaki.png" alt="長崎" class="region-map-prefectures nagasaki" />
+          <img src="/assets/kumamoto.png" alt="熊本" class="region-map-prefectures kumamoto" />
+          <img src="/assets/oita.png" alt="大分" class="region-map-prefectures oita" />
+          <img src="/assets/miyazaki.png" alt="宮崎" class="region-map-prefectures miyazaki" />
+          <img src="/assets/kagoshima.png" alt="鹿児島" class="region-map-prefectures kagoshima" />
+          <img src="/assets/okinawa.png" alt="沖縄" class="region-map-prefectures okinawa" />
+        </div>
+      </div>
+    </div> 
+
+    <div class="region-again-search-box">
+      <%= link_to "別のエリアで探す", "/", class: "region-again-search-btn" %>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
