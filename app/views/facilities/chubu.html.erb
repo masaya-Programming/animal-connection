@@ -1,0 +1,32 @@
+<%# CSS・・・assets/stylesheets/facilities/region.css %>
+<%= render "shared/header" %>
+<% breadcrumb :chubu_area %>
+<%= breadcrumbs separator: " &#x27A4; ", class: "logo" %>
+
+<div class="region-main">
+  <div class="region-wrap">
+    <div class="region-map">
+      <div class="region-box">
+        <%= image_tag asset_path("chubu-area.png"), alt:"中部マップ", width:"495px", height:"495px" %>
+        <div class="region-map-iconset">
+        <%= image_tag asset_path("chubu-icon.png"), alt:"中部", class:"region-map-name" %>
+        <%= image_tag asset_path("niigata.png"), alt:"新潟", class:"region-map-prefectures niigata" %>
+        <%= image_tag asset_path("toyama.png"), alt:"富山", class:"region-map-prefectures toyama" %>
+        <%= image_tag asset_path("ishikawa.png"), alt:"石川", class:"region-map-prefectures ishikawa" %>
+        <%= image_tag asset_path("fukui.png"), alt:"福井", class:"region-map-prefectures fukui" %>
+        <%= image_tag asset_path("yamanashi.png"), alt:"山梨", class:"region-map-prefectures yamanashi" %>
+        <%= image_tag asset_path("nagano.png"), alt:"長野", class:"region-map-prefectures nagano" %>
+        <%= image_tag asset_path("gifu.png"), alt:"岐阜", class:"region-map-prefectures gifu" %>
+        <%= image_tag asset_path("shizuoka.png"), alt:"静岡", class:"region-map-prefectures shizuoka" %>
+        <%= image_tag asset_path("aichi.png"), alt:"愛知", class:"region-map-prefectures aichi" %>
+        </div>
+      </div>
+    </div> 
+
+    <div class="region-again-search-box">
+      <%= link_to "別のエリアで探す", "/", class: "region-again-search-btn" %>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

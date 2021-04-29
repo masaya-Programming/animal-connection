@@ -1,0 +1,30 @@
+<%# CSS・・・assets/stylesheets/facilities/region.css %>
+<%= render "shared/header" %>
+<% breadcrumb :kinki_area %>
+<%= breadcrumbs separator: " &#x27A4; ", class: "logo" %>
+
+<div class="region-main">
+  <div class="region-wrap">
+    <div class="region-map">
+      <div class="region-box">
+        <%= image_tag asset_path("kinki-area.png"), alt:"近畿マップ", width:"495px", height:"495px" %>
+        <div class="region-map-iconset">
+        <%= image_tag asset_path("kinki-icon.png"), alt:"近畿", class:"region-map-name" %>
+        <%= image_tag asset_path("mie.png"), alt:"三重", class:"region-map-prefectures mie" %>
+        <%= image_tag asset_path("shiga.png"), alt:"滋賀", class:"region-map-prefectures shiga" %>
+        <%= image_tag asset_path("kyoto.png"), alt:"京都", class:"region-map-prefectures kyoto" %>
+        <%= image_tag asset_path("osaka.png"), alt:"大阪", class:"region-map-prefectures osaka" %>
+        <%= image_tag asset_path("hyogo.png"), alt:"兵庫", class:"region-map-prefectures hyogo" %>
+        <%= image_tag asset_path("nara.png"), alt:"奈良", class:"region-map-prefectures nara" %>
+        <%= image_tag asset_path("wakayama.png"), alt:"和歌山", class:"region-map-prefectures wakayama" %>
+        </div>
+      </div>
+    </div> 
+
+    <div class="region-again-search-box">
+      <%= link_to "別のエリアで探す", "/", class: "region-again-search-btn" %>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

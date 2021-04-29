@@ -1,0 +1,30 @@
+<%# CSS・・・assets/stylesheets/facilities/region.css %>
+<%= render "shared/header" %>
+<% breadcrumb :hokkaidotohoku_area %>
+<%= breadcrumbs separator: " &#x27A4; ", class: "logo" %>
+
+<div class="region-main">
+  <div class="region-wrap">
+    <div class="region-map">
+      <div class="region-box">
+        <%= image_tag asset_path("hokkaidotohoku-area.png"), alt:"北海道東北マップ", width:"495px", height:"495px" %>
+        <div class="region-map-iconset">
+        <%= image_tag asset_path("hokkaido-tohoku-icon.png"), alt:"北海道東北", class:"region-map-name" %>
+        <%= image_tag asset_path("hokkaido.png"), alt:"北海道", class:"region-map-prefectures hokkaido" %>
+        <%= image_tag asset_path("aomori.png"), alt:"青森", class:"region-map-prefectures aomori" %>
+        <%= image_tag asset_path("iwate.png"), alt:"岩手", class:"region-map-prefectures iwate" %>
+        <%= image_tag asset_path("miyagi.png"), alt:"宮城", class:"region-map-prefectures miyagi" %>
+        <%= image_tag asset_path("akita.png"), alt:"秋田", class:"region-map-prefectures akita" %>
+        <%= image_tag asset_path("yamagata.png"), alt:"山形", class:"region-map-prefectures yamagata" %>
+        <%= image_tag asset_path("fukushima.png"), alt:"福島", class:"region-map-prefectures fukushima" %>
+        </div>
+      </div>
+    </div> 
+
+    <div class="region-again-search-box">
+      <%= link_to "別のエリアで探す", "/", class: "region-again-search-btn" %>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

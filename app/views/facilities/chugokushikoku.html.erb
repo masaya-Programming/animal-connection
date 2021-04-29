@@ -1,0 +1,32 @@
+<%# CSS・・・assets/stylesheets/facilities/region.css %>
+<%= render "shared/header" %>
+<% breadcrumb :chugokushikoku_area %>
+<%= breadcrumbs separator: " &#x27A4; ", class: "logo" %>
+
+<div class="region-main">
+  <div class="region-wrap">
+    <div class="region-map">
+      <div class="region-box">
+        <%= image_tag asset_path("chugokushikoku-area.png"), alt:"中国四国マップ", width:"495px", height:"495px" %>
+        <div class="region-map-iconset">
+        <%= image_tag asset_path("chugoku-shikoku-icon.png"), alt:"中国四国", class:"region-map-name" %>
+        <%= image_tag asset_path("tottori.png"), alt:"鳥取", class:"region-map-prefectures tottori" %>
+        <%= image_tag asset_path("shimane.png"), alt:"島根", class:"region-map-prefectures shimane" %>
+        <%= image_tag asset_path("okayama.png"), alt:"岡山", class:"region-map-prefectures okayama" %>
+        <%= image_tag asset_path("hiroshima.png"), alt:"広島", class:"region-map-prefectures hiroshima" %>
+        <%= image_tag asset_path("yamaguchi.png"), alt:"山口", class:"region-map-prefectures yamaguchi" %>
+        <%= image_tag asset_path("tokushima.png"), alt:"徳島", class:"region-map-prefectures tokushima" %>
+        <%= image_tag asset_path("kagawa.png"), alt:"香川", class:"region-map-prefectures kagawa" %>
+        <%= image_tag asset_path("ehime.png"), alt:"愛媛", class:"region-map-prefectures ehime" %>
+        <%= image_tag asset_path("kochi.png"), alt:"高知", class:"region-map-prefectures kochi" %>
+        </div>
+      </div>
+    </div> 
+
+    <div class="region-again-search-box">
+      <%= link_to "別のエリアで探す", "/", class: "region-again-search-btn" %>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

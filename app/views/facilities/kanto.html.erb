@@ -1,0 +1,30 @@
+<%# CSS・・・assets/stylesheets/facilities/region.css %>
+<%= render "shared/header" %>
+<% breadcrumb :kanto_area %>
+<%= breadcrumbs separator: " &#x27A4; ", class: "logo" %>
+
+<div class="region-main">
+  <div class="region-wrap">
+    <div class="region-map">
+      <div class="region-box">
+        <%= image_tag asset_path("kanto-area.png"), alt:"関東マップ", width:"495px", height:"495px" %>
+        <div class="region-map-iconset">
+        <%= image_tag asset_path("kanto-icon.png"), alt:"関東", class:"region-map-name" %>
+        <%= image_tag asset_path("ibaraki.png"), alt:"茨城", class:"region-map-prefectures ibaraki" %>
+        <%= image_tag asset_path("tochigi.png"), alt:"栃木", class:"region-map-prefectures tochigi" %>
+        <%= image_tag asset_path("gunma.png"), alt:"群馬", class:"region-map-prefectures gunma" %>
+        <%= image_tag asset_path("saitama.png"), alt:"埼玉", class:"region-map-prefectures saitama" %>
+        <%= image_tag asset_path("chiba.png"), alt:"千葉", class:"region-map-prefectures chiba" %>
+        <%= image_tag asset_path("tokyo.png"), alt:"東京", class:"region-map-prefectures tokyo" %>
+        <%= image_tag asset_path("kanagawa.png"), alt:"神奈川", class:"region-map-prefectures kanagawa" %>
+        </div>
+      </div>
+    </div> 
+
+    <div class="region-again-search-box">
+      <%= link_to "別のエリアで探す", "/", class: "region-again-search-btn" %>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

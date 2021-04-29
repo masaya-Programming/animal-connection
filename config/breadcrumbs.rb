@@ -81,20 +81,19 @@ crumb :kyushuokinawa_area do
   parent :root
 end
 
-crumb :spot_search do
-  facility = Facility.find(params[:id])
-  link "#{facility.prefectures.name}の#{facility.category.name}"
-  if facility.region_id = "1"
+crumb :spot_search do |facility_first|
+  link "#{facility_first.prefectures.name}の#{facility_first.category.name}", spot_facilities_path(category_id: facility_first.category_id, prefectures_id: facility_first.prefectures_id)
+  if facility_first.region_id = "1"
     parent :hokkaidotohoku_area
-  elsif facility.region_id = "2"
+  elsif facility_first.region_id = "2"
     parent :kanto_area
-  elsif facility.region_id = "3"
+  elsif facility_first.region_id = "3"
     parent :chubu_area
-  elsif facility.region_id = "4"
+  elsif facility_first.region_id = "4"
     parent :kinki_area
-  elsif facility.region_id = "5"
+  elsif facility_first.region_id = "5"
     parent :chugokushikoku_area
-  elsif facility.region_id = "6"
+  elsif facility_first.region_id = "6"
     parent :kyushuokinawa_area
   end
 end
@@ -102,13 +101,25 @@ end
 # //施設情報用リスト//
 crumb :region do |facility|
   facility = Facility.find(params[:id])
-  link "#{facility.region.name}エリア", search_facilities_path
+  if facility.region.name == "北海道・東北"
+    link "#{facility.region.name}エリア", hokkaidotohoku_facilities_path
+  elsif facility.region.name == "関東"
+    link "#{facility.region.name}エリア", kanto_facilities_path
+  elsif facility.region.name == "中部"
+    link "#{facility.region.name}エリア", chubu_facilities_path
+  elsif facility.region.name == "近畿"
+    link "#{facility.region.name}エリア", kinki_facilities_path
+  elsif facility.region.name == "中国・四国"
+    link "#{facility.region.name}エリア", chugokushikoku_facilities_path
+  elsif facility.region.name == "九州・沖縄"
+    link "#{facility.region.name}エリア", kyushuokinawa_facilities_path
+  end
   parent :root
 end
 
 crumb :prefectures do |facility|
   facility = Facility.find(params[:id])
-  link "#{facility.prefectures.name}の#{facility.category.name}", search_facilities_path
+  link "#{facility.prefectures.name}の#{facility.category.name}", spot_facilities_path(category_id: facility.category_id, prefectures_id: facility.prefectures_id)
   parent :region
 end
 
@@ -123,14 +134,26 @@ end
 crumb :picture_region do |picture|
   picture = Picture.find(params[:id])
   facility = Facility.find(picture.facility_id)
-  link "#{facility.region.name}エリア", search_facilities_path
+  if facility.region.name == "北海道・東北"
+    link "#{facility.region.name}エリア", hokkaidotohoku_facilities_path
+  elsif facility.region.name == "関東"
+    link "#{facility.region.name}エリア", kanto_facilities_path
+  elsif facility.region.name == "中部"
+    link "#{facility.region.name}エリア", chubu_facilities_path
+  elsif facility.region.name == "近畿"
+    link "#{facility.region.name}エリア", kinki_facilities_path
+  elsif facility.region.name == "中国・四国"
+    link "#{facility.region.name}エリア", chugokushikoku_facilities_path
+  elsif facility.region.name == "九州・沖縄"
+    link "#{facility.region.name}エリア", kyushuokinawa_facilities_path
+  end
   parent :root
 end
 
 crumb :picture_prefectures do |picture|
   picture = Picture.find(params[:id])
   facility = Facility.find(picture.facility_id)
-  link "#{facility.prefectures.name}の#{facility.category.name}", search_facilities_path
+  link "#{facility.prefectures.name}の#{facility.category.name}", spot_facilities_path(category_id: facility.category_id, prefectures_id: facility.prefectures_id)
   parent :picture_region
 end
 
@@ -151,13 +174,25 @@ end
 # //新規投稿用リスト//
 crumb :new_region do |facility|
   facility = Facility.find(params[:facility_id])
-  link "#{facility.region.name}エリア", search_facilities_path
+  if facility.region.name == "北海道・東北"
+    link "#{facility.region.name}エリア", hokkaidotohoku_facilities_path
+  elsif facility.region.name == "関東"
+    link "#{facility.region.name}エリア", kanto_facilities_path
+  elsif facility.region.name == "中部"
+    link "#{facility.region.name}エリア", chubu_facilities_path
+  elsif facility.region.name == "近畿"
+    link "#{facility.region.name}エリア", kinki_facilities_path
+  elsif facility.region.name == "中国・四国"
+    link "#{facility.region.name}エリア", chugokushikoku_facilities_path
+  elsif facility.region.name == "九州・沖縄"
+    link "#{facility.region.name}エリア", kyushuokinawa_facilities_path
+  end
   parent :root
 end
 
 crumb :new_prefectures do |facility|
   facility = Facility.find(params[:facility_id])
-  link "#{facility.prefectures.name}の#{facility.category.name}", search_facilities_path
+  link "#{facility.prefectures.name}の#{facility.category.name}", spot_facilities_path(category_id: facility.category_id, prefectures_id: facility.prefectures_id)
   parent :new_region
 end
 
