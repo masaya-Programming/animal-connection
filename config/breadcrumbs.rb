@@ -83,17 +83,17 @@ end
 
 crumb :spot_search do |facility_first|
   link "#{facility_first.prefectures.name}の#{facility_first.category.name}", spot_facilities_path(category_id: facility_first.category_id, prefectures_id: facility_first.prefectures_id)
-  if facility_first.region_id = "1"
+  if facility_first.region.name == "北海道・東北"
     parent :hokkaidotohoku_area
-  elsif facility_first.region_id = "2"
+  elsif facility_first.region.name == "関東"
     parent :kanto_area
-  elsif facility_first.region_id = "3"
+  elsif facility_first.region.name == "中部"
     parent :chubu_area
-  elsif facility_first.region_id = "4"
+  elsif facility_first.region.name == "近畿"
     parent :kinki_area
-  elsif facility_first.region_id = "5"
+  elsif facility_first.region.name == "中国・四国"
     parent :chugokushikoku_area
-  elsif facility_first.region_id = "6"
+  elsif facility_first.region.name == "九州・沖縄"
     parent :kyushuokinawa_area
   end
 end

@@ -107,10 +107,31 @@
 }
 
 .key-search-top {
-  margin: 3rem 0rem;
+  margin: 1.5rem 0rem;
   font-size: 2rem;
   font-weight: bold;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.spot-search-box {
+  display: flex;
+  justify-content: center;
+  width: 55%;
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+
+.spot-search-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #ea352d;
+  border: 0.5rem solid #ea352d;
+  border-radius: 1rem;
+  color: #fff;
+  line-height: 2.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
 }

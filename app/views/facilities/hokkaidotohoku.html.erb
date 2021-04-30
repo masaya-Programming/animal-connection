@@ -21,6 +21,176 @@
       </div>
     </div> 
 
+    <div class="prefectures-area">
+      <div class="prefectures-box">
+        <h2 class="prefectures-top hokkaidotohoku-first-letter">北海道</h2>
+        <div class="prefectures-iconset">
+          <div class="prefectures-zoo">
+            <% if @hokkaido_zoo.length != 0 %>
+              <p class="prefectures-text"><%= @hokkaido_zoo.length %>件</p>
+              <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 1), class: "prefectures-zoo-btn" %>
+            <% else %>
+              <p class="prefectures-text prefectures-text-non">動物園の情報が</p>
+              <p class="prefectures-text">ありません。</p>
+            <% end %>
+          </div>
+          <div class="prefectures-aquarium">
+            <% if @hokkaido_aquarium.length != 0 %>
+              <p class="prefectures-text"><%= @hokkaido_aquarium.length %>件</p>
+              <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 1), class: "prefectures-aquarium-btn" %>
+            <% else %>
+              <p class="prefectures-text prefectures-text-non">水族館の情報が</p>
+              <p class="prefectures-text">ありません。</p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      
+      <div class="prefectures-box">
+        <h2 class="prefectures-top hokkaidotohoku-first-letter">青森県</h2>
+        <div class="prefectures-iconset">
+          <div class="prefectures-zoo">
+            <% if @aomori_zoo.length != 0 %>
+              <p class="prefectures-text"><%= @aomori_zoo.length %>件</p>
+              <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 2), class: "prefectures-zoo-btn" %>
+            <% else %>
+              <p class="prefectures-text prefectures-text-non">動物園の情報が</p>
+              <p class="prefectures-text">ありません。</p>
+            <% end %>
+          </div>
+          <div class="prefectures-aquarium">
+            <% if @aomori_aquarium.length != 0 %>
+              <p class="prefectures-text"><%= @aomori_aquarium.length %>件</p>
+              <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 2), class: "prefectures-aquarium-btn" %>
+            <% else %>
+              <p class="prefectures-text prefectures-text-non">水族館の情報が</p>
+              <p class="prefectures-text">ありません。</p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      
+      <div class="prefectures-box">
+        <h2 class="prefectures-top hokkaidotohoku-first-letter">岩手県</h2>
+        <div class="prefectures-iconset">
+          <div class="prefectures-zoo">
+            <% if @iwate_zoo.length != 0 %>
+              <p class="prefectures-text"><%= @iwate_zoo.length %>件</p>
+              <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 3), class: "prefectures-zoo-btn" %>
+            <% else %>
+              <p class="prefectures-text prefectures-text-non">動物園の情報が</p>
+              <p class="prefectures-text">ありません。</p>
+            <% end %>
+          </div>
+          <div class="prefectures-aquarium">
+            <% if @iwate_aquarium.length != 0 %>
+              <p class="prefectures-text"><%= @iwate_aquarium.length %>件</p>
+              <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 3), class: "prefectures-aquarium-btn" %>
+            <% else %>
+              <p class="prefectures-text prefectures-text-non">水族館の情報が</p>
+              <p class="prefectures-text">ありません。</p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      
+      <div class="prefectures-box">
+        <h2 class="prefectures-top hokkaidotohoku-first-letter">宮城県</h2>
+        <div class="prefectures-iconset">
+          <div class="prefectures-zoo">
+            <% if @miyagi_zoo.length != 0 %>
+              <p class="prefectures-text"><%= @miyagi_zoo.length %>件</p>
+              <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 4), class: "prefectures-zoo-btn" %>
+            <% else %>
+              <p class="prefectures-text prefectures-text-non">動物園の情報が</p>
+              <p class="prefectures-text">ありません。</p>
+            <% end %>
+          </div>
+          <div class="prefectures-aquarium">
+            <% if @miyagi_aquarium.length != 0 %>
+              <p class="prefectures-text"><%= @miyagi_aquarium.length %>件</p>
+              <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 4), class: "prefectures-aquarium-btn" %>
+            <% else %>
+              <p class="prefectures-text prefectures-text-non">水族館の情報が</p>
+              <p class="prefectures-text">ありません。</p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="prefectures-box">
+        <h2 class="prefectures-top hokkaidotohoku-first-letter">秋田県</h2>
+        <div class="prefectures-iconset">
+          <div class="prefectures-zoo">
+            <% if @akita_zoo.length != 0 %>
+              <p class="prefectures-text"><%= @akita_zoo.length %>件</p>
+              <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 5), class: "prefectures-zoo-btn" %>
+            <% else %>
+              <p class="prefectures-text prefectures-text-non">動物園の情報が</p>
+              <p class="prefectures-text">ありません。</p>
+            <% end %>
+          </div>
+          <div class="prefectures-aquarium">
+            <% if @akita_aquarium.length != 0 %>
+              <p class="prefectures-text"><%= @akita_aquarium.length %>件</p>
+              <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 5), class: "prefectures-aquarium-btn" %>
+            <% else %>
+              <p class="prefectures-text prefectures-text-non">水族館の情報が</p>
+              <p class="prefectures-text">ありません。</p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="prefectures-box">
+        <h2 class="prefectures-top hokkaidotohoku-first-letter">山形県</h2>
+        <div class="prefectures-iconset">
+          <div class="prefectures-zoo">
+            <% if @yamagata_zoo.length != 0 %>
+              <p class="prefectures-text"><%= @yamagata_zoo.length %>件</p>
+              <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 6), class: "prefectures-zoo-btn" %>
+            <% else %>
+              <p class="prefectures-text prefectures-text-non">動物園の情報が</p>
+              <p class="prefectures-text">ありません。</p>
+            <% end %>
+          </div>
+          <div class="prefectures-aquarium">
+            <% if @yamagata_aquarium.length != 0 %>
+              <p class="prefectures-text"><%= @yamagata_aquarium.length %>件</p>
+              <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 6), class: "prefectures-aquarium-btn" %>
+            <% else %>
+              <p class="prefectures-text prefectures-text-non">水族館の情報が</p>
+              <p class="prefectures-text">ありません。</p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="prefectures-box">
+        <h2 class="prefectures-top hokkaidotohoku-first-letter">福島県</h2>
+        <div class="prefectures-iconset">
+          <div class="prefectures-zoo">
+            <% if @fukushima_zoo.length != 0 %>
+              <p class="prefectures-text"><%= @fukushima_zoo.length %>件</p>
+              <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 7), class: "prefectures-zoo-btn" %>
+            <% else %>
+              <p class="prefectures-text prefectures-text-non">動物園の情報が</p>
+              <p class="prefectures-text">ありません。</p>
+            <% end %>
+          </div>
+          <div class="prefectures-aquarium">
+            <% if @fukushima_aquarium.length != 0 %>
+              <p class="prefectures-text"><%= @fukushima_aquarium.length %>件</p>
+              <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 7), class: "prefectures-aquarium-btn" %>
+            <% else %>
+              <p class="prefectures-text prefectures-text-non">水族館の情報が</p>
+              <p class="prefectures-text">ありません。</p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="region-again-search-box">
       <%= link_to "別のエリアで探す", "/", class: "region-again-search-btn" %>
     </div>

@@ -90,6 +90,112 @@
 .kagoshima {position:absolute; top:300px; left:268px;}
 .okinawa {position:absolute; top:324px; left:60px;}
 
+.prefectures-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prefectures-box {
+  width: 70%;
+  height: auto;
+}
+
+.prefectures-top {
+  width: 100%;
+  font-size: 1.8rem;
+  color: #000;
+  margin-top: 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 3px solid #000;
+}
+
+.hokkaidotohoku-first-letter:first-letter {
+  font-size: 2.5rem;
+  color: #25a5e8;
+}
+
+.kanto-first-letter:first-letter {
+  font-size: 2.5rem;
+  color: #49e0e6;
+}
+
+.chubu-first-letter:first-letter {
+  font-size: 2.5rem;
+  color: #6FC369;
+}
+
+.kinki-first-letter:first-letter {
+  font-size: 2.5rem;
+  color: #F1EC00;
+}
+
+.chugokushikoku-first-letter:first-letter {
+  font-size: 2.5rem;
+  color: #e6bf49;
+}
+
+.kyushuokinawa-first-letter:first-letter {
+  font-size: 2.5rem;
+  color: #e65b49;
+}
+
+.prefectures-iconset {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 6rem;
+}
+
+.prefectures-zoo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prefectures-aquarium {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prefectures-text {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.prefectures-text-non {
+  margin-top: 0.8rem;
+}
+
+.prefectures-zoo-btn {
+  font-size: 1.8rem;
+}
+
+.prefectures-aquarium-btn {
+  font-size: 1.8rem;
+}
+
+.prefectures-zoo-btn {
+  font-weight: bold;
+  color: #fff;
+  background-color: rgb(9, 156, 100);
+  border: 6px solid rgb(9, 156, 100);
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+
+.prefectures-aquarium-btn {
+  font-weight: bold;
+  color: #fff;
+  background-color: rgb(10, 138, 197);
+  border: 6px solid rgb(10, 138, 197);
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+
 .region-again-search-box {
   display: flex;
   justify-content: center;

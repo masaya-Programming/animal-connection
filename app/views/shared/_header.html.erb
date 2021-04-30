@@ -5,7 +5,7 @@
     <% if user_signed_in? %>
       <% if current_user.gender_id == 1 %>
         <li><%= link_to current_user.nickname, mypage_user_path(current_user), class: "user-nickname-men" %></li>
-      <% elsif  current_user.gender_id == 2 %>
+      <% elsif current_user.gender_id == 2 %>
         <li><%= link_to current_user.nickname, mypage_user_path(current_user), class: "user-nickname-woman" %></li>
       <% else %>
         <li><%= link_to current_user.nickname, mypage_user_path(current_user), class: "user-nickname-other" %></li>

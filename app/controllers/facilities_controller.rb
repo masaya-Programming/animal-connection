@@ -193,5 +193,6 @@ class FacilitiesController < ApplicationController
     @prefectures_name = Prefectures.find(@prefectures_id).name
     @facility = Facility.search(params[:category_id], params[:prefectures_id])
     @facility_first = @facility[0]
+    @region = @facility_first.region.name
   end
 end

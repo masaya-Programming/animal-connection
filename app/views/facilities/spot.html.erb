@@ -12,21 +12,32 @@
       <%= render partial: "facility", collection: @facility %>
     </ul>
 
-    <div class="again-search-box">
-      <% if @facility_first.region.name == "北海道・東北" %>
-        <%= link_to "北海道・東北エリアの別条件で探す", hokkaidotohoku_facilities_path, class: "again-search-btn" %>
-      <% elsif @facility_first.region.name == "関東" %>
-        <%= link_to "関東エリアの別条件で探す", kanto_facilities_path, class: "again-search-btn" %>
-      <% elsif @facility_first.region.name == "中部" %>
-        <%= link_to "中部エリアの別条件で探す", chubu_facilities_path, class: "again-search-btn" %>
-      <% elsif @facility_first.region.name == "近畿" %>
-        <%= link_to "近畿エリアの別条件で探す", kinki_facilities_path, class: "again-search-btn" %>
-      <% elsif @facility_first.region.name == "中国・四国" %>
-        <%= link_to "中国・四国エリアの別条件で探す", chugokushikoku_facilities_path, class: "again-search-btn" %>
-      <% elsif @facility_first.region.name == "九州・沖縄" %>
-        <%= link_to "九州・沖縄エリアの別条件で探す", kyushuokinawa_facilities_path, class: "again-search-btn" %>
-      <% end %>
-    </div>
+    <% if @region == "北海道・東北" %>
+      <div class="spot-search-box">
+        <%= link_to "北海道・東北エリアの別条件で探す", hokkaidotohoku_facilities_path, class: "spot-search-btn" %>
+      </div>
+    <% elsif @region == "関東" %>
+      <div class="spot-search-box">
+        <%= link_to "関東エリアの別条件で探す", kanto_facilities_path, class: "spot-search-btn" %>
+      </div>
+    <% elsif @region == "中部" %>
+      <div class="spot-search-box">
+        <%= link_to "中部エリアの別条件で探す", chubu_facilities_path, class: "spot-search-btn" %>
+      </div>
+    <% elsif @region == "近畿" %>
+      <div class="spot-search-box">
+        <%= link_to "近畿エリアの別条件で探す", kinki_facilities_path, class: "spot-search-btn" %>
+      </div>
+    <% elsif @region == "中国・四国" %>
+      <div class="spot-search-box">
+        <%= link_to "中国・四国エリアの別条件で探す", chugokushikoku_facilities_path, class: "spot-search-btn" %>
+      </div>
+    <% elsif @region == "九州・沖縄" %>
+      <div class="spot-search-box">
+        <%= link_to "九州・沖縄エリアの別条件で探す", kyushuokinawa_facilities_path, class: "spot-search-btn" %>
+      </div>
+    <% end %>
+
   </div>
 </div>
 <%= render "shared/footer" %>
