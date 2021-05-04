@@ -77,22 +77,23 @@
     </div>
   </div>
 
-  <div class="top-picture-ber">
-    <h1 class="top-picture-top">
-      新規ベストショット
-    </h1>
-    <ul class="top-picture-list">
-      <%= render partial: "picture-top", collection: @pictures, as: :new_picture %>
-    </ul>
-    <% if @pictures.length == 0 %>
-      <p class="top-picture-nil">
-        投稿されたベストショットがありません。
-      </p>
-      <p class="top-picture-nil">
-        新しい投稿をお待ちしております。
-      </p>
-    <% end %>
+  <div class="top-registration-main" >
+    <div class="top-form-wrap">
+        <h1 class="top-form-top-text">
+          新規ベストショット
+        </h1>
+        <ul class="top-picture-list">
+          <%= render partial: "picture-top", collection: @pictures, as: :new_picture %>
+        </ul>
+        <% if @pictures.length == 0 %>
+          <p class="top-picture-nil">
+            投稿されたベストショットがありません。
+          </p>
+          <p class="top-picture-nil">
+            新しい投稿をお待ちしております。
+          </p>
+        <% end %>
+    </div>
   </div>
-</div>
 
 <%= render "shared/footer" %>

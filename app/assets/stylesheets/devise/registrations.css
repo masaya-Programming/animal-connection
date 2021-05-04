@@ -7,9 +7,9 @@
 }
 
 .form-wrap {
-  width: 67vw;
+  width: 80vw;
   background-color: white;
-  padding-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
   border: 0.5rem solid white;
   border-radius: 5rem;
 }
@@ -21,7 +21,7 @@
 }
 
 .form-top-text {
-  line-height: 6rem;
+  line-height: 4.5rem;
   font-weight: bold;
 }
 
@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding-top: 2.2rem;
+  padding-top: 2rem;
 }
 
 .form-text {
@@ -154,7 +154,7 @@
 }
 
 .delete-form-wrap {
-  width: 50vw;
+  width: 70vw;
   background-color: white;
   padding-bottom: 2.5rem;
   border: 0.5rem solid rgb(202, 84, 84);
@@ -164,11 +164,11 @@
 .delete-form-header {
   width: 100%;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .delete-form-top-text {
-  line-height: 6rem;
+  line-height: 4rem;
   font-weight: bold;
   color: rgb(202, 84, 84);
 }
@@ -189,7 +189,7 @@
   display: flex;
   justify-content: center;
   width: 36%;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   margin: 0 auto;
 }
 
@@ -200,7 +200,7 @@
   background: rgb(202, 84, 84);
   border-radius: 1rem;
   color: #fff;
-  line-height: 1.5rem;
+  line-height: 2rem;
   font-size: 1.2rem;
   cursor: pointer;
 }

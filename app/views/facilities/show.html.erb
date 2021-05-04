@@ -21,6 +21,12 @@
         <%= @facility.name %>
       </h1>
     </div>
+    <div class="updated-data">
+      最終更新日:<%= @facility.updated_at.to_s(:datetime_jp) %>
+    </div>
+    <div class="show-facility-announcement">
+      ※ 訪問の際は,事前に公式情報をご確認ください
+    </div>
     <div class="first-show">
       <h2 class="show-content-zoo">
         スポット名称
@@ -46,6 +52,12 @@
       <h1 class="show-facility-name">
         <%= @facility.name %>
       </h1>
+    </div>
+    <div class="updated-data">
+      最終更新日:<%= @facility.updated_at.to_s(:datetime_jp) %>
+    </div>
+    <div class="show-facility-announcement">
+      ※ 訪問の際は,事前に公式情報をご確認ください
     </div>
     <div class="first-show">
       <h2 class="show-content-aquarium">

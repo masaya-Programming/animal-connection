@@ -10,5 +10,8 @@
     <h2 class="mypage-comment-text">
       <%= simple_format(comment.text) %>
     </h2>
+    <h2 class="mypage-picture-title">
+      <%= comment.created_at.to_s(:datetime_jp) %>
+    </h2>
   </div>
 </li>

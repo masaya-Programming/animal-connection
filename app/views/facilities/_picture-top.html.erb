@@ -1,13 +1,13 @@
 <%# CSS・・・assets/stylesheets/facilities/search.css %>
-<li>
+<li class="top-picture-li">
   <div class="top-picture-box">
-    <%= link_to facility_path(new_picture.facility_id) do %>
+    <%= link_to user_picture_path(new_picture.user, new_picture) do %>
       <p class="top-picture-name">
-        <%= truncate(new_picture.facility.name, length: 10, separator: "・") %>
+        <%= truncate(new_picture.facility.name, length: 13, separator: "・") %>
       </p>
-      <%= image_tag new_picture.image, size: "288x216" %>
+      <%= image_tag new_picture.image, class: "top-picture-image" %>
       <h2 class="top-picture-title">
-        <%= truncate(new_picture.title, length: 10, separator: "・") %>
+        <%= truncate(new_picture.title, length: 13, separator: "・") %>
       </h2>
     <% end %>
   </div>

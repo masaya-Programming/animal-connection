@@ -11,5 +11,8 @@
     <h2 class="show-comment-text">
       <%= simple_format(comment.text) %>
     </h2>
+    <h2 class="show-comment-text">
+      <%= comment.created_at.to_s(:datetime_jp) %>
+    </h2>
   </div>
 </li>

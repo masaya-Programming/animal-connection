@@ -13,6 +13,9 @@
       <h2 class="show-picture-title">
         <%= truncate(picture.title, length: 10, separator: "・") %>
       </h2>
+      <h2 class="show-picture-title">
+      <%= picture.created_at.to_s(:datetime_jp) %>
+      </h2>
     <% end %>
   </div>
 </li>

@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2% 25% 0% 25%;
+  margin: 2% 18% 0% 18%;
   background-color: rgb(9, 156, 100);
   border-radius: 1.5rem;
 }
@@ -15,13 +15,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2% 25% 0% 25%;
+  margin: 2% 18% 0% 18%;
   background-color: rgb(10, 138, 197);
   border-radius: 1.5rem;
 }
 
 .show-picture-facility-name {
-  font-size: 2.1rem;
+  font-size: 1.7rem;
   color: #FFF;
   margin-left: 1vw;
 }
@@ -50,65 +50,64 @@
   border-radius: 20px;
 }
 
-
 .show-picture-content-zoo {
-  margin: 3% 0% 1% 0%;
-  font-size: 2.2rem;
+  margin: 2.5% 0% 1% 0%;
+  font-size: 1.7rem;
   background: linear-gradient(transparent 60%, #baebba 0%);
 }
 
 .show-picture-content-aquarium {
-  margin: 3% 0% 1% 0%;
-  font-size: 2.2rem;
+  margin: 2.5% 0% 1% 0%;
+  font-size: 1.7rem;
   background: linear-gradient(transparent 60%, #93d5e6 0%);
 }
 
 .show-picture-contents-title {
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-left: 1vw;
   font-weight: 600;
 }
 
 .show-picture-contents-description {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-left: 1vw;
 }
 
 .show-picture-contents-non-description {
   color: rgb(122, 124, 126);
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin-left: 1vw;
   font-weight: 500;
 }
 
 .show-picture-content-nickname-men {
   color: white;
-  font-size: 2rem;
+  font-size: 1.4rem;
   text-shadow: 0 0.8px 0 #ccc, 0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
   background: rgb(49, 78, 204);
   border-radius: 1rem;
   margin-left: 1vw;
-  padding: 0.4rem 0.6rem;
+  padding: 0.3rem 0.5rem;
 }
 
 .show-picture-content-nickname-woman {
   color: white;
-  font-size: 2rem;
+  font-size: 1.4rem;
   text-shadow: 0 0.8px 0 #ccc, 0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
   background: rgb(243, 73, 73);
   border-radius: 1rem;
   margin-left: 1vw;
-  padding: 0.4rem 0.6rem;
+  padding: 0.3rem 0.5rem;
 }
 
 .show-picture-content-nickname-other {
   color: white;
-  font-size: 2rem;
+  font-size: 1.4rem;
   text-shadow: 0 0.8px 0 #ccc, 0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
   background: rgb(200, 39, 233);
   border-radius: 1rem;
   margin-left: 1vw;
-  padding: 0.4rem 0.6rem;
+  padding: 0.3rem 0.5rem;
 }
 
 .picture-edit-btn {

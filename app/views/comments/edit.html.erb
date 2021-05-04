@@ -8,24 +8,24 @@
     <div class="form-header">
         <% if @facility.category.name == "動物園" %>
           <%= link_to facility_path(@facility.id) do %>
-          <div class="show-facility-list-zoo">
+          <div class="newedit-facility-list-zoo">
             <%= image_tag "zoo-icon.png" %>
-            <h1 class="show-facility-name">
+            <h1 class="newedit-facility-name">
               <%= @facility.name %>
             </h1>
           </div>
         <% end %>
       <% else %>
         <%= link_to facility_path(@facility.id) do %>
-          <div class="show-facility-list-aquarium">
+          <div class="newedit-facility-list-aquarium">
             <%= image_tag "aquarium-icon.png" %>
-            <h1 class="show-facility-name">
+            <h1 class="newedit-facility-name">
               <%= @facility.name %>
             </h1>
           </div>
         <% end %>
       <% end %>
-      <h1 class="form-top-text">
+      <h1 class="picture-form-text">
         レビューの編集
       </h1>
     </div>
@@ -41,7 +41,7 @@
       <p class="info-text">※スポット利用後のレビューを入力してください。</p>
     </div>
 
-    <div class="register-btn">
+    <div class="newedit-register-btn">
       <%= f.submit "レビュー更新" ,class:"register-red-btn" %>
     </div>
 

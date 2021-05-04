@@ -17,6 +17,9 @@
         </h1>
       </div>
     <% end %>
+    <h2 class="updated-data">
+      投稿日:<%= @picture.created_at.to_s(:datetime_jp) %>
+    </h2>
     <div class="first-show-picture">
       <div class="show-picture-image-box">
         <%= image_tag @picture.image, class: "show-picture-zoo", size: "640x480" %>
@@ -57,6 +60,9 @@
         </h1>
       </div>
     <% end %>
+    <h2 class="updated-data">
+      投稿日:<%= @picture.created_at.to_s(:datetime_jp) %>
+    </h2>
     <div class="first-show-picture">
       <div class="show-picture-image-box">
         <%= image_tag @picture.image, class: "show-picture-aquarium", size: "640x480" %>
