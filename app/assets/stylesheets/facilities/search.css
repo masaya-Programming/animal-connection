@@ -20,7 +20,7 @@
 
 .search-top-text {
   line-height: 6rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -28,9 +28,13 @@
 
 .search-sab-text {
   line-height: 1.5rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   display: flex;
   justify-content: center;
+}
+
+.key-search-top-margin {
+  margin-top: 0.5rem;
 }
 
 .search-non-text {
@@ -108,7 +112,7 @@
 
 .key-search-top {
   margin: 1.5rem 0rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   display: flex;
   flex-direction: column;

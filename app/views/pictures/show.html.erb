@@ -17,9 +17,12 @@
         </h1>
       </div>
     <% end %>
-    <h2 class="updated-data">
+    <p class="updated-data">
       投稿日:<%= @picture.created_at.to_s(:datetime_jp) %>
-    </h2>
+    </p>
+    <p class="updated-data">
+      投稿者:<%= link_to @user.nickname, user_path(@picture.user_id) %>
+    </p>
     <div class="first-show-picture">
       <div class="show-picture-image-box">
         <%= image_tag @picture.image, class: "show-picture-zoo", size: "640x480" %>
@@ -40,16 +43,6 @@
           <%= simple_format(@picture.description, class: "show-picture-contents-description") %>
         <% end %>
       </p>
-      <h2 class="show-picture-content-zoo">
-        ベストショット投稿者
-      </h2>
-      <% if @user.gender.name == "男性" %>
-        <%= link_to @user.nickname, user_path(@picture.user_id), class: "show-picture-content-nickname-men" %>
-      <% elsif @user.gender.name == "女性" %>
-        <%= link_to @user.nickname, user_path(@picture.user_id), class: "show-picture-content-nickname-woman" %>
-      <% else %>
-        <%= link_to @user.nickname, user_path(@picture.user_id), class: "show-picture-content-nickname-other" %>
-      <% end %>
     </div>
   <% else %>
     <%= link_to facility_path(@facility.id) do %>
@@ -62,6 +55,9 @@
     <% end %>
     <h2 class="updated-data">
       投稿日:<%= @picture.created_at.to_s(:datetime_jp) %>
+    </h2>
+    <h2 class="updated-data">
+      投稿者:<%= link_to @user.nickname, user_path(@picture.user_id) %>
     </h2>
     <div class="first-show-picture">
       <div class="show-picture-image-box">
@@ -83,18 +79,16 @@
           <%= simple_format(@picture.description, class: "show-picture-contents-description") %>
         <% end %>
       </p>
-      <h2 class="show-picture-content-aquarium">
-        ベストショット投稿者
-      </h2>
-      <% if @user.gender.name == "男性" %>
-        <%= link_to @user.nickname, user_path(@picture.user_id), class: "show-picture-content-nickname-men" %>
-      <% elsif @user.gender.name == "女性" %>
-        <%= link_to @user.nickname, user_path(@picture.user_id), class: "show-picture-content-nickname-woman" %>
-      <% else %>
-        <%= link_to @user.nickname, user_path(@picture.user_id), class: "show-picture-content-nickname-other" %>
-      <% end %>
     </div>
   <% end %>
+
+  <div class="facility-back-box">
+    <% if @facility.category.name == "動物園" %>
+      <%= link_to  "動物園の情報を確認する→", facility_path(@facility.id), class: "zoo-back-btn" %>
+    <% else %>
+      <%= link_to  "水族館の情報を確認する→", facility_path(@facility.id), class: "aquarium-back-btn" %>
+    <% end %>
+  </div>
 
   <% if user_signed_in? && @picture.user_id == current_user.id %>
     <div class="picture-edit-btn">

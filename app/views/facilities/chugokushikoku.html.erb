@@ -29,19 +29,23 @@
         <div class="prefectures-iconset">
           <div class="prefectures-zoo">
             <% if @tottori_zoo.length != 0 %>
-              <p class="prefectures-text"><%= @tottori_zoo.length %>件</p>
-              <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 31), class: "prefectures-zoo-btn" %>
+              <div class="prefectures-set">
+                <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 31), class: "prefectures-zoo-btn" %>
+                <p class="prefectures-text">(<%= @tottori_zoo.length %>件)</p>
+              </div>
             <% else %>
-              <p class="prefectures-text prefectures-text-non">動物園の情報が</p>
+              <p class="prefectures-text prefectures-margin-top">動物園の情報が</p>
               <p class="prefectures-text">ありません。</p>
             <% end %>
           </div>
           <div class="prefectures-aquarium">
             <% if @tottori_aquarium.length != 0 %>
-              <p class="prefectures-text"><%= @tottori_aquarium.length %>件</p>
-              <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 31), class: "prefectures-aquarium-btn" %>
+              <div class="prefectures-set">
+                <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 31), class: "prefectures-aquarium-btn" %>
+                <p class="prefectures-text">(<%= @tottori_aquarium.length %>件)</p>
+              </div>
             <% else %>
-              <p class="prefectures-text prefectures-text-non">水族館の情報が</p>
+              <p class="prefectures-text prefectures-margin-top">水族館の情報が</p>
               <p class="prefectures-text">ありません。</p>
             <% end %>
           </div>
@@ -53,19 +57,23 @@
         <div class="prefectures-iconset">
           <div class="prefectures-zoo">
             <% if @shimane_zoo.length != 0 %>
-              <p class="prefectures-text"><%= @shimane_zoo.length %>件</p>
-              <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 32), class: "prefectures-zoo-btn" %>
+              <div class="prefectures-set">
+                <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 32), class: "prefectures-zoo-btn" %>
+                <p class="prefectures-text">(<%= @shimane_zoo.length %>件)</p>
+              </div>
             <% else %>
-              <p class="prefectures-text prefectures-text-non">動物園の情報が</p>
+              <p class="prefectures-text prefectures-margin-top">動物園の情報が</p>
               <p class="prefectures-text">ありません。</p>
             <% end %>
           </div>
           <div class="prefectures-aquarium">
             <% if @shimane_aquarium.length != 0 %>
-              <p class="prefectures-text"><%= @shimane_aquarium.length %>件</p>
-              <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 32), class: "prefectures-aquarium-btn" %>
+              <div class="prefectures-set">
+                <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 32), class: "prefectures-aquarium-btn" %>
+                <p class="prefectures-text">(<%= @shimane_aquarium.length %>件)</p>
+              </div>
             <% else %>
-              <p class="prefectures-text prefectures-text-non">水族館の情報が</p>
+              <p class="prefectures-text prefectures-margin-top">水族館の情報が</p>
               <p class="prefectures-text">ありません。</p>
             <% end %>
           </div>
@@ -77,19 +85,23 @@
         <div class="prefectures-iconset">
           <div class="prefectures-zoo">
             <% if @okayama_zoo.length != 0 %>
-              <p class="prefectures-text"><%= @okayama_zoo.length %>件</p>
-              <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 33), class: "prefectures-zoo-btn" %>
+              <div class="prefectures-set">
+                <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 33), class: "prefectures-zoo-btn" %>
+                <p class="prefectures-text">(<%= @okayama_zoo.length %>件)</p>
+              </div>
             <% else %>
-              <p class="prefectures-text prefectures-text-non">動物園の情報が</p>
+              <p class="prefectures-text prefectures-margin-top">動物園の情報が</p>
               <p class="prefectures-text">ありません。</p>
             <% end %>
           </div>
           <div class="prefectures-aquarium">
             <% if @okayama_aquarium.length != 0 %>
-              <p class="prefectures-text"><%= @okayama_aquarium.length %>件</p>
-              <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 33), class: "prefectures-aquarium-btn" %>
+              <div class="prefectures-set">
+                <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 33), class: "prefectures-aquarium-btn" %>
+                <p class="prefectures-text">(<%= @okayama_aquarium.length %>件)</p>
+              </div>
             <% else %>
-              <p class="prefectures-text prefectures-text-non">水族館の情報が</p>
+              <p class="prefectures-text prefectures-margin-top">水族館の情報が</p>
               <p class="prefectures-text">ありません。</p>
             <% end %>
           </div>
@@ -101,19 +113,23 @@
         <div class="prefectures-iconset">
           <div class="prefectures-zoo">
             <% if @hiroshima_zoo.length != 0 %>
-              <p class="prefectures-text"><%= @hiroshima_zoo.length %>件</p>
-              <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 34), class: "prefectures-zoo-btn" %>
+              <div class="prefectures-set">
+                <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 34), class: "prefectures-zoo-btn" %>
+                <p class="prefectures-text">(<%= @hiroshima_zoo.length %>件)</p>
+              </div>
             <% else %>
-              <p class="prefectures-text prefectures-text-non">動物園の情報が</p>
+              <p class="prefectures-text prefectures-margin-top">動物園の情報が</p>
               <p class="prefectures-text">ありません。</p>
             <% end %>
           </div>
           <div class="prefectures-aquarium">
             <% if @hiroshima_aquarium.length != 0 %>
-              <p class="prefectures-text"><%= @hiroshima_aquarium.length %>件</p>
-              <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 34), class: "prefectures-aquarium-btn" %>
+              <div class="prefectures-set">
+                <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 34), class: "prefectures-aquarium-btn" %>
+                <p class="prefectures-text">(<%= @hiroshima_aquarium.length %>件)</p>
+              </div>
             <% else %>
-              <p class="prefectures-text prefectures-text-non">水族館の情報が</p>
+              <p class="prefectures-text prefectures-margin-top">水族館の情報が</p>
               <p class="prefectures-text">ありません。</p>
             <% end %>
           </div>
@@ -125,19 +141,23 @@
         <div class="prefectures-iconset">
           <div class="prefectures-zoo">
             <% if @yamaguchi_zoo.length != 0 %>
-              <p class="prefectures-text"><%= @yamaguchi_zoo.length %>件</p>
-              <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 35), class: "prefectures-zoo-btn" %>
+              <div class="prefectures-set">
+                <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 35), class: "prefectures-zoo-btn" %>
+                <p class="prefectures-text">(<%= @yamaguchi_zoo.length %>件)</p>
+              </div>
             <% else %>
-              <p class="prefectures-text prefectures-text-non">動物園の情報が</p>
+              <p class="prefectures-text prefectures-margin-top">動物園の情報が</p>
               <p class="prefectures-text">ありません。</p>
             <% end %>
           </div>
           <div class="prefectures-aquarium">
             <% if @yamaguchi_aquarium.length != 0 %>
-              <p class="prefectures-text"><%= @yamaguchi_aquarium.length %>件</p>
-              <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 35), class: "prefectures-aquarium-btn" %>
+              <div class="prefectures-set">
+                <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 35), class: "prefectures-aquarium-btn" %>
+                <p class="prefectures-text">(<%= @yamaguchi_aquarium.length %>件)</p>
+              </div>
             <% else %>
-              <p class="prefectures-text prefectures-text-non">水族館の情報が</p>
+              <p class="prefectures-text prefectures-margin-top">水族館の情報が</p>
               <p class="prefectures-text">ありません。</p>
             <% end %>
           </div>
@@ -149,19 +169,23 @@
         <div class="prefectures-iconset">
           <div class="prefectures-zoo">
             <% if @tokushima_zoo.length != 0 %>
-              <p class="prefectures-text"><%= @tokushima_zoo.length %>件</p>
-              <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 36), class: "prefectures-zoo-btn" %>
+              <div class="prefectures-set">
+                <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 36), class: "prefectures-zoo-btn" %>
+                <p class="prefectures-text">(<%= @tokushima_zoo.length %>件)</p>
+              </div>
             <% else %>
-              <p class="prefectures-text prefectures-text-non">動物園の情報が</p>
+              <p class="prefectures-text prefectures-margin-top">動物園の情報が</p>
               <p class="prefectures-text">ありません。</p>
             <% end %>
           </div>
           <div class="prefectures-aquarium">
             <% if @tokushima_aquarium.length != 0 %>
-              <p class="prefectures-text"><%= @tokushima_aquarium.length %>件</p>
-              <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 36), class: "prefectures-aquarium-btn" %>
+              <div class="prefectures-set">
+                <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 36), class: "prefectures-aquarium-btn" %>
+                <p class="prefectures-text">(<%= @tokushima_aquarium.length %>件)</p>
+              </div>
             <% else %>
-              <p class="prefectures-text prefectures-text-non">水族館の情報が</p>
+              <p class="prefectures-text prefectures-margin-top">水族館の情報が</p>
               <p class="prefectures-text">ありません。</p>
             <% end %>
           </div>
@@ -173,19 +197,23 @@
         <div class="prefectures-iconset">
           <div class="prefectures-zoo">
             <% if @kagawa_zoo.length != 0 %>
-              <p class="prefectures-text"><%= @kagawa_zoo.length %>件</p>
-              <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 37), class: "prefectures-zoo-btn" %>
+              <div class="prefectures-set">
+                <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 37), class: "prefectures-zoo-btn" %>
+                <p class="prefectures-text">(<%= @kagawa_zoo.length %>件)</p>
+              </div>
             <% else %>
-              <p class="prefectures-text prefectures-text-non">動物園の情報が</p>
+              <p class="prefectures-text prefectures-margin-top">動物園の情報が</p>
               <p class="prefectures-text">ありません。</p>
             <% end %>
           </div>
           <div class="prefectures-aquarium">
             <% if @kagawa_aquarium.length != 0 %>
-              <p class="prefectures-text"><%= @kagawa_aquarium.length %>件</p>
-              <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 37), class: "prefectures-aquarium-btn" %>
+              <div class="prefectures-set">
+                <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 37), class: "prefectures-aquarium-btn" %>
+                <p class="prefectures-text">(<%= @kagawa_aquarium.length %>件)</p>
+              </div>
             <% else %>
-              <p class="prefectures-text prefectures-text-non">水族館の情報が</p>
+              <p class="prefectures-text prefectures-margin-top">水族館の情報が</p>
               <p class="prefectures-text">ありません。</p>
             <% end %>
           </div>
@@ -197,19 +225,23 @@
         <div class="prefectures-iconset">
           <div class="prefectures-zoo">
             <% if @ehime_zoo.length != 0 %>
-              <p class="prefectures-text"><%= @ehime_zoo.length %>件</p>
-              <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 38), class: "prefectures-zoo-btn" %>
+              <div class="prefectures-set">
+                <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 38), class: "prefectures-zoo-btn" %>
+                <p class="prefectures-text">(<%= @ehime_zoo.length %>件)</p>
+              </div>
             <% else %>
-              <p class="prefectures-text prefectures-text-non">動物園の情報が</p>
+              <p class="prefectures-text prefectures-margin-top">動物園の情報が</p>
               <p class="prefectures-text">ありません。</p>
             <% end %>
           </div>
           <div class="prefectures-aquarium">
             <% if @ehime_aquarium.length != 0 %>
-              <p class="prefectures-text"><%= @ehime_aquarium.length %>件</p>
-              <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 38), class: "prefectures-aquarium-btn" %>
+              <div class="prefectures-set">
+                <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 38), class: "prefectures-aquarium-btn" %>
+                <p class="prefectures-text">(<%= @ehime_aquarium.length %>件)</p>
+              </div>
             <% else %>
-              <p class="prefectures-text prefectures-text-non">水族館の情報が</p>
+              <p class="prefectures-text prefectures-margin-top">水族館の情報が</p>
               <p class="prefectures-text">ありません。</p>
             <% end %>
           </div>
@@ -221,19 +253,23 @@
         <div class="prefectures-iconset">
           <div class="prefectures-zoo">
             <% if @kochi_zoo.length != 0 %>
-              <p class="prefectures-text"><%= @kochi_zoo.length %>件</p>
-              <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 39), class: "prefectures-zoo-btn" %>
+              <div class="prefectures-set">
+                <%= link_to "動物園の一覧", spot_facilities_path(category_id: 1, prefectures_id: 39), class: "prefectures-zoo-btn" %>
+                <p class="prefectures-text">(<%= @kochi_zoo.length %>件)</p>
+              </div>
             <% else %>
-              <p class="prefectures-text prefectures-text-non">動物園の情報が</p>
+              <p class="prefectures-text prefectures-margin-top">動物園の情報が</p>
               <p class="prefectures-text">ありません。</p>
             <% end %>
           </div>
           <div class="prefectures-aquarium">
             <% if @kochi_aquarium.length != 0 %>
-              <p class="prefectures-text"><%= @kochi_aquarium.length %>件</p>
-              <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 39), class: "prefectures-aquarium-btn" %>
+              <div class="prefectures-set">
+                <%= link_to "水族館の一覧", spot_facilities_path(category_id: 2, prefectures_id: 39), class: "prefectures-aquarium-btn" %>
+                <p class="prefectures-text">(<%= @kochi_aquarium.length %>件)</p>
+              </div>
             <% else %>
-              <p class="prefectures-text prefectures-text-non">水族館の情報が</p>
+              <p class="prefectures-text prefectures-margin-top">水族館の情報が</p>
               <p class="prefectures-text">ありません。</p>
             <% end %>
           </div>

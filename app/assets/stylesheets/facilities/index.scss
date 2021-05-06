@@ -34,7 +34,7 @@
 .top-registration-main {
   width: 100%;
   height: auto;
-  padding-top: 1rem;
+  padding: 0.5rem 0rem;
   background-color: rgb(223, 235, 230);
   display: flex;
   justify-content: center;
@@ -49,9 +49,49 @@
   font-size: 1.6rem;
 }
 
+.top-form-text {
+  font-weight: bold;
+  margin: 0rem 2.5rem;
+}
+
 .top-form-top-text {
   font-weight: bold;
-  margin-left: 2rem;
+  border-bottom: 3px solid #000;
+  margin: 0 3rem 1rem 3rem;
+}
+
+.top-text-picture-top {
+  margin-top: 0.5rem;
+}
+
+.top-picture-first-letter:first-letter {
+  font-size: 2.3rem;
+  color: rgb(148, 216, 207);
+}
+
+.show-facility-zoo-first-letter:first-letter {
+  font-size: 2.3rem;
+  color: rgb(9, 156, 100);
+}
+
+.show-facility-aquarium-first-letter:first-letter {
+  font-size: 2.3rem;
+  color: rgb(10, 138, 197);
+}
+
+.mypage-men-first-letter:first-letter {
+  font-size: 2.3rem;
+  color: rgb(49, 78, 204);
+}
+
+.mypage-woman-first-letter:first-letter {
+  font-size: 2.3rem;
+  color: rgb(243, 73, 73);
+}
+
+.mypage-other-first-letter:first-letter {
+  font-size: 2.3rem;
+  color: rgb(200, 39, 233);
 }
 
 .top-select {
@@ -116,49 +156,63 @@
   transition-duration: 0.5s;
 }
 
+.top-picture-main {
+  width: 100%;
+  height: auto;
+  padding: 0.5rem 0rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.top-picture-form-wrap {
+  width: 98vw;
+  padding: 0.5rem 0rem;
+  font-size: 1.6rem;
+}
+
 .top-picture-list {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
   list-style: none;
-  margin: 1rem 0 0 0;
 }
 
 .top-picture-li {
   width: 25%;
-  height: 20%;
 }
 
 .top-picture-box {
   display: flex;
   flex-direction: column;
   background-color: rgb(164, 223, 215);
-  margin: 0.3rem 0.3rem;
-  padding: 0.5rem;
+  margin: 0.3rem 0.1rem;
+  padding: 0.3rem 0.2rem;
   border-radius: 0.8rem;
 }
 
 .top-picture-name {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: rgb(29, 28, 28);
   margin-bottom: 0.1rem;
+  margin-left: 0.3rem;
 }
 
 .top-picture-image {
   width: 100%;
+  height: 15vw;
 }
 
 .top-picture-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: rgb(48, 38, 38);
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
+  margin-left: 0.3rem;
 }
 
 .top-picture-nil {
   display: flex;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: rgb(48, 38, 38);
-  margin-top: 0.2vw;
-  margin-left: 1vw;
 }

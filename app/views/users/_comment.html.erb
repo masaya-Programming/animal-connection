@@ -1,17 +1,11 @@
 <%# CSS・・・assets/stylesheets/users/show.css %>
-<li>
-  <div class="mypage-comment-box">
-    <p class="mypage-comment-name">
-      <%= link_to truncate(comment.facility.name, length: 15, separator: "・"), facility_path(comment.facility_id), class: "mypage-comment-facility-link" %>
-      <% if user_signed_in? && comment.user_id == current_user.id %>
-        <%= link_to "レビュー編集 / 削除", edit_user_comment_path(comment.user, comment), class: "mypage-comment-edit-link" %>
-      <% end %>
-    </p>
-    <h2 class="mypage-comment-text">
-      <%= simple_format(comment.text) %>
-    </h2>
-    <h2 class="mypage-picture-title">
-      <%= comment.created_at.to_s(:datetime_jp) %>
-    </h2>
+<li class="mypage-comment-li">
+  <p class="comment-created-data">投稿日:<%= comment.created_at.to_s(:datetime_jp) %></p>
+  <div class="speech-balloon">
+    <p><%= simple_format(comment.text) %></p>
   </div>
+  <% if user_signed_in? && comment.user_id == current_user.id %>
+    <%= link_to "レビュー編集 / 削除", edit_user_comment_path(comment.user, comment), class: "mypage-comment-edit-link" %>
+  <% end %>
+  <%= link_to truncate(comment.facility.name, length: 11, separator: "・"), facility_path(comment.facility_id), class: "mypage-comment-facility-link" %>
 </li>

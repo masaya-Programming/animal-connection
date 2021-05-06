@@ -3,46 +3,42 @@
 }
 
 .mypage-header {
-  width: 100%;
+  margin: 0 8rem;
   padding: 2% 0% 1% 0%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .mypage-top-nickname-men {
   color: white;
-  font-size: 2rem;
-  text-shadow: 0 0.8px 0 #ccc, 0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
+  font-size: 1.5rem;
+  text-shadow:  0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
   background: rgb(49, 78, 204);
-  margin-bottom: 0.8rem;
   border-radius: 1rem;
-  padding: 0.8rem 1.2rem;
+  padding: 0.5rem 1rem;
 }
 
 .mypage-top-nickname-woman {
   color: white;
-  font-size: 2rem;
-  text-shadow: 0 0.8px 0 #ccc, 0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
+  font-size: 1.5rem;
+  text-shadow: 0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
   background: rgb(243, 73, 73);
-  margin-bottom: 0.8rem;
   border-radius: 1rem;
-  padding: 0.8rem 1.2rem;
+  padding: 0.5rem 1rem;
 }
 
 .mypage-top-nickname-other {
   color: white;
-  font-size: 2rem;
-  text-shadow: 0 0.8px 0 #ccc, 0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
+  font-size: 1.5rem;
+  text-shadow: 0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
   background: rgb(200, 39, 233);
-  margin-bottom: 0.8rem;
   border-radius: 1rem;
-  padding: 0.8rem 1.2rem;
+  padding: 0.5rem 1rem;
 }
 
 .mypage-top-text {
-  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  font-size: 1.3rem;
 }
 
 .mypage-comment-ber {
@@ -59,36 +55,65 @@
 .mypage-comment-list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   list-style: none;
-  margin-left: 1vw;
+  margin: 0% 12%;
 }
 
-.mypage-comment-box {
+.mypage-comment-li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0.8rem 0rem;
+  margin-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 4px solid rgb(241, 241, 241);
 }
 
-.mypage-comment-name {
+.speech-balloon {
+  position: relative;
+  background-color: #d0e4da;
+  padding: 0.8rem;
+  color: #333;
+  border-radius: 1rem;
   font-size: 1.3rem;
+  }
+  
+  .speech-balloon::before {
+  content: "";
+  position: absolute;
+  border: 1rem solid transparent;
+  border-top: 1rem solid #d0e4da;
+  top: 100%;
+  left: 26%;
+  }
+  
+  .speech-balloon p {
+  margin: 0;
+  padding: 0;
+  }
+
+.mypage-comment-edit-link {
   display: flex;
+  justify-content: center;
+  background-color: #ea352d;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  margin-left: 75%;
+  margin-top: 0.2rem;
 }
 
 .mypage-comment-facility-link {
-  background-color: rgb(73, 168, 140);
-  color: #fff;
-  border-radius: 10%;
-  padding: 0.2rem 0.7rem;
-}
-
-.mypage-comment-edit-link {
-  background-color: #ea352d;
-  color: #fff;
-  border-radius: 10%;
-  padding: 0.2rem 0.7rem;
-  margin-left: 2vw;
+  background-color: rgb(164, 223, 215);
+  color: #000;
+  font-size: 1.4rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 0.3rem 1rem;
+  margin-top: -0.6rem;
+  margin-left: 5%;
+  margin-right: 50%;
+  text-decoration: none;
 }
 
 .mypage-comment-text {
@@ -103,8 +128,6 @@
   justify-content: center;
   font-size: 1.7rem;
   color: rgb(48, 38, 38);
-  margin-top: 0.2vw;
-  margin-left: 1vw;
 }
 
 .mypage-picture-ber {

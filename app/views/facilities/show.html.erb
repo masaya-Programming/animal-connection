@@ -83,38 +83,54 @@
     <%= link_to "公式サイトへ (外部リンク)", @facility.official_website, target: :blank, class: "official-btn" %>
   </div>
 
-  <div class="show-comment-ber">
-    <h1 class="show-comment-top">
-      <%= @facility.name %> レビュー  <%= @comments.length %>件
-    </h1>
-    <ul class="show-comment-list">
-      <%= render partial: "comment", collection: @comments %>
-    </ul>
-    <% if @comments.length == 0 %>
-      <p class="show-comment-picture-nil-text">
-        投稿されたレビューがありません。
-      </p>
-      <p class="show-comment-picture-nil-text">
-        新しい投稿をお待ちしております。
-      </p>
-    <% end %>
+  <div class="top-picture-main">
+    <div class="top-picture-form-wrap">
+      <% if @facility.category.name == "動物園" %>
+        <h1 class="top-form-top-text show-facility-zoo-first-letter">
+          レビュー <%= @comments.length %>件
+        </h1>
+      <% else %>
+        <h1 class="top-form-top-text show-facility-aquarium-first-letter">
+          レビュー <%= @comments.length %>件
+        </h1>
+      <% end %>
+      <ul class="mypage-comment-list">
+        <%= render partial: "comment", collection: @comments %>
+      </ul>
+      <% if @comments.length == 0 %>
+        <p class="show-comment-picture-nil-text">
+          投稿されたレビューがありません。
+        </p>
+        <p class="show-comment-picture-nil-text">
+          新しい投稿をお待ちしております。
+        </p>
+      <% end %>
+    </div>
   </div>
 
-  <div class="show-picture-ber">
-    <h1 class="show-picture-top">
-      <%= @facility.name %> ベストショット <%= @pictures.length %>件
-    </h1>
-    <ul class="show-picture-list">
-      <%= render partial: "picture", collection: @pictures %>
-    </ul>
-    <% if @pictures.length == 0 %>
-      <p class="show-comment-picture-nil-text">
-        投稿されたベストショットがありません。
-      </p>
-      <p class="show-comment-picture-nil-text">
-        新しい投稿をお待ちしております。
-      </p>
-    <% end %>
+  <div class="top-picture-main">
+    <div class="top-picture-form-wrap">
+      <% if @facility.category.name == "動物園" %>
+        <h1 class="top-form-top-text top-text-picture-top show-facility-zoo-first-letter">
+          ベストショット <%= @pictures.length %>件
+        </h1>
+      <% else %>
+        <h1 class="top-form-top-text top-text-picture-top show-facility-aquarium-first-letter">
+          ベストショット <%= @pictures.length %>件
+        </h1>
+      <% end %>
+      <ul class="top-picture-list">
+        <%= render partial: "picture", collection: @pictures %>
+      </ul>
+      <% if @pictures.length == 0 %>
+        <p class="show-comment-picture-nil-text">
+          投稿されたベストショットがありません。
+        </p>
+        <p class="show-comment-picture-nil-text show-facility-margin">
+          新しい投稿をお待ちしております。
+        </p>
+      <% end %>
+    </div>
   </div>
 
   <div class="show-btn-set">

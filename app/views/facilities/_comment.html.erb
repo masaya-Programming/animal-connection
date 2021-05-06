@@ -1,18 +1,13 @@
 <%# CSS・・・assets/stylesheets/facilities/show.css %>
-<li>
-  <div class="show-comment-box">
-    <p class="show-comment-name">
-      <% if user_signed_in? && comment.user.nickname == current_user.nickname %>
-        <%= link_to comment.user.nickname, user_path(comment.user_id), class: "show-my-comment-link" %>
-      <% else %>
-        <%= link_to comment.user.nickname, user_path(comment.user_id), class: "show-comment-link" %>
-      <% end %>
-    </p>
-    <h2 class="show-comment-text">
-      <%= simple_format(comment.text) %>
-    </h2>
-    <h2 class="show-comment-text">
-      <%= comment.created_at.to_s(:datetime_jp) %>
-    </h2>
+<li class="mypage-comment-li">
+  <p class="comment-created-data">投稿日:<%= comment.created_at.to_s(:datetime_jp) %></p>
+  <div class="comment-speech-balloon">
+    <p><%= simple_format(comment.text) %></p>
   </div>
+  <% if user_signed_in? && comment.user_id == current_user.id %>
+    <%= link_to "レビュー編集 / 削除", edit_user_comment_path(comment.user, comment), class: "mypage-comment-edit-link" %>
+  <% end %>
+  <p class="comment-user-created-data">
+    投稿者:<%= link_to truncate(comment.user.nickname, length: 11, separator: "・"), user_path(comment.user_id) %>
+  </p>
 </li>

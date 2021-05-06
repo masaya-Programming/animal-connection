@@ -1,17 +1,17 @@
 <%# CSS・・・assets/stylesheets/users/show.css %>
-<li>
-  <p class="mypage-picture-name">
-    <%= link_to truncate(picture.facility.name, length: 10, separator: "・"), facility_path(picture.facility_id), class: "mypage-picture-link" %>
-  </p>
-  <div class="mypage-picture-box">
+<li class="top-picture-li">
+  <div class="top-picture-box">
     <%= link_to user_picture_path(picture.user, picture) do %>
-      <%= image_tag picture.image, size: "320x240" %>
-      <h2 class="mypage-picture-title">
-        <%= truncate(picture.title, length: 10, separator: "・") %>
-      </h2>
-      <h2 class="mypage-picture-title">
-        <%= picture.created_at.to_s(:datetime_jp) %>
-      </h2>
+      <p class="picture-created-data">
+        投稿日:<%= picture.created_at.to_s(:datetime_jp) %>
+      </p>
+      <p class="mypage-picture-name">
+        <%= truncate(picture.facility.name, length: 11, separator: "・") %>
+      </p>
+      <%= image_tag picture.image, class: "top-picture-image" %>
+      <h2 class="top-picture-title">
+        <%= truncate(picture.title, length: 11, separator: "・") %>
+      </h2>   
     <% end %>
   </div>
 </li>

@@ -17,7 +17,7 @@
       <% else %>
         <h1 class="mypage-top-nickname-other"><%= @user.nickname %></h1>
       <% end %>
-      <h1 class="mypage-top-text">マイページ</h1>
+      <h2 class="mypage-top-text">マイページ</h2>
     <% else %>
       <% if @user.gender.name == "男性" %>
         <h1 class="mypage-top-nickname-men"><%= @user.nickname %></h1>
@@ -26,36 +26,60 @@
       <% else %>
         <h1 class="mypage-top-nickname-other"><%= @user.nickname %></h1>
       <% end %>
-      <h1 class="mypage-top-text">ユーザーページ</h1>
+      <h2 class="mypage-top-text">ユーザーページ</h2>
     <% end %>
   </div>
 
-  <div class="mypage-comment-ber">
-    <h1 class="mypage-comment-top">
-      投稿レビュー <%= @comments.length %>件
-    </h1>
-    <ul class="mypage-comment-list">
-      <%= render partial: "comment", collection: @comments %>
-    </ul>
-    <% if @comments.length == 0 %>
-      <p class="mypage-comment-picture-nil-text">
-        <%= @user.nickname %>の投稿レビューはありません。
-      </p>
-    <% end %>
+  <div class="top-picture-main">
+    <div class="top-picture-form-wrap">
+      <% if @user.gender.name == "男性" %>
+        <h2 class="top-form-top-text mypage-men-first-letter">
+          レビュー <%= @comments.length %>件
+        </h2>
+      <% elsif @user.gender.name == "女性" %>
+        <h2 class="top-form-top-text mypage-woman-first-letter">
+          レビュー <%= @comments.length %>件
+        </h2>
+      <% else %>
+        <h2 class="top-form-top-text mypage-other-first-letter">
+          レビュー <%= @comments.length %>件
+        </h2>
+      <% end %>
+      <ul class="mypage-comment-list">
+        <%= render partial: "comment", collection: @comments %>
+      </ul>
+      <% if @comments.length == 0 %>
+        <p class="mypage-comment-picture-nil-text">
+          <%= @user.nickname %>のレビューはありません。
+        </p>
+      <% end %>
+    </div>
   </div>
 
-  <div class="mypage-picture-ber">
-    <h1 class="mypage-picture-top">
-      投稿ベストショット <%= @pictures.length %>件
-    </h1>
-    <ul class="mypage-picture-list">
-      <%= render partial: "picture", collection: @pictures %>
-    </ul>
-    <% if @pictures.length == 0 %>
-      <p class="mypage-comment-picture-nil-text">
-        <%= @user.nickname %>の投稿ベストショットはありません。
-      </p>
-    <% end %>
+  <div class="top-picture-main">
+    <div class="top-picture-form-wrap">
+      <% if @user.gender.name == "男性" %>
+        <h2 class="top-form-top-text top-text-picture-top mypage-men-first-letter">
+          ベストショット <%= @pictures.length %>件
+        </h2>
+      <% elsif @user.gender.name == "女性" %>
+        <h2 class="top-form-top-text top-text-picture-top mypage-woman-first-letter">
+          ベストショット <%= @pictures.length %>件
+        </h2>
+      <% else %>
+        <h2 class="top-form-top-text top-text-picture-top mypage-other-first-letter">
+          ベストショット <%= @pictures.length %>件
+        </h2>
+      <% end %>
+      <ul class="top-picture-list">
+        <%= render partial: "picture", collection: @pictures %>
+      </ul>
+      <% if @pictures.length == 0 %>
+        <p class="show-comment-picture-nil-text">
+          <%= @user.nickname %>のベストショットはありません。
+        </p>
+      <% end %>
+    </div>
   </div>
 
   <% if user_signed_in? && @user == current_user %>

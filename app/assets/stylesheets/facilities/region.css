@@ -103,7 +103,7 @@
 
 .prefectures-top {
   width: 100%;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #000;
   margin-top: 1rem;
   padding-bottom: 0.3rem;
@@ -111,32 +111,32 @@
 }
 
 .hokkaidotohoku-first-letter:first-letter {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: #25a5e8;
 }
 
 .kanto-first-letter:first-letter {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: #49e0e6;
 }
 
 .chubu-first-letter:first-letter {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: #6FC369;
 }
 
 .kinki-first-letter:first-letter {
-  font-size: 2.5rem;
-  color: #F1EC00;
+  font-size: 2.3rem;
+  color: #e4e003;
 }
 
 .chugokushikoku-first-letter:first-letter {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: #e6bf49;
 }
 
 .kyushuokinawa-first-letter:first-letter {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: #e65b49;
 }
 
@@ -145,6 +145,11 @@
   align-items: center;
   width: 100%;
   height: 6rem;
+}
+
+.prefectures-set {
+  display: flex;
+  align-items: flex-end;
 }
 
 .prefectures-zoo {
@@ -163,19 +168,20 @@
 
 .prefectures-text {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
 }
 
-.prefectures-text-non {
-  margin-top: 0.8rem;
+.prefectures-margin-top {
+  margin-top: 1rem;
 }
 
 .prefectures-zoo-btn {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .prefectures-aquarium-btn {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .prefectures-zoo-btn {
@@ -183,7 +189,7 @@
   color: #fff;
   background-color: rgb(9, 156, 100);
   border: 6px solid rgb(9, 156, 100);
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   cursor: pointer;
 }
 
@@ -192,7 +198,7 @@
   color: #fff;
   background-color: rgb(10, 138, 197);
   border: 6px solid rgb(10, 138, 197);
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   cursor: pointer;
 }
 
