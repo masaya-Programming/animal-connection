@@ -97,17 +97,20 @@
 }
 
 .prefectures-box {
-  width: 70%;
+  width: 65%;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .prefectures-top {
   width: 100%;
   font-size: 1.6rem;
   color: #000;
-  margin-top: 1rem;
+  margin: 1rem 0 0.5rem 0;
   padding-bottom: 0.3rem;
-  border-bottom: 3px solid #000;
+  border-bottom: 3.5px solid #000;
 }
 
 .hokkaidotohoku-first-letter:first-letter {
@@ -143,8 +146,9 @@
 .prefectures-iconset {
   display: flex;
   align-items: center;
-  width: 100%;
-  height: 6rem;
+  width: 85%;
+  height: 4rem;
+  margin-bottom: 1.5rem;
 }
 
 .prefectures-set {
