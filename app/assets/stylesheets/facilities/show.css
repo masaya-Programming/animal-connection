@@ -68,14 +68,19 @@
   background: linear-gradient(transparent 60%, #93d5e6 0%);
 }
 
-.show-contents-kana {
+.show-contents-sabtext {
   font-size: 1.3rem;
   margin-left: 1vw;
 }
 
-.show-contents-name {
+.show-contents-text {
   font-size: 1.6rem;
   margin-left: 1vw;
+}
+
+.non-data {
+  color: rgb(122, 124, 126);
+  font-weight: 500;
 }
 
 .upper-content {

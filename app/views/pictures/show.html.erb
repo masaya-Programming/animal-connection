@@ -38,7 +38,7 @@
       </h2>
       <p>
         <% if @picture.description == "" %>
-          <p class="show-picture-contents-non-description">この投稿に説明はありません。</p>
+          <p class="show-picture-contents-description non-description">この投稿に説明はありません。</p>
         <% else %>
           <%= simple_format(@picture.description, class: "show-picture-contents-description") %>
         <% end %>
@@ -74,7 +74,7 @@
       </h2>
       <p>
         <% if @picture.description == "" %>
-          <p class="show-picture-contents-non-description">この投稿に説明はありません。</p>
+          <p class="show-picture-contents-description non-description">この投稿に説明はありません。</p>
         <% else %>
           <%= simple_format(@picture.description, class: "show-picture-contents-description") %>
         <% end %>

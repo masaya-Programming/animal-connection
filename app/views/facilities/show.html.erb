@@ -31,16 +31,61 @@
       <h2 class="show-content-zoo">
         スポット名称
       </h2>
-      <p class="show-contents-kana">
+      <p class="show-contents-sabtext">
         <%= @facility.kananame %>
       </p>
-      <p class="show-contents-name">
+      <p class="show-contents-text">
         <%= @facility.name %>
       </p>
+
+      <h2 class="show-content-zoo">
+        営業情報
+      </h2>
+      <p>
+        <% if @facility.business_data == nil %>
+          <p class="show-contents-text non-data">営業情報がありません。</p>
+        <% else %>
+          <%= simple_format(@facility.business_data, class: "show-contents-text") %>
+        <% end %>
+      </p>
+      
+      <h2 class="show-content-zoo">
+        休業情報
+      </h2>
+      <p>
+        <% if @facility.closed_data == nil %>
+          <p class="show-contents-text non-data">休業情報がありません。</p>
+        <% else %>
+          <%= simple_format(@facility.closed_data, class: "show-contents-text") %>
+        <% end %>
+      </p>
+
+      <h2 class="show-content-zoo">
+        いきもの情報
+      </h2>
+      <p>
+        <% if @facility.animal_data == nil %>
+          <p class="show-contents-text non-data">いきもの情報がありません。</p>
+        <% else %>
+          <%= simple_format(@facility.animal_data, class: "show-contents-text") %>
+        <% end %>
+      </p>
+
+      <h2 class="show-content-zoo">
+        注目ポイント
+      </h2>
+      <p>
+        <% if @facility.attention_point == nil %>
+          <p class="show-contents-text non-data">注目ポイント情報がありません。</p>
+        <% else %>
+          <%= simple_format(@facility.attention_point, class: "show-contents-text") %>
+        <% end %>
+      </p>
+      
       <h2 class="show-content-zoo">
         所在地
       </h2>
-      <p class="show-contents-name">
+      <p class="show-contents-text">
         <%= @facility.address %>
       </p>
       <div id="map" style="width:100%; height:360px; margin-top:1.5%">
@@ -63,16 +108,61 @@
       <h2 class="show-content-aquarium">
         スポット名称
       </h2>
-      <p class="show-contents-kana">
+      <p class="show-contents-sabtext">
         <%= @facility.kananame %>
       </p>
-      <p class="show-contents-name">
+      <p class="show-contents-text">
         <%= @facility.name %>
       </p>
+
+      <h2 class="show-content-aquarium">
+        営業情報
+      </h2>
+      <p>
+        <% if @facility.business_data == nil %>
+          <p class="show-contents-text non-data">営業情報がありません。</p>
+        <% else %>
+          <%= simple_format(@facility.business_data, class: "show-contents-text") %>
+        <% end %>
+      </p>
+      
+      <h2 class="show-content-aquarium">
+        休業情報
+      </h2>
+      <p>
+        <% if @facility.closed_data == nil %>
+          <p class="show-contents-text non-data">休業情報がありません。</p>
+        <% else %>
+          <%= simple_format(@facility.closed_data, class: "show-contents-text") %>
+        <% end %>
+      </p>
+
+      <h2 class="show-content-aquarium">
+        いきもの情報
+      </h2>
+      <p>
+        <% if @facility.animal_data == nil %>
+          <p class="show-contents-text non-data">いきもの情報がありません。</p>
+        <% else %>
+          <%= simple_format(@facility.animal_data, class: "show-contents-text") %>
+        <% end %>
+      </p>
+
+      <h2 class="show-content-aquarium">
+        注目ポイント
+      </h2>
+      <p>
+        <% if @facility.attention_point == nil %>
+          <p class="show-contents-text non-data">注目ポイント情報がありません。</p>
+        <% else %>
+          <%= simple_format(@facility.attention_point, class: "show-contents-text") %>
+        <% end %>
+      </p>
+
       <h2 class="show-content-aquarium">
         所在地
       </h2>
-      <p class="show-contents-name">
+      <p class="show-contents-text">
         <%= @facility.address %>
       </p>
       <div id="map" style="width:100%; height:360px; margin-top:1.5%">
