@@ -11,18 +11,18 @@
   <% if @facility.category.name == "動物園" %>
     <%= link_to facility_path(@facility.id) do %>
       <div class="show-picture-list-zoo">
-        <%= image_tag "zoo-icon.png" %>
+        <%= image_tag "zoo-icon.png", width:"52px", height:"52px" %>
         <h1 class="show-picture-facility-name">
           <%= @facility.name %>
         </h1>
       </div>
     <% end %>
-    <p class="updated-data">
+    <div class="updated-data">
       投稿日:<%= @picture.created_at.to_s(:datetime_jp) %>
-    </p>
-    <p class="updated-data">
+    </div>
+    <div class="updated-data">
       投稿者:<%= link_to @user.nickname, user_path(@picture.user_id) %>
-    </p>
+    </div>
     <div class="first-show-picture">
       <div class="show-picture-image-box">
         <%= image_tag @picture.image, class: "show-picture-zoo", size: "640x480" %>
@@ -47,18 +47,18 @@
   <% else %>
     <%= link_to facility_path(@facility.id) do %>
       <div class="show-picture-list-aquarium">
-        <%= image_tag "aquarium-icon.png" %>
+        <%= image_tag "aquarium-icon.png", width:"52px", height:"52px" %>
         <h1 class="show-picture-facility-name">
           <%= @facility.name %>
         </h1>
       </div>
     <% end %>
-    <h2 class="updated-data">
+    <div class="updated-data">
       投稿日:<%= @picture.created_at.to_s(:datetime_jp) %>
-    </h2>
-    <h2 class="updated-data">
+    </div>
+    <div class="updated-data">
       投稿者:<%= link_to @user.nickname, user_path(@picture.user_id) %>
-    </h2>
+    </div>
     <div class="first-show-picture">
       <div class="show-picture-image-box">
         <%= image_tag @picture.image, class: "show-picture-aquarium", size: "640x480" %>

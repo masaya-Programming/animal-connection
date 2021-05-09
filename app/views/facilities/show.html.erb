@@ -16,7 +16,7 @@
 <div class="show-main">
   <% if @facility.category.name == "動物園" %>
     <div class="show-facility-list-zoo">
-      <%= image_tag "zoo-icon.png" %>
+      <%= image_tag "zoo-icon.png", width:"52px", height:"52px" %>
       <h1 class="show-facility-name">
         <%= @facility.name %>
       </h1>
@@ -93,7 +93,7 @@
     </div>
   <% else %>
     <div class="show-facility-list-aquarium">
-      <%= image_tag "aquarium-icon.png" %>
+      <%= image_tag "aquarium-icon.png", width:"52px", height:"52px" %>
       <h1 class="show-facility-name">
         <%= @facility.name %>
       </h1>
@@ -113,28 +113,6 @@
       </p>
       <p class="show-contents-text">
         <%= @facility.name %>
-      </p>
-
-      <h2 class="show-content-aquarium">
-        営業情報
-      </h2>
-      <p>
-        <% if @facility.business_data == nil %>
-          <p class="show-contents-sabtext non-data">営業情報がありません。</p>
-        <% else %>
-          <%= simple_format(@facility.business_data, class: "show-contents-sabtext") %>
-        <% end %>
-      </p>
-      
-      <h2 class="show-content-aquarium">
-        休業情報
-      </h2>
-      <p>
-        <% if @facility.closed_data == nil %>
-          <p class="show-contents-sabtext non-data">休業情報がありません。</p>
-        <% else %>
-          <%= simple_format(@facility.closed_data, class: "show-contents-sabtext") %>
-        <% end %>
       </p>
 
       <h2 class="show-content-aquarium">

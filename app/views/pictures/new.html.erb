@@ -9,7 +9,7 @@
       <% if @facility.category.name == "動物園" %>
           <%= link_to facility_path(@facility.id) do %>
           <div class="newedit-facility-list-zoo">
-            <%= image_tag "zoo-icon.png" %>
+            <%= image_tag "zoo-icon.png", width:"52px", height:"52px" %>
             <h1 class="newedit-facility-name">
               <%= @facility.name %>
             </h1>
@@ -18,7 +18,7 @@
       <% else %>
         <%= link_to facility_path(@facility.id) do %>
           <div class="newedit-facility-list-aquarium">
-            <%= image_tag "aquarium-icon.png" %>
+            <%= image_tag "aquarium-icon.png", width:"52px", height:"52px" %>
             <h1 class="newedit-facility-name">
               <%= @facility.name %>
             </h1>

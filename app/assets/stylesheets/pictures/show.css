@@ -21,7 +21,7 @@
 }
 
 .show-picture-facility-name {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: #FFF;
   margin-left: 1vw;
 }
@@ -52,60 +52,30 @@
 
 .show-picture-content-zoo {
   margin: 2.5% 0% 1% 0%;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   background: linear-gradient(transparent 60%, #baebba 0%);
 }
 
 .show-picture-content-aquarium {
   margin: 2.5% 0% 1% 0%;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   background: linear-gradient(transparent 60%, #93d5e6 0%);
 }
 
 .show-picture-contents-title {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   margin-left: 1vw;
   font-weight: 600;
 }
 
 .show-picture-contents-description {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-left: 1vw;
 }
 
 .non-description {
   color: rgb(122, 124, 126);
   font-weight: 500;
-}
-
-.show-picture-content-nickname-men {
-  color: white;
-  font-size: 1.4rem;
-  text-shadow: 0 0.8px 0 #ccc, 0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
-  background: rgb(49, 78, 204);
-  border-radius: 1rem;
-  margin-left: 1vw;
-  padding: 0.3rem 0.5rem;
-}
-
-.show-picture-content-nickname-woman {
-  color: white;
-  font-size: 1.4rem;
-  text-shadow: 0 0.8px 0 #ccc, 0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
-  background: rgb(243, 73, 73);
-  border-radius: 1rem;
-  margin-left: 1vw;
-  padding: 0.3rem 0.5rem;
-}
-
-.show-picture-content-nickname-other {
-  color: white;
-  font-size: 1.4rem;
-  text-shadow: 0 0.8px 0 #ccc, 0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
-  background: rgb(200, 39, 233);
-  border-radius: 1rem;
-  margin-left: 1vw;
-  padding: 0.3rem 0.5rem;
 }
 
 .facility-back-box {

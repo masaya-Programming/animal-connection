@@ -55,7 +55,7 @@
 .facility-list-zoo {
   display: flex;
   align-items: center;
-  margin: 1.2% 11% 1.2% 11%;
+  margin: 1.2% 9% 1.2% 9%;
   background-color: rgb(9, 156, 100);
   border: 3px solid rgb(112, 207, 171);
   border-radius: 1.5rem;
@@ -64,7 +64,7 @@
 .facility-list-aquarium {
   display: flex;
   align-items: center;
-  margin: 1.2% 11% 1.2% 11%;
+  margin: 1.2% 9% 1.2% 9%;
   background-color: rgb(10, 138, 197);
   border: 3px solid rgb(123, 194, 226);
   border-radius: 1.5rem;
@@ -77,13 +77,13 @@
 }
 
 .facility-prefectures-text {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #FFF;
   margin-left: 1vw;
 }
 
 .facility-name-text {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #FFF;
   margin-top: 0.2vw;
   margin-left: 2vw;

@@ -21,7 +21,7 @@
 }
 
 .show-facility-name {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: #FFF;
   margin-left: 1vw;
 }
@@ -58,23 +58,23 @@
 
 .show-content-zoo {
   margin: 2.5% 0% 1% 0%;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   background: linear-gradient(transparent 60%, #baebba 0%);
 }
 
 .show-content-aquarium {
   margin: 2.5% 0% 1% 0%;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   background: linear-gradient(transparent 60%, #93d5e6 0%);
 }
 
 .show-contents-sabtext {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-left: 1vw;
 }
 
 .show-contents-text {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   margin-left: 1vw;
 }
 
@@ -130,21 +130,10 @@
   padding: 0.8rem 0rem;
 }
 
-.show-comment-name {
-  font-size: 1.3rem;
-}
-
-.show-comment-text {
-  font-size: 1.7rem;
-  color: rgb(48, 38, 38);
-  margin-top: 0.2vw;
-  margin-left: 1vw;
-}
-
 .show-comment-picture-nil-text {
   display: flex;
   justify-content: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: rgb(48, 38, 38);
   margin-top: 0.2vw;
 }
@@ -176,11 +165,6 @@
   width: 100%;
   padding: 3% 10%;
   background-color: rgb(60, 243, 234);
-}
-
-.show-picture-top {
-  font-size: 2rem;
-  margin-bottom: 0.8rem;
 }
 
 .show-picture-list {
@@ -222,26 +206,6 @@
   font-size: 1.3rem;
   color: rgb(29, 28, 28);
   margin-bottom: 0.1em;
-}
-
-.show-picture-link {
-  background-color: rgb(73, 168, 140);
-  color: #fff;
-  border-radius: 10%;
-  padding: 0.2rem 0.7rem;
-}
-
-.show-my-picture-link {
-  background-color: rgb(194, 80, 65);
-  color: #fff;
-  border-radius: 10%;
-  padding: 0.2rem 0.7rem;
-}
-
-.show-picture-title {
-  font-size: 1.5rem;
-  color: rgb(48, 38, 38);
-  margin-top: 0.2rem;
 }
 
 .show-facility-margin {
