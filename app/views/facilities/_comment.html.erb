@@ -4,10 +4,10 @@
   <div class="comment-speech-balloon">
     <p><%= simple_format(comment.text) %></p>
   </div>
-  <% if user_signed_in? && comment.user_id == current_user.id %>
-    <%= link_to "レビュー編集 / 削除", edit_user_comment_path(comment.user, comment), class: "mypage-comment-edit-link" %>
-  <% end %>
   <p class="comment-user-created-data">
     投稿者:<%= link_to truncate(comment.user.nickname, length: 11, separator: "・"), user_path(comment.user_id) %>
   </p>
+  <% if user_signed_in? && comment.user_id == current_user.id %>
+    <%= link_to "レビュー編集 / 削除", edit_user_comment_path(comment.user, comment), class: "mypage-comment-edit-link" %>
+  <% end %>
 </li>

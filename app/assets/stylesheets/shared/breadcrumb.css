@@ -5,15 +5,15 @@
 }
 
 .logo a {
-  font-size: 1.1rem;
-  margin: 0vw 0.3vw;
+  font-size: 0.9rem;
+  margin: 0vw 0.2vw;
   color: #000;
 }
 
 .current {
   font-weight: bold;
-  font-size: 1.1rem;
-  margin: 0vw 0.3vw;
+  font-size: 0.9rem;
+  margin: 0vw 0.2vw;
 }
 
 .logo a:hover {

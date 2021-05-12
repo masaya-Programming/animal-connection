@@ -63,33 +63,33 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  margin-top: 0.8rem;
+  padding-bottom: 1rem;
   border-bottom: 4px solid rgb(241, 241, 241);
 }
 
 .speech-balloon {
   position: relative;
   background-color: #d0e4da;
-  padding: 0.8rem;
+  padding: 0.6rem;
   color: #333;
   border-radius: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   }
-  
-  .speech-balloon::before {
-  content: "";
-  position: absolute;
-  border: 1rem solid transparent;
-  border-top: 1rem solid #d0e4da;
-  top: 100%;
-  left: 26%;
-  }
-  
-  .speech-balloon p {
-  margin: 0;
-  padding: 0;
-  }
+
+.speech-balloon::before {
+content: "";
+position: absolute;
+border: 1rem solid transparent;
+border-top: 0.8rem solid #d0e4da;
+top: 100%;
+left: 11%;
+}
+
+.speech-balloon p {
+margin: 0;
+padding: 0;
+}
 
 .mypage-comment-edit-link {
   display: flex;
@@ -100,33 +100,25 @@
   border-radius: 0.5rem;
   padding: 0.3rem 0.5rem;
   margin-left: 75%;
-  margin-top: 0.2rem;
+  margin-top: -1.5rem;
 }
 
 .mypage-comment-facility-link {
   background-color: rgb(164, 223, 215);
   color: #000;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   text-align: center;
   border-radius: 0.5rem;
-  padding: 0.3rem 1rem;
-  margin-top: -0.6rem;
-  margin-left: 5%;
+  padding: 0.3rem 0.5rem;
+  margin-top: 0.8rem;
+  margin-left: 3%;
   margin-right: 50%;
-  text-decoration: none;
-}
-
-.mypage-comment-text {
-  font-size: 1.7rem;
-  color: rgb(48, 38, 38);
-  margin-top: 0.2vw;
-  margin-left: 1vw;
 }
 
 .mypage-comment-picture-nil-text {
   display: flex;
   justify-content: center;
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   color: rgb(48, 38, 38);
 }
 
@@ -134,11 +126,6 @@
   width: 100%;
   padding: 3% 10%;
   background-color: rgb(60, 243, 234);
-}
-
-.mypage-picture-top {
-  font-size: 2rem;
-  margin-bottom: 0.8rem;
 }
 
 .mypage-picture-list {
@@ -159,7 +146,7 @@
 }
 
 .mypage-picture-name {
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: rgb(29, 28, 28);
   margin-bottom: 0.1em;
 }

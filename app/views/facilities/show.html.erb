@@ -39,35 +39,18 @@
       </p>
 
       <h2 class="show-content-zoo">
-        営業情報
-      </h2>
-      <p>
-        <% if @facility.business_data == nil %>
-          <p class="show-contents-sabtext non-data">営業情報がありません。</p>
-        <% else %>
-          <%= simple_format(@facility.business_data, class: "show-contents-sabtext") %>
-        <% end %>
-      </p>
-      
-      <h2 class="show-content-zoo">
-        休業情報
-      </h2>
-      <p>
-        <% if @facility.closed_data == nil %>
-          <p class="show-contents-sabtext non-data">休業情報がありません。</p>
-        <% else %>
-          <%= simple_format(@facility.closed_data, class: "show-contents-sabtext") %>
-        <% end %>
-      </p>
-
-      <h2 class="show-content-zoo">
         いきもの情報
       </h2>
       <p>
         <% if @facility.animal_data == nil %>
-          <p class="show-contents-sabtext non-data">いきもの情報がありません。</p>
+          <p class="show-contents-text non-data">いきもの情報がありません。</p>
         <% else %>
-          <%= simple_format(@facility.animal_data, class: "show-contents-sabtext") %>
+          <% if @facility.business_data == nil %>
+            <%= simple_format(@facility.animal_data, class: "show-contents-text") %>
+          <% else %>
+            <%= simple_format(@facility.business_data, class: "show-contents-text") %>
+            <%= simple_format(@facility.animal_data, class: "show-contents-text") %>
+          <% end %>
         <% end %>
       </p>
 
@@ -76,9 +59,9 @@
       </h2>
       <p>
         <% if @facility.attention_point == nil %>
-          <p class="show-contents-sabtext non-data">注目ポイント情報がありません。</p>
+          <p class="show-contents-text non-data">注目ポイント情報がありません。</p>
         <% else %>
-          <%= simple_format(@facility.attention_point, class: "show-contents-sabtext") %>
+          <%= simple_format(@facility.attention_point, class: "show-contents-text") %>
         <% end %>
       </p>
       
@@ -120,9 +103,14 @@
       </h2>
       <p>
         <% if @facility.animal_data == nil %>
-          <p class="show-contents-sabtext non-data">いきもの情報がありません。</p>
+          <p class="show-contents-text non-data">いきもの情報がありません。</p>
         <% else %>
-          <%= simple_format(@facility.animal_data, class: "show-contents-sabtext") %>
+          <% if @facility.business_data == nil %>
+            <%= simple_format(@facility.animal_data, class: "show-contents-text") %>
+          <% else %>
+            <%= simple_format(@facility.business_data, class: "show-contents-text") %>
+            <%= simple_format(@facility.animal_data, class: "show-contents-text") %>
+          <% end %>
         <% end %>
       </p>
 
@@ -131,9 +119,9 @@
       </h2>
       <p>
         <% if @facility.attention_point == nil %>
-          <p class="show-contents-sabtext non-data">注目ポイント情報がありません。</p>
+          <p class="show-contents-text non-data">注目ポイント情報がありません。</p>
         <% else %>
-          <%= simple_format(@facility.attention_point, class: "show-contents-sabtext") %>
+          <%= simple_format(@facility.attention_point, class: "show-contents-text") %>
         <% end %>
       </p>
 

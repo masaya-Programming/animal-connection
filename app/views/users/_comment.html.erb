@@ -4,8 +4,10 @@
   <div class="speech-balloon">
     <p><%= simple_format(comment.text) %></p>
   </div>
+  <p class="comment-user-created-data">
+    スポット名称:<%= link_to truncate(comment.facility.name, length: 11, separator: "・"), facility_path(comment.facility_id) %>
+  </p>
   <% if user_signed_in? && comment.user_id == current_user.id %>
     <%= link_to "レビュー編集 / 削除", edit_user_comment_path(comment.user, comment), class: "mypage-comment-edit-link" %>
   <% end %>
-  <%= link_to truncate(comment.facility.name, length: 11, separator: "・"), facility_path(comment.facility_id), class: "mypage-comment-facility-link" %>
 </li>
