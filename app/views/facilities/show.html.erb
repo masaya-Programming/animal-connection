@@ -29,13 +29,24 @@
     </div>
     <div class="first-show">
       <h2 class="show-content-zoo">
-        スポット名称
+        施設名称
       </h2>
       <p class="show-contents-sabtext">
         <%= @facility.kananame %>
       </p>
       <p class="show-contents-text">
         <%= @facility.name %>
+      </p>
+
+      <h2 class="show-content-zoo">
+        施設概要
+      </h2>
+      <p>
+        <% if @facility.attention_point == nil %>
+          <p class="show-contents-text non-data">注目ポイント情報がありません。</p>
+        <% else %>
+          <%= simple_format(@facility.attention_point, class: "show-contents-text") %>
+        <% end %>
       </p>
 
       <h2 class="show-content-zoo">
@@ -51,17 +62,6 @@
             <%= simple_format(@facility.business_data, class: "show-contents-text") %>
             <%= simple_format(@facility.animal_data, class: "show-contents-text") %>
           <% end %>
-        <% end %>
-      </p>
-
-      <h2 class="show-content-zoo">
-        注目ポイント
-      </h2>
-      <p>
-        <% if @facility.attention_point == nil %>
-          <p class="show-contents-text non-data">注目ポイント情報がありません。</p>
-        <% else %>
-          <%= simple_format(@facility.attention_point, class: "show-contents-text") %>
         <% end %>
       </p>
       
@@ -89,13 +89,24 @@
     </div>
     <div class="first-show">
       <h2 class="show-content-aquarium">
-        スポット名称
+        施設名称
       </h2>
       <p class="show-contents-sabtext">
         <%= @facility.kananame %>
       </p>
       <p class="show-contents-text">
         <%= @facility.name %>
+      </p>
+
+      <h2 class="show-content-aquarium">
+        施設概要
+      </h2>
+      <p>
+        <% if @facility.attention_point == nil %>
+          <p class="show-contents-text non-data">注目ポイント情報がありません。</p>
+        <% else %>
+          <%= simple_format(@facility.attention_point, class: "show-contents-text") %>
+        <% end %>
       </p>
 
       <h2 class="show-content-aquarium">
@@ -111,17 +122,6 @@
             <%= simple_format(@facility.business_data, class: "show-contents-text") %>
             <%= simple_format(@facility.animal_data, class: "show-contents-text") %>
           <% end %>
-        <% end %>
-      </p>
-
-      <h2 class="show-content-aquarium">
-        注目ポイント
-      </h2>
-      <p>
-        <% if @facility.attention_point == nil %>
-          <p class="show-contents-text non-data">注目ポイント情報がありません。</p>
-        <% else %>
-          <%= simple_format(@facility.attention_point, class: "show-contents-text") %>
         <% end %>
       </p>
 
