@@ -10,21 +10,21 @@
         <%= image_tag asset_path("chugokushikoku-area.png"), alt:"中国四国マップ", width:"495px", height:"495px" %>
         <div class="region-map-iconset">
         <%= image_tag asset_path("chugoku-shikoku-icon.png"), alt:"中国四国", class:"region-map-name" %>
-        <%= image_tag asset_path("tottori.png"), alt:"鳥取", class:"region-map-prefectures tottori" %>
-        <%= image_tag asset_path("shimane.png"), alt:"島根", class:"region-map-prefectures shimane" %>
-        <%= image_tag asset_path("okayama.png"), alt:"岡山", class:"region-map-prefectures okayama" %>
-        <%= image_tag asset_path("hiroshima.png"), alt:"広島", class:"region-map-prefectures hiroshima" %>
-        <%= image_tag asset_path("yamaguchi.png"), alt:"山口", class:"region-map-prefectures yamaguchi" %>
-        <%= image_tag asset_path("tokushima.png"), alt:"徳島", class:"region-map-prefectures tokushima" %>
-        <%= image_tag asset_path("kagawa.png"), alt:"香川", class:"region-map-prefectures kagawa" %>
-        <%= image_tag asset_path("ehime.png"), alt:"愛媛", class:"region-map-prefectures ehime" %>
-        <%= image_tag asset_path("kochi.png"), alt:"高知", class:"region-map-prefectures kochi" %>
+        <a href="#scroll-tottori"><%= image_tag asset_path("tottori.png"), alt:"鳥取", class:"region-map-prefectures tottori" %></a>
+        <a href="#scroll-shimane"><%= image_tag asset_path("shimane.png"), alt:"島根", class:"region-map-prefectures shimane" %></a>
+        <a href="#scroll-okayama"><%= image_tag asset_path("okayama.png"), alt:"岡山", class:"region-map-prefectures okayama" %></a>
+        <a href="#scroll-hiroshima"><%= image_tag asset_path("hiroshima.png"), alt:"広島", class:"region-map-prefectures hiroshima" %></a>
+        <a href="#scroll-yamaguchi"><%= image_tag asset_path("yamaguchi.png"), alt:"山口", class:"region-map-prefectures yamaguchi" %></a>
+        <a href="#scroll-tokushima"><%= image_tag asset_path("tokushima.png"), alt:"徳島", class:"region-map-prefectures tokushima" %></a>
+        <a href="#scroll-kagawa"><%= image_tag asset_path("kagawa.png"), alt:"香川", class:"region-map-prefectures kagawa" %></a>
+        <a href="#scroll-ehime"><%= image_tag asset_path("ehime.png"), alt:"愛媛", class:"region-map-prefectures ehime" %></a>
+        <a href="#scroll-kochi"><%= image_tag asset_path("kochi.png"), alt:"高知", class:"region-map-prefectures kochi" %></a>
         </div>
       </div>
     </div> 
     
     <div class="prefectures-area">
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-tottori">
         <h2 class="prefectures-top chugokushikoku-first-letter">鳥取県</h2>
         <%= image_tag asset_path("tottori-image.jpg"), alt:"鳥取イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -53,7 +53,7 @@
         </div>
       </div>
       
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-shimane">
         <h2 class="prefectures-top chugokushikoku-first-letter">島根県</h2>
         <%= image_tag asset_path("shimane-image.jpg"), alt:"島根イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -82,7 +82,7 @@
         </div>
       </div>
       
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-okayama">
         <h2 class="prefectures-top chugokushikoku-first-letter">岡山県</h2>
         <%= image_tag asset_path("okayama-image.jpg"), alt:"岡山イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -111,7 +111,7 @@
         </div>
       </div>
       
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-hiroshima">
         <h2 class="prefectures-top chugokushikoku-first-letter">広島県</h2>
         <%= image_tag asset_path("hiroshima-image.jpg"), alt:"広島イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -140,7 +140,7 @@
         </div>
       </div>
 
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-yamaguchi">
         <h2 class="prefectures-top chugokushikoku-first-letter">山口県</h2>
         <%= image_tag asset_path("yamaguchi-image.jpg"), alt:"山口イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -169,7 +169,7 @@
         </div>
       </div>
 
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-tokushima">
         <h2 class="prefectures-top chugokushikoku-first-letter">徳島県</h2>
         <%= image_tag asset_path("tokushima-image.jpg"), alt:"徳島イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -198,7 +198,7 @@
         </div>
       </div>
 
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-kagawa">
         <h2 class="prefectures-top chugokushikoku-first-letter">香川県</h2>
         <%= image_tag asset_path("kagawa-image.jpg"), alt:"香川イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -227,7 +227,7 @@
         </div>
       </div>
 
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-ehime">
         <h2 class="prefectures-top chugokushikoku-first-letter">愛媛県</h2>
         <%= image_tag asset_path("ehime-image.jpg"), alt:"愛媛イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -256,7 +256,7 @@
         </div>
       </div>
 
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-kochi">
         <h2 class="prefectures-top chugokushikoku-first-letter">高知県</h2>
         <%= image_tag asset_path("kochi-image.jpg"), alt:"高知イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">

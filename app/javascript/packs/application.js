@@ -8,6 +8,7 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 require("../picture_preview")
+require("../smooth_scroll")
 
 //= require jquery
 //= require jquery_ujs

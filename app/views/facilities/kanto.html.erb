@@ -10,19 +10,19 @@
         <%= image_tag asset_path("kanto-area.png"), alt:"関東マップ", width:"495px", height:"495px" %>
         <div class="region-map-iconset">
         <%= image_tag asset_path("kanto-icon.png"), alt:"関東", class:"region-map-name" %>
-        <%= image_tag asset_path("ibaraki.png"), alt:"茨城", class:"region-map-prefectures ibaraki" %>
-        <%= image_tag asset_path("tochigi.png"), alt:"栃木", class:"region-map-prefectures tochigi" %>
-        <%= image_tag asset_path("gunma.png"), alt:"群馬", class:"region-map-prefectures gunma" %>
-        <%= image_tag asset_path("saitama.png"), alt:"埼玉", class:"region-map-prefectures saitama" %>
-        <%= image_tag asset_path("chiba.png"), alt:"千葉", class:"region-map-prefectures chiba" %>
-        <%= image_tag asset_path("tokyo.png"), alt:"東京", class:"region-map-prefectures tokyo" %>
-        <%= image_tag asset_path("kanagawa.png"), alt:"神奈川", class:"region-map-prefectures kanagawa" %>
+        <a href="#scroll-ibaraki"><%= image_tag asset_path("ibaraki.png"), alt:"茨城", class:"region-map-prefectures ibaraki" %></a>
+        <a href="#scroll-tochigi"><%= image_tag asset_path("tochigi.png"), alt:"栃木", class:"region-map-prefectures tochigi" %></a>
+        <a href="#scroll-gunma"><%= image_tag asset_path("gunma.png"), alt:"群馬", class:"region-map-prefectures gunma" %></a>
+        <a href="#scroll-saitama"><%= image_tag asset_path("saitama.png"), alt:"埼玉", class:"region-map-prefectures saitama" %></a>
+        <a href="#scroll-chiba"><%= image_tag asset_path("chiba.png"), alt:"千葉", class:"region-map-prefectures chiba" %></a>
+        <a href="#scroll-tokyo"><%= image_tag asset_path("tokyo.png"), alt:"東京", class:"region-map-prefectures tokyo" %></a>
+        <a href="#scroll-kanagawa"><%= image_tag asset_path("kanagawa.png"), alt:"神奈川", class:"region-map-prefectures kanagawa" %></a>
         </div>
       </div>
     </div> 
 
     <div class="prefectures-area">
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-ibaraki">
         <h2 class="prefectures-top kanto-first-letter">茨城県</h2>
         <%= image_tag asset_path("ibaraki-image.jpg"), alt:"茨城イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -51,7 +51,7 @@
         </div>
       </div>
       
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-tochigi">
         <h2 class="prefectures-top kanto-first-letter">栃木県</h2>
         <%= image_tag asset_path("tochigi-image.jpg"), alt:"栃木イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -80,7 +80,7 @@
         </div>
       </div>
       
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-gunma">
         <h2 class="prefectures-top kanto-first-letter">群馬県</h2>
         <%= image_tag asset_path("gunma-image.jpg"), alt:"群馬イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -109,7 +109,7 @@
         </div>
       </div>
       
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-saitama">
         <h2 class="prefectures-top kanto-first-letter">埼玉県</h2>
         <%= image_tag asset_path("saitama-image.jpg"), alt:"埼玉イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -138,7 +138,7 @@
         </div>
       </div>
 
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-chiba">
         <h2 class="prefectures-top kanto-first-letter">千葉県</h2>
         <%= image_tag asset_path("chiba-image.jpg"), alt:"千葉イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -167,7 +167,7 @@
         </div>
       </div>
 
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-tokyo">
         <h2 class="prefectures-top kanto-first-letter">東京都</h2>
         <%= image_tag asset_path("tokyo-image.jpg"), alt:"東京イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -196,7 +196,7 @@
         </div>
       </div>
 
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-kanagawa">
         <h2 class="prefectures-top kanto-first-letter">神奈川県</h2>
         <%= image_tag asset_path("kanagawa-image.jpg"), alt:"神奈川イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">

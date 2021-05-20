@@ -10,20 +10,20 @@
         <%= image_tag asset_path("kyushuokinawa-area.png"), alt:"九州沖縄マップ", width:"495px", height:"495px" %>
         <div class="region-map-iconset">
         <%= image_tag asset_path("kyushu-okinawa-icon.png"), alt:"九州沖縄", class:"region-map-name" %>
-        <%= image_tag asset_path("fukuoka.png"), alt:"福岡", class:"region-map-prefectures fukuoka" %>
-        <%= image_tag asset_path("saga.png"), alt:"佐賀", class:"region-map-prefectures saga" %>
-        <%= image_tag asset_path("nagasaki.png"), alt:"長崎", class:"region-map-prefectures nagasaki" %>
-        <%= image_tag asset_path("kumamoto.png"), alt:"熊本", class:"region-map-prefectures kumamoto" %>
-        <%= image_tag asset_path("oita.png"), alt:"大分", class:"region-map-prefectures oita" %>
-        <%= image_tag asset_path("miyazaki.png"), alt:"宮崎", class:"region-map-prefectures miyazaki" %>
-        <%= image_tag asset_path("kagoshima.png"), alt:"鹿児島", class:"region-map-prefectures kagoshima" %>
-        <%= image_tag asset_path("okinawa.png"), alt:"沖縄", class:"region-map-prefectures okinawa" %>
+        <a href="#scroll-fukuoka"><%= image_tag asset_path("fukuoka.png"), alt:"福岡", class:"region-map-prefectures fukuoka" %></a>
+        <a href="#scroll-saga"><%= image_tag asset_path("saga.png"), alt:"佐賀", class:"region-map-prefectures saga" %></a>
+        <a href="#scroll-nagasaki"><%= image_tag asset_path("nagasaki.png"), alt:"長崎", class:"region-map-prefectures nagasaki" %></a>
+        <a href="#scroll-kumamoto"><%= image_tag asset_path("kumamoto.png"), alt:"熊本", class:"region-map-prefectures kumamoto" %></a>
+        <a href="#scroll-oita"><%= image_tag asset_path("oita.png"), alt:"大分", class:"region-map-prefectures oita" %></a>
+        <a href="#scroll-miyazaki"><%= image_tag asset_path("miyazaki.png"), alt:"宮崎", class:"region-map-prefectures miyazaki" %></a>
+        <a href="#scroll-kagoshima"><%= image_tag asset_path("kagoshima.png"), alt:"鹿児島", class:"region-map-prefectures kagoshima" %></a>
+        <a href="#scroll-okinawa"><%= image_tag asset_path("okinawa.png"), alt:"沖縄", class:"region-map-prefectures okinawa" %></a>
         </div>
       </div>
     </div> 
 
     <div class="prefectures-area">
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-fukuoka">
         <h2 class="prefectures-top kyushuokinawa-first-letter">福岡県</h2>
         <%= image_tag asset_path("fukuoka-image.jpg"), alt:"福岡イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -52,7 +52,7 @@
         </div>
       </div>
       
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-saga">
         <h2 class="prefectures-top kyushuokinawa-first-letter">佐賀県</h2>
         <%= image_tag asset_path("saga-image.jpg"), alt:"佐賀イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -81,7 +81,7 @@
         </div>
       </div>
       
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-nagasaki">
         <h2 class="prefectures-top kyushuokinawa-first-letter">長崎県</h2>
         <%= image_tag asset_path("nagasaki-image.jpg"), alt:"長崎イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -110,7 +110,7 @@
         </div>
       </div>
       
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-kumamoto">
         <h2 class="prefectures-top kyushuokinawa-first-letter">熊本県</h2>
         <%= image_tag asset_path("kumamoto-image.jpg"), alt:"熊本イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -139,7 +139,7 @@
         </div>
       </div>
 
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-oita">
         <h2 class="prefectures-top kyushuokinawa-first-letter">大分県</h2>
         <%= image_tag asset_path("oita-image.jpg"), alt:"大分イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -168,7 +168,7 @@
         </div>
       </div>
 
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-miyazaki">
         <h2 class="prefectures-top kyushuokinawa-first-letter">宮崎県</h2>
         <%= image_tag asset_path("miyazaki-image.jpg"), alt:"宮崎イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -197,7 +197,7 @@
         </div>
       </div>
 
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-kagoshima">
         <h2 class="prefectures-top kyushuokinawa-first-letter">鹿児島県</h2>
         <%= image_tag asset_path("kagoshima-image.jpg"), alt:"鹿児島イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -226,7 +226,7 @@
         </div>
       </div>
 
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-okinawa">
         <h2 class="prefectures-top kyushuokinawa-first-letter">沖縄県</h2>
         <%= image_tag asset_path("okinawa-image.jpg"), alt:"沖縄イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">

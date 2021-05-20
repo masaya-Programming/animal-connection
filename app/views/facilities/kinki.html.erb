@@ -10,19 +10,19 @@
         <%= image_tag asset_path("kinki-area.png"), alt:"近畿マップ", width:"495px", height:"495px" %>
         <div class="region-map-iconset">
         <%= image_tag asset_path("kinki-icon.png"), alt:"近畿", class:"region-map-name" %>
-        <%= image_tag asset_path("mie.png"), alt:"三重", class:"region-map-prefectures mie" %>
-        <%= image_tag asset_path("shiga.png"), alt:"滋賀", class:"region-map-prefectures shiga" %>
-        <%= image_tag asset_path("kyoto.png"), alt:"京都", class:"region-map-prefectures kyoto" %>
-        <%= image_tag asset_path("osaka.png"), alt:"大阪", class:"region-map-prefectures osaka" %>
-        <%= image_tag asset_path("hyogo.png"), alt:"兵庫", class:"region-map-prefectures hyogo" %>
-        <%= image_tag asset_path("nara.png"), alt:"奈良", class:"region-map-prefectures nara" %>
-        <%= image_tag asset_path("wakayama.png"), alt:"和歌山", class:"region-map-prefectures wakayama" %>
+        <a href="#scroll-mie"><%= image_tag asset_path("mie.png"), alt:"三重", class:"region-map-prefectures mie" %></a>
+        <a href="#scroll-shiga"><%= image_tag asset_path("shiga.png"), alt:"滋賀", class:"region-map-prefectures shiga" %></a>
+        <a href="#scroll-kyoto"><%= image_tag asset_path("kyoto.png"), alt:"京都", class:"region-map-prefectures kyoto" %></a>
+        <a href="#scroll-osaka"><%= image_tag asset_path("osaka.png"), alt:"大阪", class:"region-map-prefectures osaka" %></a>
+        <a href="#scroll-hyogo"><%= image_tag asset_path("hyogo.png"), alt:"兵庫", class:"region-map-prefectures hyogo" %></a>
+        <a href="#scroll-nara"><%= image_tag asset_path("nara.png"), alt:"奈良", class:"region-map-prefectures nara" %></a>
+        <a href="#scroll-wakayama"><%= image_tag asset_path("wakayama.png"), alt:"和歌山", class:"region-map-prefectures wakayama" %></a>
         </div>
       </div>
     </div> 
 
     <div class="prefectures-area">
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-mie">
         <h2 class="prefectures-top kinki-first-letter">三重県</h2>
         <%= image_tag asset_path("mie-image.jpg"), alt:"三重イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -51,7 +51,7 @@
         </div>
       </div>
       
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-shiga">
         <h2 class="prefectures-top kinki-first-letter">滋賀県</h2>
         <%= image_tag asset_path("shiga-image.jpg"), alt:"滋賀イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -80,7 +80,7 @@
         </div>
       </div>
       
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-kyoto">
         <h2 class="prefectures-top kinki-first-letter">京都府</h2>
         <%= image_tag asset_path("kyoto-image.jpg"), alt:"京都イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -109,7 +109,7 @@
         </div>
       </div>
       
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-osaka">
         <h2 class="prefectures-top kinki-first-letter">大阪府</h2>
         <%= image_tag asset_path("osaka-image.jpg"), alt:"大阪イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -138,7 +138,7 @@
         </div>
       </div>
 
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-hyogo">
         <h2 class="prefectures-top kinki-first-letter">兵庫県</h2>
         <%= image_tag asset_path("hyogo-image.jpg"), alt:"兵庫イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -167,7 +167,7 @@
         </div>
       </div>
 
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-nara">
         <h2 class="prefectures-top kinki-first-letter">奈良県</h2>
         <%= image_tag asset_path("nara-image.jpg"), alt:"奈良イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
@@ -196,7 +196,7 @@
         </div>
       </div>
 
-      <div class="prefectures-box">
+      <div class="prefectures-box" id="scroll-wakayama">
         <h2 class="prefectures-top kinki-first-letter">和歌山県</h2>
         <%= image_tag asset_path("wakayama-image.jpg"), alt:"和歌山イメージ", width:"560px", height:"220px" %>
         <div class="prefectures-iconset">
