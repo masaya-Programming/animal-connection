@@ -108,20 +108,20 @@
 
 /* /全シート共通 */
 
-.register-btn {
+.create-edit-set {
   width: 50%;
   padding-top: 3rem;
   margin: 0 auto;
 }
 
-.register-red-btn {
+.create-edit-btn {
   width: 100%;
-  background: #ea352d;
-  border: 0.2rem outset #e77e5a;
-  border-radius: 1rem;
+  background: #db5a53;
+  padding: 0.8rem;
+  border: 0.2rem outset #e2724d;
+  border-radius: 1.3rem;
   color: #fff;
-  line-height: 3rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 
@@ -226,4 +226,10 @@
   line-height: 2.5rem;
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+.login-flash-message {
+  color: rgb(182, 48, 0);
+  font-size: 1.3vw;
+  text-align: center;
 }
