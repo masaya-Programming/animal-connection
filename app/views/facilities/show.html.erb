@@ -190,15 +190,15 @@
   </div>
 
   <div class="show-btn-set">
-    <%= link_to(new_facility_comment_path(@facility), class: "comment-btn") do %>
-      <span class="comment-btn-text">レビュー</span>
-      <span class="comment-btn-text">投稿</span>
-      <%= image_tag "review-icon.png" , size: "185x50" ,class: "comment-btn-icon" %>
+    <%= link_to(new_facility_comment_path(@facility), class: "show-btn") do %>
+      <span class="show-btn-text">レビュー</span>
+      <span class="show-btn-text">投稿</span>
+      <%= image_tag "review-icon.png", width:"110px", height:"80px" %>
     <% end %>
-    <%= link_to(new_facility_picture_path(@facility), class: "picture-btn") do %>
-      <span class="picture-btn-text">ベストショット</span>
-      <span class="picture-btn-text">投稿</span>
-      <%= image_tag "picture-icon.png" , size: "185x50" ,class: "picture-btn-icon" %>
+    <%= link_to(new_facility_picture_path(@facility), class: "show-btn") do %>
+      <span class="show-btn-text">ベストショット</span>
+      <span class="show-btn-text">投稿</span>
+      <%= image_tag "picture-icon.png", width:"110px", height:"80px" %>
     <% end %>
   </div>
 </div>

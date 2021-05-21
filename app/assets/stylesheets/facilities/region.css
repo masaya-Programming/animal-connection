@@ -181,19 +181,20 @@
 }
 
 .prefectures-zoo-btn {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .prefectures-aquarium-btn {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .prefectures-zoo-btn {
   font-weight: bold;
   color: #fff;
   background-color: rgb(9, 156, 100);
-  border: 6px solid rgb(9, 156, 100);
+  border: 0.3rem outset #3ebd25;
   border-radius: 1rem;
+  padding: 0.3rem;
   cursor: pointer;
 }
 
@@ -201,8 +202,9 @@
   font-weight: bold;
   color: #fff;
   background-color: rgb(10, 138, 197);
-  border: 6px solid rgb(10, 138, 197);
+  border: 0.3rem outset #3fa1da;
   border-radius: 1rem;
+  padding: 0.3rem;
   cursor: pointer;
 }
 
@@ -219,10 +221,16 @@
   justify-content: center;
   width: 100%;
   background: #ea352d;
-  border: 0.5rem solid #ea352d;
+  border: 0.3rem outset #f38e6d;
   border-radius: 1rem;
   color: #fff;
   line-height: 2.5rem;
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+.top-cursor-set {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 3rem;
 }

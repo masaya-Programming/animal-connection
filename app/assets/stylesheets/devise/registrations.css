@@ -117,6 +117,7 @@
 .register-red-btn {
   width: 100%;
   background: #ea352d;
+  border: 0.2rem outset #e77e5a;
   border-radius: 1rem;
   color: #fff;
   line-height: 3rem;
@@ -137,7 +138,7 @@
   justify-content: center;
   width: 100%;
   background: #837d7d;
-  border: 0.5rem solid #837d7d;
+  border: 0.3rem outset #97908e;
   border-radius: 1rem;
   color: #fff;
   line-height: 2.5rem;
@@ -198,6 +199,7 @@
   justify-content: center;
   width: 100%;
   background: rgb(202, 84, 84);
+  border: 0.2rem outset #db6b45;
   border-radius: 1rem;
   color: #fff;
   line-height: 2rem;
@@ -218,7 +220,7 @@
   justify-content: center;
   width: 100%;
   background: #837d7d;
-  border: 0.5rem solid #837d7d;
+  border: 0.3rem outset #aaa4a2;
   border-radius: 1rem;
   color: #fff;
   line-height: 2.5rem;

@@ -57,7 +57,7 @@
   align-items: center;
   margin: 1.2% 9% 1.2% 9%;
   background-color: rgb(9, 156, 100);
-  border: 3px solid rgb(112, 207, 171);
+  border: 0.4rem outset rgb(112, 207, 171);
   border-radius: 1.5rem;
 }
 
@@ -66,7 +66,7 @@
   align-items: center;
   margin: 1.2% 9% 1.2% 9%;
   background-color: rgb(10, 138, 197);
-  border: 3px solid rgb(123, 194, 226);
+  border: 0.4rem outset rgb(123, 194, 226);
   border-radius: 1.5rem;
 }
 
@@ -102,7 +102,7 @@
   justify-content: center;
   width: 100%;
   background: #ea352d;
-  border: 0.5rem solid #ea352d;
+  border: 0.3rem outset #e77e5a;
   border-radius: 1rem;
   color: #fff;
   line-height: 2.5rem;
@@ -132,7 +132,7 @@
   justify-content: center;
   width: 100%;
   background: #ea352d;
-  border: 0.5rem solid #ea352d;
+  border: 0.3rem outset #e77e5a;
   border-radius: 1rem;
   color: #fff;
   line-height: 2.5rem;

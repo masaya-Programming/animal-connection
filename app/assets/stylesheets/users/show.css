@@ -9,36 +9,33 @@
   align-items: flex-end;
 }
 
-.mypage-top-nickname-men {
+.mypage-top {
   color: white;
   font-size: 1.5rem;
   text-shadow:  0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
-  background: rgb(49, 78, 204);
-  border-radius: 1rem;
+  font-family: 'Kosugi Maru', sans-serif;
+  border-radius: 0.5rem;
   padding: 0.5rem 1rem;
 }
 
-.mypage-top-nickname-woman {
-  color: white;
-  font-size: 1.5rem;
-  text-shadow: 0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
-  background: rgb(243, 73, 73);
-  border-radius: 1rem;
-  padding: 0.5rem 1rem;
+.mypage-nickname-men {
+  background: rgb(79, 102, 204);
+  border: 0.2rem outset #4554a7;
 }
 
-.mypage-top-nickname-other {
-  color: white;
-  font-size: 1.5rem;
-  text-shadow: 0 1.6px 0 #ccc, 0 2.3px 6.5px rgba(0, 0, 0, .2);
-  background: rgb(200, 39, 233);
-  border-radius: 1rem;
-  padding: 0.5rem 1rem;
+.mypage-nickname-woman {
+  background: rgb(233, 84, 84);
+  border: 0.2rem outset #db7556;
+}
+
+.mypage-nickname-other {
+  background: rgb(199, 120, 214);
+  border: 0.2rem outset #ab32b6;
 }
 
 .mypage-top-text {
   margin-left: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .mypage-comment-ber {
@@ -94,25 +91,14 @@ padding: 0;
 .mypage-comment-edit-link {
   display: flex;
   justify-content: center;
-  background-color: #ea352d;
-  color: #fff;
-  font-size: 1rem;
-  border-radius: 0.5rem;
-  padding: 0.3rem 0.5rem;
   margin-left: 75%;
   margin-top: -1.5rem;
-}
-
-.mypage-comment-facility-link {
-  background-color: rgb(164, 223, 215);
-  color: #000;
-  font-size: 1.1rem;
-  text-align: center;
-  border-radius: 0.5rem;
   padding: 0.3rem 0.5rem;
-  margin-top: 0.8rem;
-  margin-left: 3%;
-  margin-right: 50%;
+  background-color: #ea352d;
+  border: 0.2rem outset #db7556;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1rem;
 }
 
 .mypage-comment-picture-nil-text {
@@ -178,6 +164,7 @@ padding: 0;
   justify-content: center;
   width: 40%;
   background: #ea352d;
+  border: 0.3rem outset #f38e6d;
   border-radius: 1rem;
   color: #fff;
   line-height: 2rem;

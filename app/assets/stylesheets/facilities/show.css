@@ -8,6 +8,7 @@
   justify-content: center;
   margin: 2% 13% 0% 13%;
   background-color: rgb(9, 156, 100);
+  border: 0.4rem outset rgb(112, 207, 171);
   border-radius: 1.5rem;
 }
 
@@ -17,6 +18,7 @@
   justify-content: center;
   margin: 2% 13% 0% 13%;
   background-color: rgb(10, 138, 197);
+  border: 0.4rem outset rgb(123, 194, 226);
   border-radius: 1.5rem;
 }
 
@@ -92,16 +94,16 @@
 
 .official-btn {
   background: linear-gradient(to left, #b3ffab, #12fff7);
-  padding: 0.8rem;
   margin: 1rem 0rem;
-  line-height: 1.5rem;
-  border-radius: 2rem;
   border: 0.4rem outset #1dc0c0;
+  border-radius: 2rem;
+  padding: 0.8rem;
+  line-height: 1.5rem;
+  text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
   color: rgb(104, 92, 92);
   cursor: pointer;
-  text-decoration: none;
 }
 
 .show-comment-ber {
@@ -217,49 +219,24 @@
   display: flex;
   flex-direction: column;
   right: 1.5rem;
-  bottom: 2.2vh;
+  bottom: 5rem;
 }
 
-.comment-btn {
+.show-btn {
   width: 10rem;
-  background: #0db498;
+  background: #14caac;
   text-align: center;
-  border-radius: 3rem;
-  padding: 0.4rem 0.8rem;
   margin-bottom: 1.5rem;
+  border: 0.3rem outset #1dc0c0;
+  border-radius: 1.5rem;
+  padding: 0.2rem 0.5rem;
 }
 
-.comment-btn-text {
+.show-btn-text {
   color: #fff;
   display: block;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none;
   margin-bottom: 0.3rem;
-}
-
-.comment-btn-icon {
-  width: 6rem;
-}
-
-.picture-btn {
-  width: 10rem;
-  background: #0db498;
-  text-align: center;
-  border-radius: 3rem;
-  padding: 0.4rem 0.8rem;
-  margin-bottom: 1.5rem;
-}
-
-.picture-btn-text {
-  color: #fff;
-  display: block;
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-decoration: none;
-  margin-bottom: 0.3rem;
-}
-
-.picture-btn-icon {
-  width: 6rem;
 }

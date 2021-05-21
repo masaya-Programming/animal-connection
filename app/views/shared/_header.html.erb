@@ -1,19 +1,19 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
-<header class="top-page-header">
+<header class="top-page-header" id="scroll-top">
   <%= link_to image_tag("animal-connection-rogo.png", class:"animal-connection-icon"), "/" %>
   <ul class="lists-UserAction">
     <% if user_signed_in? %>
       <% if current_user.gender_id == 1 %>
-        <li><%= link_to current_user.nickname, mypage_user_path(current_user), class: "user-nickname-men" %></li>
+        <li><%= link_to current_user.nickname, mypage_user_path(current_user), class: "user-nickname-men header-btn" %></li>
       <% elsif current_user.gender_id == 2 %>
-        <li><%= link_to current_user.nickname, mypage_user_path(current_user), class: "user-nickname-woman" %></li>
+        <li><%= link_to current_user.nickname, mypage_user_path(current_user), class: "user-nickname-woman header-btn" %></li>
       <% else %>
-        <li><%= link_to current_user.nickname, mypage_user_path(current_user), class: "user-nickname-other" %></li>
+        <li><%= link_to current_user.nickname, mypage_user_path(current_user), class: "user-nickname-other header-btn" %></li>
       <% end %>
-      <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout header-btn" %></li>
     <% else %>
-      <li><%= link_to "ログイン", new_user_session_path, class: "login" %></li>
-      <li><%= link_to "新規登録", new_user_registration_path, class: "sign-up" %></li>
+      <li><%= link_to "ログイン", new_user_session_path, class: "login header-btn" %></li>
+      <li><%= link_to "新規登録", new_user_registration_path, class: "sign-up header-btn" %></li>
     <% end %>
   </ul>
 </header>

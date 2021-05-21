@@ -21,86 +21,50 @@
   align-items: flex-end;
 }
 
-.user-nickname-men {
+.header-btn {
   display: inline-block;
-  padding: 1rem 1.5rem;
-  text-decoration: none;
-  color: white;
-  background: rgb(49, 78, 204);
-  border-bottom: solid 3px rgb(17, 36, 119);
+  padding: 1rem 1.4rem;
   border-radius: 2rem;
+  color: white;
+  font-size: 1.7rem;
   font-weight: bold;
-  font-size: 1.4rem;
+  font-family: 'Kosugi Maru', sans-serif;
+  text-decoration: none;
   text-shadow:1px 0 1px black;
-  margin-right: 1vw;
+}
+
+.user-nickname-men {
+  background: rgb(79, 102, 204);
+  border: 0.3rem outset #4554a7;
+  margin-right: 2vw;
 }
 
 .user-nickname-woman {
-  display: inline-block;
-  padding: 1rem 1.5rem;
-  text-decoration: none;
-  color: white;
-  background: rgb(243, 73, 73);
-  border-bottom: solid 3px rgb(192, 27, 27);
-  border-radius: 2rem;
-  font-weight: bold;
-  font-size: 1.4rem;
-  text-shadow:1px 0 1px black;
-  margin-right: 1vw;
+  background: rgb(233, 84, 84);
+  border: 0.3rem outset #db7556;
+  margin-right: 2vw;
 }
 
 .user-nickname-other {
-  display: inline-block;
-  padding: 1rem 1.5rem;
-  text-decoration: none;
-  color: white;
-  background: rgb(200, 39, 233);
-  border-bottom: solid 3px rgb(143, 23, 167);
-  border-radius: 2rem;
-  font-weight: bold;
-  font-size: 1.4rem;
-  text-shadow:1px 0 1px black;
-  margin-right: 1vw;
-}
-
-.logout {
-  display: inline-block;
-  padding: 1rem 1.5rem;
-  text-decoration: none;
-  color: white;
-  background: rgb(238, 147, 72);
-  border-bottom: solid 3px rgb(175, 100, 100);
-  border-radius: 2rem;
-  font-weight: bold;
-  font-size: 1.4rem;
-  text-shadow:1px 0 1px black;
+  background: rgb(199, 120, 214);
+  border: 0.3rem outset #ab32b6;
+  margin-right: 2vw;
 }
 
 .login {
-  display: inline-block;
-  padding: 1rem 1.5rem;
-  text-decoration: none;
-  color: white;
   background: rgb(238, 147, 72);
-  border-bottom: solid 3px rgb(175, 100, 100);
-  border-radius: 2rem;
-  font-weight: bold;
-  font-size: 1.4rem;
-  text-shadow:1px 0 1px black;
-  margin-right: 1vw;
+  border: 0.3rem outset #e6d472;
+  margin-right: 2vw;
+}
+
+.logout {
+  background: rgb(238, 147, 72);
+  border: 0.3rem outset #e6d472;
 }
 
 .sign-up {
-  display: inline-block;
-  padding: 1rem 1.5rem;
-  text-decoration: none;
-  color: white;
   background: rgb(238, 147, 72);
-  border-bottom: solid 3px rgb(175, 100, 100);
-  border-radius: 2rem;
-  font-size: 1.4rem;
-  text-shadow:1px 0 1px black;
-  font-weight: bold;
+  border: 0.3rem outset #e6d472;
 }
 
 .header-second {
