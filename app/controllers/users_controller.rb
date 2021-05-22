@@ -24,6 +24,8 @@ class UsersController < ApplicationController
   end
 
   def goodlist
+    @goods = Good.where(user_id: current_user.id)
+    @goods = @goods.reverse
   end
 
   private

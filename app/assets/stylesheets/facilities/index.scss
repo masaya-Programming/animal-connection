@@ -66,7 +66,7 @@
 
 .top-picture-first-letter:first-letter {
   font-size: 2.3rem;
-  color: rgb(148, 216, 207);
+  color: #a1d3bf;
 }
 
 .show-facility-zoo-first-letter:first-letter {
@@ -185,10 +185,17 @@
 .top-picture-box {
   display: flex;
   flex-direction: column;
-  background-color: rgb(164, 223, 215);
   margin: 0.3rem 0.1rem;
   padding: 0.3rem 0.2rem;
   border-radius: 0.8rem;
+}
+
+.picture-box-zoo {
+  background-color: rgb(158, 221, 197);
+}
+
+.picture-box-aquarium {
+  background-color: rgb(155, 204, 226);
 }
 
 .top-picture-name {

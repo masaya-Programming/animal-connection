@@ -2,4 +2,25 @@
 <% breadcrumb :goodlist %>
 <%= breadcrumbs separator:" &#x27A4; ", class: "logo" %>
 
+<div class="mypage-main">
+  <div class="top-picture-main">
+    <div class="top-picture-form-wrap">
+      <h2 class="top-form-top-text top-picture-first-letter">
+        いいね登録 <%= @goods.length %>件
+      </h2>
+      <ul class="top-picture-list">
+        <%= render partial: "picture-good", collection: @goods %>
+      </ul>
+      <% if @goods.length == 0 %>
+        <p class="show-comment-picture-nil-text">
+          いいね登録していません。
+        </p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="mypage-Back-box">
+    <%= link_to "マイページへ戻る", mypage_user_path(current_user), class: "mypage-Back-btn" %>
+  </div>
+</div>
 <%= render "shared/footer" %>
