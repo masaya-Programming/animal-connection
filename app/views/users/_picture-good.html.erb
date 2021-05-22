@@ -1,28 +1,11 @@
 <%# CSS・・・assets/stylesheets/users/show.css %>
 <li class="top-picture-li">
-  <% if good.facility.category_id == 1 %>
-    <div class="top-picture-box picture-box-zoo">
-      <%= link_to user_picture_path(good.user, good) do %>
-        <p class="mypage-picture-name">
-          <%= truncate(good.facility.name, length: 11, separator: "・") %>
-        </p>
-        <%= image_tag good.image, class: "top-picture-image" %>
-        <h2 class="top-picture-title">
-          <%= truncate(good.title, length: 11, separator: "・") %>
-        </h2>   
-      <% end %>
+    <div class="good-picture-box">
+    <%= link_to user_picture_path(user_id: good_picture.user_id, id: good_picture.picture_id) do %>
+      <%= image_tag good_picture.picture.image, class: "top-picture-image" %>
+      <h2 class="top-picture-title">
+        <%= truncate(good_picture.picture.title, length: 11, separator: "・") %>
+      </h2>   
+    <% end %>
     </div>
-  <% else %>
-    <div class="top-picture-box picture-box-aquarium">
-      <%= link_to user_picture_path(good.user, good) do %>
-        <p class="mypage-picture-name">
-          <%= truncate(good.facility.name, length: 11, separator: "・") %>
-        </p>
-        <%= image_tag good.image, class: "top-picture-image" %>
-        <h2 class="top-picture-title">
-          <%= truncate(good.title, length: 11, separator: "・") %>
-        </h2>   
-      <% end %>
-    </div>
-  <% end %>
 </li>

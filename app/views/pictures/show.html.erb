@@ -9,14 +9,20 @@
 
 <div class="show-picture-main">
   <% if @facility.category.name == "動物園" %>
-    <%= link_to facility_path(@facility.id) do %>
-      <div class="show-picture-list-zoo">
-        <%= image_tag "zoo-icon.png", width:"52px", height:"52px" %>
-        <h1 class="show-picture-facility-name">
-          <%= @facility.name %>
-        </h1>
-      </div>
-    <% end %>
+    <div class="show-picture-list-zoo">
+      <%= image_tag "zoo-icon.png", width:"52px", height:"52px" %>
+      <h1 class="show-picture-facility-name">
+        <%= @facility.name %>
+      </h1>
+      <% if user_signed_in? && @picture.user_id != current_user.id %>
+        <% if Good.exists?(user_id: current_user.id, picture_id: @picture.id) %>
+          <%= link_to image_tag("pop1-heart.png", width:"120px", class:"pop-heart"), user_picture_goods_path(current_user.id, @picture.id), method: :delete %>
+        <% else %>
+          <%= link_to image_tag("pop2-heart.png", width:"120px", class:"pop-heart"), user_picture_goods_path(current_user.id, @picture.id), method: :post %>
+        <% end %>
+      <% end %>
+    </div>
+
     <div class="updated-data">
       投稿日:<%= @picture.created_at.to_s(:datetime_jp) %>
     </div>
@@ -45,14 +51,20 @@
       </p>
     </div>
   <% else %>
-    <%= link_to facility_path(@facility.id) do %>
-      <div class="show-picture-list-aquarium">
-        <%= image_tag "aquarium-icon.png", width:"52px", height:"52px" %>
-        <h1 class="show-picture-facility-name">
-          <%= @facility.name %>
-        </h1>
-      </div>
-    <% end %>
+    <div class="show-picture-list-aquarium">
+      <%= image_tag "aquarium-icon.png", width:"52px", height:"52px" %>
+      <h1 class="show-picture-facility-name">
+        <%= @facility.name %>
+      </h1>
+      <% if user_signed_in? && @picture.user_id != current_user.id %>
+        <% if Good.exists?(user_id: current_user.id, picture_id: @picture.id) %>
+          <%= link_to image_tag("pop1-heart.png", width:"120px", class:"pop-heart"), user_picture_goods_path(current_user.id, @picture.id), method: :delete %>
+        <% else %>
+          <%= link_to image_tag("pop2-heart.png", width:"120px", class:"pop-heart"), user_picture_goods_path(current_user.id, @picture.id), method: :post %>
+        <% end %>
+      <% end %>
+    </div>
+
     <div class="updated-data">
       投稿日:<%= @picture.created_at.to_s(:datetime_jp) %>
     </div>
@@ -63,6 +75,13 @@
       <div class="show-picture-image-box">
         <%= image_tag @picture.image, class: "show-picture-aquarium", size: "640x480" %>
       </div>
+      <% if user_signed_in? && @picture.user_id != current_user.id %>
+        <% if Good.exists?(user_id: current_user.id, picture_id: @picture.id) %>
+          <%= link_to image_tag("pop1-heart.png", width:"120px", class:"pop-star"), user_picture_goods_path(current_user.id, @picture.id), method: :delete %>
+        <% else %>
+          <%= link_to image_tag("pop2-heart.png", width:"120px", class:"pop-star"), user_picture_goods_path(current_user.id, @picture.id), method: :post %>
+        <% end %>
+      <% end %>
       <h2 class="show-picture-content-aquarium">
         タイトル
       </h2>
@@ -84,9 +103,9 @@
 
   <div class="facility-back-box">
     <% if @facility.category.name == "動物園" %>
-      <%= link_to  "動物園の情報を確認する→", facility_path(@facility.id), class: "zoo-back-btn" %>
+      <%= link_to  "動物園の詳細ページに戻る", facility_path(@facility.id), class: "zoo-back-btn" %>
     <% else %>
-      <%= link_to  "水族館の情報を確認する→", facility_path(@facility.id), class: "aquarium-back-btn" %>
+      <%= link_to  "水族館の詳細ページに戻る", facility_path(@facility.id), class: "aquarium-back-btn" %>
     <% end %>
   </div>
 

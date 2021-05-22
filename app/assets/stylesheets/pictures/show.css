@@ -10,6 +10,7 @@
   background-color: rgb(9, 156, 100);
   border: 0.4rem outset rgb(112, 207, 171);
   border-radius: 1.5rem;
+  position:relative;
 }
 
 .show-picture-list-aquarium {
@@ -20,12 +21,20 @@
   background-color: rgb(10, 138, 197);
   border: 0.4rem outset rgb(123, 194, 226);
   border-radius: 1.5rem;
+  position:relative;
 }
 
 .show-picture-facility-name {
   font-size: 1.4rem;
   color: #FFF;
   margin-left: 1vw;
+}
+
+.pop-heart {
+  position:absolute; top:-19px; left:-60px;
+  border: 0.4rem outset rgb(214, 105, 172);
+  background-color: #FFF;
+  border-radius: 1rem;
 }
 
 .first-show-picture {
@@ -84,20 +93,18 @@
   display: flex;
   justify-content: center;
   width: 70%;
-  padding-bottom: 1rem;
-  margin: 0 auto;
+  margin: 2.3rem auto 1.5rem auto;
 }
 
 .zoo-back-btn {
   display: flex;
   justify-content: center;
-  width: 40%;
+  width: 55%;
   background: rgb(9, 156, 100);
   border: 0.3rem outset #64be30;
-  padding: 0.1rem;
+  padding: 0.7rem;
   border-radius: 0.5rem;
   color: #fff;
-  line-height: 2rem;
   font-size: 1.1rem;
   cursor: pointer;
 }
@@ -105,13 +112,12 @@
 .aquarium-back-btn {
   display: flex;
   justify-content: center;
-  width: 40%;
+  width: 55%;
   background: rgb(10, 138, 197);
   border: 0.3rem outset #3072be;
-  padding: 0.1rem;
+  padding: 0.7rem;
   border-radius: 0.5rem;
   color: #fff;
-  line-height: 2rem;
   font-size: 1.1rem;
   cursor: pointer;
 }
