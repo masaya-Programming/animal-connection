@@ -163,4 +163,11 @@
   ### picturesテーブルのAssociation
 - belongs_to : user
 - belongs_to : facility
-  
+  ## favoritesテーブル
+| Column      | Type       | Options           |
+| ----------- | ---------- | ----------------- |
+| user        | references | foreign_key: true |
+| facility    | references | foreign_key: true |
+  ### favoritesテーブルのAssociation
+- belongs_to : user
+- belongs_to : facility

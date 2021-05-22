@@ -18,6 +18,14 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
+  def favolist
+    @favorites = Favorite.where(user_id: current_user.id)
+    @favorites = @favorites.reverse
+  end
+
+  def goodlist
+  end
+
   private
 
   def set_user

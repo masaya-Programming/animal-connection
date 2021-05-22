@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :destroy] do
     member do
-      get "mypage"
+      get "mypage", "favolist", "goodlist"
     end
     resources :comments, only: [:edit, :update, :destroy]
     resources :pictures, only: [:show, :edit, :update, :destroy]
@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     end
     resources :comments, only: [:new, :create]
     resources :pictures, only: [:new, :create]
+    resource :favorites, only: [:create, :destroy]
   end
 
 end

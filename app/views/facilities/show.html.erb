@@ -20,13 +20,23 @@
       <h1 class="show-facility-name">
         <%= @facility.name %>
       </h1>
+      <% if user_signed_in? %>    
+        <% if Favorite.exists?(user_id: current_user.id, facility_id: @facility.id) %>
+          <%= link_to image_tag("pop1-star.png", width:"120px", class:"pop-star"), facility_favorites_path(@facility.id), method: :delete %>
+        <% else %>
+          <%= link_to image_tag("pop2-star.png", width:"120px", class:"pop-star"), facility_favorites_path(@facility.id), method: :post %>
+        <% end %>
+      <% end %>
     </div>
+
     <div class="updated-data">
       最終更新日:<%= @facility.updated_at.to_s(:datetime_jp) %>
     </div>
+
     <div class="show-facility-announcement">
       ※ 訪問の際は,事前に公式情報をご確認ください
     </div>
+
     <div class="first-show">
       <h2 class="show-content-zoo">
         施設名称
@@ -74,19 +84,30 @@
       <div id="map" style="width:100%; height:360px; margin-top:1.5%">
       </div>
     </div>
+
   <% else %>
     <div class="show-facility-list-aquarium">
       <%= image_tag "aquarium-icon.png", width:"52px", height:"52px" %>
       <h1 class="show-facility-name">
         <%= @facility.name %>
       </h1>
+      <% if user_signed_in? %>    
+        <% if Favorite.exists?(user_id: current_user.id, facility_id: @facility.id) %>
+          <%= link_to image_tag("pop1-star.png", width:"120px", class:"pop-star"), facility_favorites_path(@facility.id), method: :delete %>
+        <% else %>
+          <%= link_to image_tag("pop2-star.png", width:"120px", class:"pop-star"), facility_favorites_path(@facility.id), method: :post %>
+        <% end %>
+      <% end %>
     </div>
+
     <div class="updated-data">
       最終更新日:<%= @facility.updated_at.to_s(:datetime_jp) %>
     </div>
+
     <div class="show-facility-announcement">
       ※ 訪問の際は,事前に公式情報をご確認ください
     </div>
+
     <div class="first-show">
       <h2 class="show-content-aquarium">
         施設名称
@@ -135,6 +156,7 @@
       </div>
     </div>
   <% end %>
+  
   <div class="upper-content">
     <%= link_to "公式サイトへ (外部リンク)", @facility.official_website, target: :blank, class: "official-btn" %>
   </div>

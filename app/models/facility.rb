@@ -32,4 +32,5 @@ class Facility < ApplicationRecord
 
   has_many :comments, dependent: :destroy
   has_many :pictures, dependent: :destroy
+  has_many :favorites, dependent: :destroy
 end
