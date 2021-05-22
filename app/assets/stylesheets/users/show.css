@@ -4,7 +4,7 @@
 
 .mypage-header {
   margin: 0 8rem;
-  padding: 2% 0% 1% 0%;
+  padding-top: 3.5rem;
   display: flex;
   align-items: flex-end;
 }
@@ -36,6 +36,28 @@
 .mypage-top-text {
   margin-left: 0.5rem;
   font-size: 1.4rem;
+}
+
+.mypage-icon-set {
+  display: flex;
+  justify-content: flex-end;
+  height: auto;
+  margin-top: -4.5rem;
+  padding: 0 13%;
+}
+
+.mypage-icon {
+  background-color: #FFF;
+  border-radius: 1rem;
+}
+
+.top-star {
+  border: 0.5rem outset rgb(228, 243, 93);
+}
+
+.top-heart {
+  border: 0.5rem outset rgb(228, 243, 93);
+  margin-left: 2rem;
 }
 
 .mypage-comment-ber {

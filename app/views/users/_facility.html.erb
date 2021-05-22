@@ -1,0 +1,28 @@
+<%# CSS・・・assets/stylesheets/facilities/search.css %>
+<li>
+  <% if facility.facility.category_id == 1 %>
+    <%= link_to facility_path(facility.facility_id), class: "facility-list-zoo" do %>
+      <%= image_tag "zoo-icon.png", width:"52px", height:"52px" %>
+      <div class="facility-text-box">
+        <p class="facility-prefectures-text">
+          <%= Prefectures.find(facility.facility.prefectures_id).name %>
+        </p>
+        <h2 class="facility-name-text">
+          <%= facility.facility.name %>
+        </h2>
+      </div>
+    <% end %>
+  <% else %>
+    <%= link_to facility_path(facility.facility_id), class: "facility-list-aquarium" do %>
+      <%= image_tag "aquarium-icon.png", width:"52px", height:"52px" %>
+      <div class="facility-text-box">
+        <p class="facility-prefectures-text">
+          <%= Prefectures.find(facility.facility.prefectures_id).name %>
+        </p>
+        <h2 class="facility-name-text">
+          <%= facility.facility.name %>
+        </h2>
+      </div>
+    <% end %>
+  <% end %>
+</li>

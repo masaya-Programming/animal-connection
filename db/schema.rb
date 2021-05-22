@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_22_022157) do
+ActiveRecord::Schema.define(version: 2021_05_21_145350) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -62,6 +62,16 @@ ActiveRecord::Schema.define(version: 2021_04_22_022157) do
     t.text "attention_point"
   end
 
+  create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "facility_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["facility_id"], name: "index_favorites_on_facility_id"
+    t.index ["user_id", "facility_id"], name: "index_favorites_on_user_id_and_facility_id", unique: true
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
   create_table "pictures", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
     t.text "description"
@@ -90,6 +100,8 @@ ActiveRecord::Schema.define(version: 2021_04_22_022157) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "facilities"
   add_foreign_key "comments", "users"
+  add_foreign_key "favorites", "facilities"
+  add_foreign_key "favorites", "users"
   add_foreign_key "pictures", "facilities"
   add_foreign_key "pictures", "users"
 end

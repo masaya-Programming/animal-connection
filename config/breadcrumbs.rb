@@ -28,6 +28,16 @@ crumb :edit_user do
   parent :mypage
 end
 
+crumb :favolist do
+  link "お気に入りの動物園・水族館", favolist_user_path(current_user)
+  parent :mypage
+end
+
+crumb :goodlist do
+  link "いいねリスト", goodlist_user_path(current_user)
+  parent :mypage
+end
+
 crumb :edit_comment do |comment|
   comment = Comment.find(params[:id])
   link "レビュー更新", edit_user_comment_path(current_user.id, comment.id)

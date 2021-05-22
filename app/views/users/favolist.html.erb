@@ -1,0 +1,24 @@
+<%= render "shared/header" %>
+<% breadcrumb :favolist %>
+<%= breadcrumbs separator:" &#x27A4; ", class: "logo" %>
+
+<div class="search-main">
+  <div class="search-wrap">
+    <h1 class="search-top-text"><%= current_user.nickname %>のお気に入り</h1>
+    <p class="search-sab-text"><%= @favorites.length %>件</p>
+    
+    <% if @favorites.length == 0 %>
+      <p class="search-non-text">お気に入り情報がありません。</p>
+    <% end %>
+
+    <ul class="facilities-list">
+      <%= render partial: "facility", collection: @favorites %>
+    </ul>
+
+    <div class="mypage-Back-box">
+      <%= link_to "マイページへ戻る", mypage_user_path(current_user), class: "mypage-Back-btn" %>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
