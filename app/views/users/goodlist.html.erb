@@ -6,21 +6,21 @@
   <div class="top-picture-main">
     <div class="top-picture-form-wrap">
       <h2 class="top-form-top-text top-picture-first-letter">
-        いいね登録 <%= @goods.length %>件
+        いいね <%= @goods.length %>件
       </h2>
       <ul class="top-picture-list">
-        <%= render partial: "picture-good", collection: @goods %>
+        <%= render partial: "picture-good", collection: @goods, as: :good_picture %>
       </ul>
       <% if @goods.length == 0 %>
-        <p class="show-comment-picture-nil-text">
-          いいね登録していません。
+        <p class="good-picture-nil-text">
+          いいねをしていません。
         </p>
       <% end %>
     </div>
   </div>
 
-  <div class="mypage-Back-box">
-    <%= link_to "マイページへ戻る", mypage_user_path(current_user), class: "mypage-Back-btn" %>
+  <div class="good-mypage-Back-box">
+    <%= link_to "マイページに戻る", mypage_user_path(current_user), class: "mypage-Back-btn" %>
   </div>
 </div>
 <%= render "shared/footer" %>

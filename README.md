@@ -124,6 +124,8 @@
   ### usersテーブルのAssociation
 - has_many : comments
 - has_many : pictures
+- has_many : favorites
+- has_many : goods
   ## facilitiesテーブル
 | Column           | Type    | Options     |
 | ---------------- | --------| ----------- |
@@ -144,6 +146,7 @@
   ### facilitiesテーブルのAssociation
 - has_many : comments
 - has_many : pictures
+- has_many : favorites
   ## commentsテーブル
 | Column   | Type       | Options           |
 | -------- | ---------- | ----------------- |
@@ -163,6 +166,7 @@
   ### picturesテーブルのAssociation
 - belongs_to : user
 - belongs_to : facility
+- has_many : goods
   ## favoritesテーブル
 | Column      | Type       | Options           |
 | ----------- | ---------- | ----------------- |
@@ -171,3 +175,11 @@
   ### favoritesテーブルのAssociation
 - belongs_to : user
 - belongs_to : facility
+  ## goodsテーブル
+| Column      | Type       | Options           |
+| ----------- | ---------- | ----------------- |
+| user        | references | foreign_key: true |
+| picture     | references | foreign_key: true |
+  ### goodsテーブルのAssociation
+- belongs_to : user
+- belongs_to : picture

@@ -11,7 +11,9 @@ Rails.application.routes.draw do
       get "mypage", "favolist", "goodlist"
     end
     resources :comments, only: [:edit, :update, :destroy]
-    resources :pictures, only: [:show, :edit, :update, :destroy]
+    resources :pictures, only: [:show, :edit, :update, :destroy] do
+      resource :goods, only: [:create, :destroy]
+    end
   end
 
   resources :facilities, only: [:index, :show] do

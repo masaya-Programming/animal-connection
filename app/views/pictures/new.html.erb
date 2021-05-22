@@ -7,23 +7,19 @@
   <div class="form-wrap">
     <div class="picture-form-header">
       <% if @facility.category.name == "動物園" %>
-          <%= link_to facility_path(@facility.id) do %>
-          <div class="newedit-facility-list-zoo">
-            <%= image_tag "zoo-icon.png", width:"52px", height:"52px" %>
-            <h1 class="newedit-facility-name">
-              <%= @facility.name %>
-            </h1>
-          </div>
-        <% end %>
+        <div class="newedit-facility-list-zoo">
+          <%= image_tag "zoo-icon.png", width:"52px", height:"52px" %>
+          <h1 class="newedit-facility-name">
+            <%= @facility.name %>
+          </h1>
+        </div>
       <% else %>
-        <%= link_to facility_path(@facility.id) do %>
-          <div class="newedit-facility-list-aquarium">
-            <%= image_tag "aquarium-icon.png", width:"52px", height:"52px" %>
-            <h1 class="newedit-facility-name">
-              <%= @facility.name %>
-            </h1>
-          </div>
-        <% end %>
+        <div class="newedit-facility-list-aquarium">
+          <%= image_tag "aquarium-icon.png", width:"52px", height:"52px" %>
+          <h1 class="newedit-facility-name">
+            <%= @facility.name %>
+          </h1>
+        </div>
       <% end %>
       <h1 class="picture-form-text">
         ベストショット投稿
@@ -64,6 +60,14 @@
 
     <div class="create-edit-set">
       <%= f.submit "ベストショット投稿", class:"create-edit-btn" %>
+    </div>
+
+    <div class="facility-back-box">
+      <% if @facility.category.name == "動物園" %>
+        <%= link_to  "動物園の詳細ページに戻る", facility_path(@facility.id), class: "zoo-back-btn" %>
+      <% else %>
+        <%= link_to  "水族館の詳細ページに戻る", facility_path(@facility.id), class: "aquarium-back-btn" %>
+      <% end %>
     </div>
   </div>
 <% end %>

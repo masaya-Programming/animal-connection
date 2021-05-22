@@ -31,7 +31,7 @@
 }
 
 .pop-star {
-  position:absolute; top:-19px; left:-90px;
+  position:absolute; top:-19px; left:-60px;
   border: 0.4rem outset rgb(228, 243, 93);
   background-color: #FFF;
   border-radius: 1rem;
@@ -147,6 +147,14 @@
   font-size: 1.3rem;
   color: rgb(48, 38, 38);
   margin-top: 0.2vw;
+}
+
+.good-picture-nil-text {
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: rgb(48, 38, 38);
+  margin: 1rem 0;
 }
 
 .comment-speech-balloon {

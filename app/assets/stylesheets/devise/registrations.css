@@ -110,7 +110,7 @@
 
 .create-edit-set {
   width: 50%;
-  padding-top: 3rem;
+  padding-top: 2rem;
   margin: 0 auto;
 }
 
@@ -130,6 +130,14 @@
   justify-content: center;
   width: 35%;
   padding-top: 2rem;
+  margin: 0 auto;
+}
+
+.good-mypage-Back-box {
+  display: flex;
+  justify-content: center;
+  width: 35%;
+  padding: 2rem 0;
   margin: 0 auto;
 }
 
