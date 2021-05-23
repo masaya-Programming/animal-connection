@@ -34,16 +34,20 @@
       投稿者:<%= link_to @user.nickname, user_path(@picture.user_id) %>
     </div>
 
-    <div class="first-show-picture">
+    <div class="show-picture-area">
       <div class="show-picture-image-box">
-        <%= image_tag @picture.image, class: "show-picture-zoo", size: "640x480" %>
+        <%= image_tag @picture.image, class: "show-picture-zoo" %>
       </div>
+    </div>
+
+    <div class="first-show-picture">
       <h2 class="show-picture-content-zoo">
         タイトル
       </h2>
       <p class="show-picture-contents-title">
         <%= @picture.title %>
       </p>
+
       <h2 class="show-picture-content-zoo">
         説明文
       </h2>
@@ -53,6 +57,13 @@
         <% else %>
           <%= simple_format(@picture.description, class: "show-picture-contents-description") %>
         <% end %>
+      </p>
+
+      <h2 class="show-picture-content-zoo">
+        いいね数
+      </h2>
+      <p class="show-picture-contents-description">
+        <%= @good_count %> 件
       </p>
     </div>
   <% else %>
@@ -81,16 +92,20 @@
       投稿者:<%= link_to @user.nickname, user_path(@picture.user_id) %>
     </div>
 
-    <div class="first-show-picture">
+    <div class="show-picture-area">
       <div class="show-picture-image-box">
-        <%= image_tag @picture.image, class: "show-picture-aquarium", size: "640x480" %>
+        <%= image_tag @picture.image, class: "show-picture-aquarium" %>
       </div>
+    </div>
+
+    <div class="first-show-picture">
       <h2 class="show-picture-content-aquarium">
         タイトル
       </h2>
       <p class="show-picture-contents-title">
         <%= @picture.title %>
       </p>
+
       <h2 class="show-picture-content-aquarium">
         説明文
       </h2>
@@ -100,6 +115,13 @@
         <% else %>
           <%= simple_format(@picture.description, class: "show-picture-contents-description") %>
         <% end %>
+      </p>
+      
+      <h2 class="show-picture-content-aquarium">
+        いいね数
+      </h2>
+      <p class="show-picture-contents-description">
+        <%= @good_count %> 件
       </p>
     </div>
   <% end %>

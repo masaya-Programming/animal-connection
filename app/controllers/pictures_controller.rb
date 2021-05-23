@@ -21,6 +21,7 @@ class PicturesController < ApplicationController
   end
 
   def show
+    @good_count = Good.where(picture_id: @picture.id).count
   end
 
   def edit

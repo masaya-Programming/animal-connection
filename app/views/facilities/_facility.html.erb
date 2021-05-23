@@ -10,6 +10,13 @@
         <h2 class="facility-name-text">
           <%= facility.name %>
         </h2>
+        <div class="facility-data">
+          <p>規模 : <%= facility.business_data %></p>
+          <div class="facility-data-count">
+            <p class="facility-data-count-review"><%= image_tag "review-icon.png", width:"28px", height:"20px", class:"facility-data-count-icon" %><%= Comment.where(facility_id: facility.id).count %>件</p>
+            <p class="facility-data-count-picture"><%= image_tag "picture-icon.png", width:"28px", height:"20px", class:"facility-data-count-icon" %><%= Picture.where(facility_id: facility.id).count %>件</p>
+          </div>
+        </div>
       </div>
     <% end %>
   <% else %>
@@ -22,6 +29,13 @@
         <h2 class="facility-name-text">
           <%= facility.name %>
         </h2>
+        <div class="facility-data">
+          <p>規模 : <%= facility.business_data %></p>
+          <div class="facility-data-count">
+            <p class="facility-data-count-review"><%= image_tag "review-icon.png", width:"28px", height:"20px", class:"facility-data-count-icon" %><%= Comment.where(facility_id: facility.id).count %>件</p>
+            <p class="facility-data-count-picture"><%= image_tag "picture-icon.png", width:"28px", height:"20px", class:"facility-data-count-icon" %><%= Picture.where(facility_id: facility.id).count %>件</p>
+          </div>
+        </div>
       </div>
     <% end %>
   <% end %>

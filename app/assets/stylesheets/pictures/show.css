@@ -37,28 +37,44 @@
   border-radius: 1rem;
 }
 
+.show-picture-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 100%;
+}
+
+.show-picture-image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 500px;
+}
+
+.show-picture-zoo {
+  background-color: rgb(158, 221, 197);
+  padding: 0.6rem;
+  border-radius: 20px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.show-picture-aquarium {
+  background-color: rgb(155, 204, 226);
+  padding: 0.6rem;
+  border-radius: 20px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .first-show-picture {
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 2% 13%;
-}
-
-.show-picture-image-box {
-  margin: auto;
-}
-
-.show-picture-zoo {
-  background-color: rgb(158, 221, 197);
-  padding: 1rem;
-  border-radius: 20px;
-}
-
-.show-picture-aquarium {
-  background-color: rgb(155, 204, 226);
-  padding: 1rem;
-  border-radius: 20px;
+  padding: 1% 13% 2% 13%;
 }
 
 .show-picture-content-zoo {
