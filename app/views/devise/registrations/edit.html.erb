@@ -66,11 +66,11 @@
     </div>
 
     <div class="create-edit-set">
-      <%= f.submit "アカウント更新", class:"create-edit-btn" %>
+      <%= f.submit "アカウント情報の更新", class:"create-edit-btn", data: {confirm: "このアカウント情報に更新しますか?"} %>
     </div>
 
     <div class="mypage-Back-box">
-      <%= link_to  "マイページに戻る", mypage_user_path(current_user), class: "mypage-Back-btn" %>
+      <%= link_to  "マイページに戻る", mypage_user_path(current_user), class: "mypage-Back-btn", data: {confirm: "アカウント情報変更をやめて、マイページに戻りますか?"} %>
     </div>
   </div>
 <% end %>
@@ -79,7 +79,7 @@
   <div class="delete-form-wrap">
     <div class="delete-form-header">
       <h1 class="delete-form-top-text">
-        アカウント情報の削除
+        アカウント削除
       </h1>
     </div>
 
@@ -93,11 +93,11 @@
     </div>
 
     <div class="delete-btn">
-      <%= link_to  "アカウント削除", user_path(current_user), method: :delete, class: "delete-red-btn" %>
+      <%= link_to  "アカウント削除", user_path(current_user), method: :delete, class: "delete-red-btn", data: {confirm: "本当にアカウントを削除しますか?"} %>
     </div>
 
     <div class="delete-mypage-Back-box">
-      <%= link_to  "マイページに戻る", mypage_user_path(current_user), class: "delete-mypage-Back-btn" %>
+      <%= link_to  "マイページに戻る", mypage_user_path(current_user), class: "delete-mypage-Back-btn", data: {confirm: "アカウント削除をやめて、マイページに戻りますか?"} %>
     </div>
   </div>
 </div>

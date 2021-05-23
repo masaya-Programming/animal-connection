@@ -91,7 +91,7 @@
 
   <% if user_signed_in? && @user == current_user %>
     <div class="user-edit-btn">
-      <%= link_to  "アカウント情報の変更 / 削除", edit_user_registration_path(current_user), class: "user-edit-red-btn" %>
+      <%= link_to  "アカウント情報の変更 / 削除", edit_user_registration_path(current_user), class: "user-edit-red-btn", data: {confirm: "アカウント情報の変更/削除ページに進みますか?"} %>
     </div>
   <% end %>
 </div>

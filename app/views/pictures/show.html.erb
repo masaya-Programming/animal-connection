@@ -14,12 +14,16 @@
       <h1 class="show-picture-facility-name">
         <%= @facility.name %>
       </h1>
-      <% if user_signed_in? && @picture.user_id != current_user.id %>
-        <% if Good.exists?(user_id: current_user.id, picture_id: @picture.id) %>
-          <%= link_to image_tag("pop1-heart.png", width:"120px", class:"pop-heart"), user_picture_goods_path(current_user.id, @picture.id), method: :delete %>
-        <% else %>
-          <%= link_to image_tag("pop2-heart.png", width:"120px", class:"pop-heart"), user_picture_goods_path(current_user.id, @picture.id), method: :post %>
+      <% if user_signed_in? %>
+        <% if @picture.user_id != current_user.id %>
+          <% if Good.exists?(user_id: current_user.id, picture_id: @picture.id) %>
+            <%= link_to image_tag("pop1-heart.png", width:"120px", class:"pop-heart"), user_picture_goods_path(current_user.id, @picture.id), method: :delete %>
+          <% else %>
+            <%= link_to image_tag("pop2-heart.png", width:"120px", class:"pop-heart"), user_picture_goods_path(current_user.id, @picture.id), method: :post %>
+          <% end %>
         <% end %>
+      <% else %>
+        <%= link_to image_tag("pop2-heart.png", width:"120px", class:"pop-heart"), new_user_session_path, data: {confirm: "いいね機能はログインが必要です。ログインページに進みますか?"} %>
       <% end %>
     </div>
 
@@ -29,6 +33,7 @@
     <div class="updated-data">
       投稿者:<%= link_to @user.nickname, user_path(@picture.user_id) %>
     </div>
+
     <div class="first-show-picture">
       <div class="show-picture-image-box">
         <%= image_tag @picture.image, class: "show-picture-zoo", size: "640x480" %>
@@ -56,12 +61,16 @@
       <h1 class="show-picture-facility-name">
         <%= @facility.name %>
       </h1>
-      <% if user_signed_in? && @picture.user_id != current_user.id %>
-        <% if Good.exists?(user_id: current_user.id, picture_id: @picture.id) %>
-          <%= link_to image_tag("pop1-heart.png", width:"120px", class:"pop-heart"), user_picture_goods_path(current_user.id, @picture.id), method: :delete %>
-        <% else %>
-          <%= link_to image_tag("pop2-heart.png", width:"120px", class:"pop-heart"), user_picture_goods_path(current_user.id, @picture.id), method: :post %>
+      <% if user_signed_in? %>
+        <% if @picture.user_id != current_user.id %>
+          <% if Good.exists?(user_id: current_user.id, picture_id: @picture.id) %>
+            <%= link_to image_tag("pop1-heart.png", width:"120px", class:"pop-heart"), user_picture_goods_path(current_user.id, @picture.id), method: :delete %>
+          <% else %>
+            <%= link_to image_tag("pop2-heart.png", width:"120px", class:"pop-heart"), user_picture_goods_path(current_user.id, @picture.id), method: :post %>
+          <% end %>
         <% end %>
+      <% else %>
+        <%= link_to image_tag("pop2-heart.png", width:"120px", class:"pop-heart"), new_user_session_path, data: {confirm: "いいね機能はログインが必要です。ログインページに進みますか?"} %>
       <% end %>
     </div>
 
@@ -71,17 +80,11 @@
     <div class="updated-data">
       投稿者:<%= link_to @user.nickname, user_path(@picture.user_id) %>
     </div>
+
     <div class="first-show-picture">
       <div class="show-picture-image-box">
         <%= image_tag @picture.image, class: "show-picture-aquarium", size: "640x480" %>
       </div>
-      <% if user_signed_in? && @picture.user_id != current_user.id %>
-        <% if Good.exists?(user_id: current_user.id, picture_id: @picture.id) %>
-          <%= link_to image_tag("pop1-heart.png", width:"120px", class:"pop-star"), user_picture_goods_path(current_user.id, @picture.id), method: :delete %>
-        <% else %>
-          <%= link_to image_tag("pop2-heart.png", width:"120px", class:"pop-star"), user_picture_goods_path(current_user.id, @picture.id), method: :post %>
-        <% end %>
-      <% end %>
       <h2 class="show-picture-content-aquarium">
         タイトル
       </h2>
@@ -111,7 +114,7 @@
 
   <% if user_signed_in? && @picture.user_id == current_user.id %>
     <div class="picture-edit-btn">
-      <%= link_to  "ベストショット情報の編集 / 削除", edit_user_picture_path(@picture.user, @picture), class: "picture-edit-red-btn" %>
+      <%= link_to  "ベストショットの編集 / 削除", edit_user_picture_path(@picture.user, @picture), class: "picture-edit-red-btn", data: {confirm: "ベストショットの編集/削除ページに進みますか?"} %>
     </div>
   <% end %>
 

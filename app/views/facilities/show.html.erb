@@ -26,6 +26,8 @@
         <% else %>
           <%= link_to image_tag("pop2-star.png", width:"120px", class:"pop-star"), facility_favorites_path(@facility.id), method: :post %>
         <% end %>
+      <% else %>
+        <%= link_to image_tag("pop2-star.png", width:"120px", class:"pop-star"), new_user_session_path, data: {confirm: "お気に入り機能はログインが必要です。ログインページに進みますか?"} %>
       <% end %>
     </div>
 
@@ -97,6 +99,8 @@
         <% else %>
           <%= link_to image_tag("pop2-star.png", width:"120px", class:"pop-star"), facility_favorites_path(@facility.id), method: :post %>
         <% end %>
+      <% else %>
+        <%= link_to image_tag("pop2-star.png", width:"120px", class:"pop-star"), new_user_session_path, data: {confirm: "お気に入り機能はログインが必要です。ログインページに進みますか?"} %>
       <% end %>
     </div>
 
@@ -158,7 +162,7 @@
   <% end %>
   
   <div class="upper-content">
-    <%= link_to "公式サイトへ (外部リンク)", @facility.official_website, target: :blank, class: "official-btn", data: {confirm: "外部ページに進みますか?"} %>
+    <%= link_to "公式サイトへ (外部リンク)", @facility.official_website, target: :blank, class: "official-btn", data: {confirm: "公式サイト(外部ページ)に進みますか?"} %>
   </div>
 
   <div class="top-picture-main">
@@ -211,17 +215,33 @@
     </div>
   </div>
 
-  <div class="show-btn-set">
-    <%= link_to(new_facility_comment_path(@facility), class: "show-btn") do %>
-      <span class="show-btn-text">レビュー</span>
-      <span class="show-btn-text">投稿</span>
-      <%= image_tag "review-icon.png", width:"110px", height:"80px" %>
-    <% end %>
-    <%= link_to(new_facility_picture_path(@facility), class: "show-btn") do %>
-      <span class="show-btn-text">ベストショット</span>
-      <span class="show-btn-text">投稿</span>
-      <%= image_tag "picture-icon.png", width:"110px", height:"80px" %>
-    <% end %>
-  </div>
+  <% if user_signed_in? %>
+    <div class="show-btn-set">
+      <%= link_to(new_facility_comment_path(@facility), class: "show-btn", data: {confirm: "レビュー投稿ページに進みますか?"}) do %>
+        <span class="show-btn-text">レビュー</span>
+        <span class="show-btn-text">投稿</span>
+        <%= image_tag "review-icon.png", width:"110px", height:"80px" %>
+      <% end %>
+      <%= link_to(new_facility_picture_path(@facility), class: "show-btn", data: {confirm: "ベストショット投稿ページに進みますか?"}) do %>
+        <span class="show-btn-text">ベストショット</span>
+        <span class="show-btn-text">投稿</span>
+        <%= image_tag "picture-icon.png", width:"110px", height:"80px" %>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="show-btn-set">
+      <%= link_to(new_user_session_path, class: "show-btn", data: {confirm: "レビュー投稿はログインが必要です。ログインページに進みますか?"}) do %>
+        <span class="show-btn-text">レビュー</span>
+        <span class="show-btn-text">投稿</span>
+        <%= image_tag "review-icon.png", width:"110px", height:"80px" %>
+      <% end %>
+      <%= link_to(new_user_session_path, class: "show-btn", data: {confirm: "ベストショット投稿はログインが必要です。ログインページに進みますか?"}) do %>
+        <span class="show-btn-text">ベストショット</span>
+        <span class="show-btn-text">投稿</span>
+        <%= image_tag "picture-icon.png", width:"110px", height:"80px" %>
+      <% end %>
+    </div>
+  <% end %>
+
 </div>
 <%= render "shared/footer" %>

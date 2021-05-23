@@ -38,14 +38,14 @@
     </div>
 
     <div class="create-edit-set">
-      <%= f.submit "レビュー投稿", class:"create-edit-btn" %>
+      <%= f.submit "レビュー投稿", class:"create-edit-btn", data: {confirm: "この内容で投稿しますか?"} %>
     </div>
 
     <div class="facility-back-box">
       <% if @facility.category.name == "動物園" %>
-        <%= link_to  "動物園の詳細ページに戻る", facility_path(@facility.id), class: "zoo-back-btn" %>
+        <%= link_to  "動物園の詳細ページに戻る", facility_path(@facility.id), class: "zoo-back-btn", data: {confirm: "レビュー投稿をやめて、動物園の詳細ページに戻りますか?"} %>
       <% else %>
-        <%= link_to  "水族館の詳細ページに戻る", facility_path(@facility.id), class: "aquarium-back-btn" %>
+        <%= link_to  "水族館の詳細ページに戻る", facility_path(@facility.id), class: "aquarium-back-btn", data: {confirm: "レビュー投稿をやめて、水族館の詳細ページに戻りますか?"} %>
       <% end %>
     </div>
   </div>

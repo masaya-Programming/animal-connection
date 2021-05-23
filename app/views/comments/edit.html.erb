@@ -42,11 +42,11 @@
     </div>
 
     <div class="create-edit-set">
-      <%= f.submit "レビュー更新", class:"create-edit-btn" %>
+      <%= f.submit "レビュー更新", class:"create-edit-btn", data: {confirm: "この内容に更新しますか?"} %>
     </div>
 
     <div class="mypage-Back-box">
-      <%= link_to  "マイページに戻る", mypage_user_path(current_user), class: "mypage-Back-btn" %>
+      <%= link_to  "マイページに戻る", mypage_user_path(current_user), class: "mypage-Back-btn", data: {confirm: "レビュー編集をやめて、マイページに戻りますか?"} %>
     </div>
   </div>
 <% end %>
@@ -55,7 +55,7 @@
   <div class="delete-form-wrap">
     <div class="delete-form-header">
       <h1 class="delete-form-top-text">
-        レビューの削除
+        レビュー削除
       </h1>
     </div>
 
@@ -69,11 +69,11 @@
     </div>
 
     <div class="delete-btn">
-      <%= link_to  "レビュー削除", user_comment_path(current_user.id, @comment.id), method: :delete, class: "delete-red-btn" %>
+      <%= link_to  "レビュー削除", user_comment_path(current_user.id, @comment.id), method: :delete, class: "delete-red-btn", data: {confirm: "本当にレビューを削除しますか?"} %>
     </div>
 
     <div class="delete-mypage-Back-box">
-      <%= link_to  "マイページに戻る", mypage_user_path(current_user), class: "delete-mypage-Back-btn" %>
+      <%= link_to  "マイページに戻る", mypage_user_path(current_user), class: "delete-mypage-Back-btn", data: {confirm: "レビュー削除をやめて、マイページに戻りますか?"} %>
     </div>
   </div>
 </div>

@@ -61,11 +61,11 @@
     </div>
 
     <div class="create-edit-set">
-      <%= f.submit "ベストショット更新", class:"create-edit-btn" %>
+      <%= f.submit "ベストショット更新", class:"create-edit-btn", data: {confirm: "この内容に更新しますか?"} %>
     </div>
 
     <div class="picture-show-Back-box">
-      <%= link_to  "詳細ページに戻る", user_picture_path(@picture.user, @picture), class: "picture-show-Back-btn" %>
+      <%= link_to  "詳細ページに戻る", user_picture_path(@picture.user, @picture), class: "picture-show-Back-btn", data: {confirm: "ベストショット編集をやめて、詳細ページに戻りますか?"} %>
     </div>
   </div>
 <% end %>
@@ -74,7 +74,7 @@
   <div class="delete-form-wrap">
     <div class="delete-form-header">
       <h1 class="delete-form-top-text">
-        ベストショットの削除
+        ベストショット削除
       </h1>
     </div>
 
@@ -88,11 +88,11 @@
     </div>
 
     <div class="delete-picture-show-btn">
-      <%= link_to  "ベストショット削除", user_picture_path(current_user.id, @picture.id), method: :delete, class: "delete-picture-show-red-btn" %>
+      <%= link_to  "ベストショット削除", user_picture_path(current_user.id, @picture.id), method: :delete, class: "delete-picture-show-red-btn", data: {confirm: "本当にベストショットを削除しますか?"} %>
     </div>
 
     <div class="delete-picture-show-Back-box">
-      <%= link_to  "詳細ページに戻る", user_picture_path(@picture.user, @picture), class: "delete-picture-show-Back-btn" %>
+      <%= link_to  "詳細ページに戻る", user_picture_path(@picture.user, @picture), class: "delete-picture-show-Back-btn", data: {confirm: "ベストショット削除をやめて、詳細ページに戻りますか?"} %>
     </div>
   </div>
 </div>
