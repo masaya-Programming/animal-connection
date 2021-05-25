@@ -85,7 +85,7 @@
         <ul class="top-picture-list">
           <%= render partial: "picture-top", collection: @pictures, as: :new_picture %>
         </ul>
-        <% if @pictures.length == 0 %>
+        <% if @pictures_count == 0 %>
           <p class="top-picture-nil">
             投稿されたベストショットがありません。
           </p>

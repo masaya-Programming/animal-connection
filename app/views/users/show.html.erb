@@ -9,23 +9,17 @@
 
 <div class="mypage-main">
   <div class="mypage-header">
+    <% if @user.gender.name == "男性" %>
+      <h1 class="mypage-nickname-men mypage-top"><%= @user.nickname %></h1>
+    <% elsif @user.gender.name == "女性" %>
+      <h1 class="mypage-nickname-woman mypage-top"><%= @user.nickname %></h1>
+    <% else %>
+      <h1 class="mypage-nickname-other mypage-top"><%= @user.nickname %></h1>
+    <% end %>
+
     <% if user_signed_in? && @user == current_user %>
-      <% if @user.gender.name == "男性" %>
-        <h1 class="mypage-nickname-men mypage-top"><%= @user.nickname %></h1>
-      <% elsif @user.gender.name == "女性" %>
-        <h1 class="mypage-nickname-woman mypage-top"><%= @user.nickname %></h1>
-      <% else %>
-        <h1 class="mypage-nickname-other mypage-top"><%= @user.nickname %></h1>
-      <% end %>
       <h2 class="mypage-top-text">マイページ</h2>
     <% else %>
-      <% if @user.gender.name == "男性" %>
-        <h1 class="mypage-nickname-men mypage-top"><%= @user.nickname %></h1>
-      <% elsif @user.gender.name == "女性" %>
-        <h1 class="mypage-nickname-woman mypage-top"><%= @user.nickname %></h1>
-      <% else %>
-        <h1 class="mypage-nickname-other mypage-top"><%= @user.nickname %></h1>
-      <% end %>
       <h2 class="mypage-top-text">ユーザーページ</h2>
     <% end %>
   </div>
@@ -41,21 +35,21 @@
     <div class="top-picture-form-wrap">
       <% if @user.gender.name == "男性" %>
         <h2 class="top-form-top-text mypage-men-first-letter">
-          レビュー <%= @comments.length %>件
+          レビュー <%= @comments_count %>件
         </h2>
       <% elsif @user.gender.name == "女性" %>
         <h2 class="top-form-top-text mypage-woman-first-letter">
-          レビュー <%= @comments.length %>件
+          レビュー <%= @comments_count %>件
         </h2>
       <% else %>
         <h2 class="top-form-top-text mypage-other-first-letter">
-          レビュー <%= @comments.length %>件
+          レビュー <%= @comments_count %>件
         </h2>
       <% end %>
       <ul class="mypage-comment-list">
         <%= render partial: "comment", collection: @comments %>
       </ul>
-      <% if @comments.length == 0 %>
+      <% if @comments_count == 0 %>
         <p class="mypage-comment-picture-nil-text">
           <%= @user.nickname %>のレビューはありません。
         </p>
@@ -67,21 +61,21 @@
     <div class="top-picture-form-wrap">
       <% if @user.gender.name == "男性" %>
         <h2 class="top-form-top-text top-text-picture-top mypage-men-first-letter">
-          ベストショット <%= @pictures.length %>件
+          ベストショット <%= @pictures_count %>件
         </h2>
       <% elsif @user.gender.name == "女性" %>
         <h2 class="top-form-top-text top-text-picture-top mypage-woman-first-letter">
-          ベストショット <%= @pictures.length %>件
+          ベストショット <%= @pictures_count %>件
         </h2>
       <% else %>
         <h2 class="top-form-top-text top-text-picture-top mypage-other-first-letter">
-          ベストショット <%= @pictures.length %>件
+          ベストショット <%= @pictures_count %>件
         </h2>
       <% end %>
       <ul class="top-picture-list">
         <%= render partial: "picture", collection: @pictures %>
       </ul>
-      <% if @pictures.length == 0 %>
+      <% if @pictures_count == 0 %>
         <p class="show-comment-picture-nil-text">
           <%= @user.nickname %>のベストショットはありません。
         </p>

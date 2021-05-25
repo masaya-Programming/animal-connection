@@ -9,8 +9,10 @@ class UsersController < ApplicationController
   def show
     @comments = Comment.where(user_id: @user.id)
     @comments = @comments.reverse
+    @comments_count = Comment.where(user_id: @user.id).count
     @pictures = Picture.where(user_id: @user.id)
     @pictures = @pictures.reverse
+    @pictures_count = Picture.where(user_id: @user.id).count
   end
 
   def destroy
@@ -26,6 +28,7 @@ class UsersController < ApplicationController
   def goodlist
     @goods = Good.where(user_id: current_user.id)
     @goods = @goods.reverse
+    @goods_count = Good.where(user_id: current_user.id).count
   end
 
   private

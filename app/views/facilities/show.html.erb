@@ -169,17 +169,17 @@
     <div class="top-picture-form-wrap">
       <% if @facility.category.name == "動物園" %>
         <h1 class="top-form-top-text show-facility-zoo-first-letter">
-          レビュー <%= @comments.length %>件
+          レビュー <%= @comments_count %>件
         </h1>
       <% else %>
         <h1 class="top-form-top-text show-facility-aquarium-first-letter">
-          レビュー <%= @comments.length %>件
+          レビュー <%= @comments_count %>件
         </h1>
       <% end %>
       <ul class="mypage-comment-list">
         <%= render partial: "comment", collection: @comments %>
       </ul>
-      <% if @comments.length == 0 %>
+      <% if @comments_count == 0 %>
         <p class="show-comment-picture-nil-text">
           投稿されたレビューがありません。
         </p>
@@ -194,17 +194,17 @@
     <div class="top-picture-form-wrap">
       <% if @facility.category.name == "動物園" %>
         <h1 class="top-form-top-text top-text-picture-top show-facility-zoo-first-letter">
-          ベストショット <%= @pictures.length %>件
+          ベストショット <%= @pictures_count %>件
         </h1>
       <% else %>
         <h1 class="top-form-top-text top-text-picture-top show-facility-aquarium-first-letter">
-          ベストショット <%= @pictures.length %>件
+          ベストショット <%= @pictures_count %>件
         </h1>
       <% end %>
       <ul class="top-picture-list">
         <%= render partial: "picture", collection: @pictures %>
       </ul>
-      <% if @pictures.length == 0 %>
+      <% if @pictures_count == 0 %>
         <p class="show-comment-picture-nil-text">
           投稿されたベストショットがありません。
         </p>

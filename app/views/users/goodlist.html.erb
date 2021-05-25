@@ -6,12 +6,12 @@
   <div class="top-picture-main">
     <div class="top-picture-form-wrap">
       <h2 class="top-form-top-text top-picture-first-letter">
-        いいね <%= @goods.length %>件
+        いいね <%= @goods_count %>件
       </h2>
       <ul class="top-picture-list">
         <%= render partial: "picture-good", collection: @goods, as: :good_picture %>
       </ul>
-      <% if @goods.length == 0 %>
+      <% if @goods_count == 0 %>
         <p class="good-picture-nil-text">
           いいねをしていません。
         </p>
