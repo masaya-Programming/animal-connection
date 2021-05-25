@@ -4,13 +4,29 @@ class FacilitiesController < ApplicationController
     @pictures_count = Picture.order(id: :DESC).count
   end
 
+  def toppicturelist
+    @pictures = Picture.order(id: :DESC)
+  end
+
   def show
+    @facility = Facility.find(params[:id])
+    @comments = Comment.where(facility_id: @facility.id).order('id DESC').limit(5)
+    @comments_count = Comment.where(facility_id: @facility.id).count
+    @pictures = Picture.where(facility_id: @facility.id).order('id DESC').limit(12)
+    @pictures_count = Picture.where(facility_id: @facility.id).count
+    @google_key = ENV['GMP_API_KEY']
+  end
+
+  def facilitycommentlist
     @facility = Facility.find(params[:id])
     @comments = Comment.where(facility_id: @facility.id).order('id DESC')
     @comments_count = Comment.where(facility_id: @facility.id).count
+  end
+
+  def facilitypicturelist
+    @facility = Facility.find(params[:id])
     @pictures = Picture.where(facility_id: @facility.id).order('id DESC')
     @pictures_count = Picture.where(facility_id: @facility.id).count
-    @google_key = ENV['GMP_API_KEY']
   end
 
   def search

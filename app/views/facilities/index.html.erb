@@ -79,20 +79,25 @@
 
   <div class="top-picture-main" >
     <div class="top-picture-form-wrap">
-        <h1 class="top-form-top-text top-picture-first-letter">
-          新規ベストショット
-        </h1>
-        <ul class="top-picture-list">
-          <%= render partial: "picture-top", collection: @pictures, as: :new_picture %>
-        </ul>
-        <% if @pictures_count == 0 %>
-          <p class="top-picture-nil">
-            投稿されたベストショットがありません。
-          </p>
-          <p class="top-picture-nil">
-            新しい投稿をお待ちしております。
-          </p>
-        <% end %>
+      <h1 class="top-form-top-text top-picture-first-letter">
+        新規ベストショット
+      </h1>
+      <ul class="top-picture-list">
+        <%= render partial: "picture-top", collection: @pictures, as: :new_picture %>
+      </ul>
+      <% if @pictures_count == 0 %>
+        <p class="top-picture-nil">
+          投稿されたベストショットがありません。
+        </p>
+        <p class="top-picture-nil">
+          新しい投稿をお待ちしております。
+        </p>
+      <% end %>
+      <% if @pictures_count >= 13 %>
+        <div class="listup-box">
+          <%= link_to toppicturelist_facilities_path, class: "listup-btn" do %>もっと<br>見る<% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 

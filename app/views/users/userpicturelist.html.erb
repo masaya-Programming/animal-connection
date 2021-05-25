@@ -1,0 +1,51 @@
+<%= render "shared/header" %>
+<% if user_signed_in? && @user == current_user %>
+  <% breadcrumb :mypicturelist %>
+<% else %>
+  <% breadcrumb :userpicturelist %>
+<% end %>
+<%= breadcrumbs separator:" &#x27A4; ", class: "logo" %>
+
+<div class="mypage-main">
+  <div class="mypage-header">
+    <% if @user.gender.name == "男性" %>
+      <h1 class="mypage-nickname-men mypage-top"><%= @user.nickname %></h1>
+    <% elsif @user.gender.name == "女性" %>
+      <h1 class="mypage-nickname-woman mypage-top"><%= @user.nickname %></h1>
+    <% else %>
+      <h1 class="mypage-nickname-other mypage-top"><%= @user.nickname %></h1>
+    <% end %>
+  </div>
+
+  <div class="top-picture-main">
+    <div class="top-picture-form-wrap">
+      <% if @user.gender.name == "男性" %>
+        <h2 class="top-form-top-text top-text-picture-top mypage-men-first-letter">
+          ベストショット <%= @pictures_count %>件
+        </h2>
+      <% elsif @user.gender.name == "女性" %>
+        <h2 class="top-form-top-text top-text-picture-top mypage-woman-first-letter">
+          ベストショット <%= @pictures_count %>件
+        </h2>
+      <% else %>
+        <h2 class="top-form-top-text top-text-picture-top mypage-other-first-letter">
+          ベストショット <%= @pictures_count %>件
+        </h2>
+      <% end %>
+      <ul class="top-picture-list">
+        <%= render partial: "picture", collection: @pictures %>
+      </ul>
+    </div>
+  </div>
+
+  <% if user_signed_in? && @user == current_user %>
+    <div class="good-mypage-Back-box">
+      <%= link_to "マイページに戻る", mypage_user_path(current_user), class: "mypage-Back-btn" %>
+    </div>
+  <% else %>
+    <div class="listdown-box">
+      <%= link_to user_path(@user.id), class: "listdown-btn" do %><%= @user.nickname %>さんの<br>ユーザーページに戻る<% end %>
+    </div>
+  <% end %>
+</div>
+<%= render "shared/footer" %>

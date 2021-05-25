@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :destroy] do
     member do
-      get "mypage", "favolist", "goodlist"
+      get "mypage", "favolist", "goodlist", "usercommentlist", "userpicturelist"
     end
     resources :comments, only: [:edit, :update, :destroy]
     resources :pictures, only: [:show, :edit, :update, :destroy] do
@@ -18,7 +18,10 @@ Rails.application.routes.draw do
 
   resources :facilities, only: [:index, :show] do
     collection do
-      get "search", "keysearch", "hokkaidotohoku", "kanto", "chubu", "kinki", "chugokushikoku", "kyushuokinawa", "spot"
+      get "search", "keysearch", "hokkaidotohoku", "kanto", "chubu", "kinki", "chugokushikoku", "kyushuokinawa", "spot", "toppicturelist"
+    end
+    member do
+      get "facilitycommentlist", "facilitypicturelist"
     end
     resources :comments, only: [:new, :create]
     resources :pictures, only: [:new, :create]

@@ -154,6 +154,51 @@
   cursor: pointer;
 }
 
+.listup-box {
+  display: flex;
+  justify-content: center;
+  width: 15%;
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+}
+
+.listup-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 130px;
+  background: #444242;
+  border: 0.4rem outset #696563;
+  border-radius: 10rem;
+  color: #fff;
+  font-size: 1.6rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.listdown-box {
+  display: flex;
+  justify-content: center;
+  width: 35%;
+  padding: 1.5rem 0 2rem 0;
+  margin: 0 auto;
+}
+
+.listdown-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #837d7d;
+  border: 0.3rem outset #97908e;
+  border-radius: 10rem;
+  color: #fff;
+  font-size: 1.6rem;
+  text-align: center;
+  cursor: pointer;
+}
+
 .delete-main {
   width: 100%;
   height: auto;

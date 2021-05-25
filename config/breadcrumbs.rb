@@ -23,6 +23,28 @@ crumb :userpage do |user|
   parent :root
 end
 
+crumb :mycommentlist do
+  link "マイレビューリスト", usercommentlist_user_path(current_user)
+  parent :mypage
+end
+
+crumb :usercommentlist do |user|
+  user = User.find(params[:id])
+  link "#{user.nickname}さんのレビューリスト", usercommentlist_user_path(user.id)
+  parent :userpage
+end
+
+crumb :mypicturelist do
+  link "マイベストショットリスト", userpicturelist_user_path(current_user)
+  parent :mypage
+end
+
+crumb :userpicturelist do |user|
+  user = User.find(params[:id])
+  link "#{user.nickname}さんのベストショットリスト", userpicturelist_user_path(user.id)
+  parent :userpage
+end
+
 crumb :edit_user do
   link "アカウント更新", edit_user_registration_path(current_user)
   parent :mypage
@@ -91,6 +113,11 @@ crumb :kyushuokinawa_area do
   parent :root
 end
 
+crumb :toppicturelist do
+  link "新規ベストショットリスト", toppicturelist_facilities_path
+  parent :root
+end
+
 crumb :spot_search do |facility_first|
   link "#{facility_first.prefectures.name}の#{facility_first.category.name}", spot_facilities_path(category_id: facility_first.category_id, prefectures_id: facility_first.prefectures_id)
   if facility_first.region.name == "北海道・東北"
@@ -138,7 +165,63 @@ crumb :show_facility do |facility|
   link "#{facility.name}", facility_path(facility.id)
   parent :prefectures
 end
+
+crumb :facilitycommentlist do |facility|
+  facility = Facility.find(params[:id])
+  link "#{facility.name}のレビューリスト", facilitycommentlist_facility_path(facility.id)
+  parent :show_facility
+end
+
+crumb :facilitypicturelist do |facility|
+  facility = Facility.find(params[:id])
+  link "#{facility.name}のベストショットリスト", facilitypicturelist_facility_path(facility.id)
+  parent :show_facility
+end
 # //施設情報用リスト//
+
+
+# //新規投稿用リスト//
+crumb :new_region do |facility|
+  facility = Facility.find(params[:facility_id])
+  if facility.region.name == "北海道・東北"
+    link "#{facility.region.name}エリア", hokkaidotohoku_facilities_path
+  elsif facility.region.name == "関東"
+    link "#{facility.region.name}エリア", kanto_facilities_path
+  elsif facility.region.name == "中部"
+    link "#{facility.region.name}エリア", chubu_facilities_path
+  elsif facility.region.name == "近畿"
+    link "#{facility.region.name}エリア", kinki_facilities_path
+  elsif facility.region.name == "中国・四国"
+    link "#{facility.region.name}エリア", chugokushikoku_facilities_path
+  elsif facility.region.name == "九州・沖縄"
+    link "#{facility.region.name}エリア", kyushuokinawa_facilities_path
+  end
+  parent :root
+end
+
+crumb :new_prefectures do |facility|
+  facility = Facility.find(params[:facility_id])
+  link "#{facility.prefectures.name}の#{facility.category.name}", spot_facilities_path(category_id: facility.category_id, prefectures_id: facility.prefectures_id)
+  parent :new_region
+end
+
+crumb :new_show_facility do |facility|
+  facility = Facility.find(params[:facility_id])
+  link "#{facility.name}", facility_path(facility.id)
+  parent :new_prefectures
+end
+
+crumb :new_comment do |facility|
+  link "レビュー投稿", new_facility_comment_path(facility.id)
+  parent :new_show_facility
+end
+
+crumb :new_picture do |facility|
+  link "ベストショット投稿", new_facility_picture_path(facility.id)
+  parent :new_show_facility
+end
+# //新規投稿用リスト//
+
 
 # //ベストショット詳細用リスト//
 crumb :picture_region do |picture|
@@ -180,45 +263,3 @@ crumb :show_picture do |picture|
   parent :picture_show_facility
 end
 # //ベストショット詳細用リスト//
-
-# //新規投稿用リスト//
-crumb :new_region do |facility|
-  facility = Facility.find(params[:facility_id])
-  if facility.region.name == "北海道・東北"
-    link "#{facility.region.name}エリア", hokkaidotohoku_facilities_path
-  elsif facility.region.name == "関東"
-    link "#{facility.region.name}エリア", kanto_facilities_path
-  elsif facility.region.name == "中部"
-    link "#{facility.region.name}エリア", chubu_facilities_path
-  elsif facility.region.name == "近畿"
-    link "#{facility.region.name}エリア", kinki_facilities_path
-  elsif facility.region.name == "中国・四国"
-    link "#{facility.region.name}エリア", chugokushikoku_facilities_path
-  elsif facility.region.name == "九州・沖縄"
-    link "#{facility.region.name}エリア", kyushuokinawa_facilities_path
-  end
-  parent :root
-end
-
-crumb :new_prefectures do |facility|
-  facility = Facility.find(params[:facility_id])
-  link "#{facility.prefectures.name}の#{facility.category.name}", spot_facilities_path(category_id: facility.category_id, prefectures_id: facility.prefectures_id)
-  parent :new_region
-end
-
-crumb :new_show_facility do |facility|
-  facility = Facility.find(params[:facility_id])
-  link "#{facility.name}", facility_path(facility.id)
-  parent :new_prefectures
-end
-# //新規投稿用リスト//
-
-crumb :new_comment do |facility|
-  link "レビュー投稿", new_facility_comment_path(facility.id)
-  parent :new_show_facility
-end
-
-crumb :new_picture do |facility|
-  link "ベストショット投稿", new_facility_picture_path(facility.id)
-  parent :new_show_facility
-end

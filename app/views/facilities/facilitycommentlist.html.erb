@@ -1,0 +1,47 @@
+<%= render "shared/header" %>
+<% breadcrumb :facilitycommentlist, @facility %>
+<%= breadcrumbs separator:" &#x27A4; ", class: "logo" %>
+
+<div class="show-main">
+  <% if @facility.category.name == "動物園" %>
+    <div class="show-facility-list-zoo">
+      <%= image_tag "zoo-icon.png", width:"52px", height:"52px" %>
+      <h1 class="show-facility-name">
+        <%= @facility.name %>
+      </h1>
+    </div>
+  <% else %>
+    <div class="show-facility-list-aquarium">
+      <%= image_tag "aquarium-icon.png", width:"52px", height:"52px" %>
+      <h1 class="show-facility-name">
+        <%= @facility.name %>
+      </h1>
+    </div>
+  <% end %>
+
+  <div class="top-picture-main">
+    <div class="top-picture-form-wrap">
+      <% if @facility.category.name == "動物園" %>
+        <h1 class="top-form-top-text show-facility-zoo-first-letter">
+          レビュー <%= @comments_count %>件
+        </h1>
+      <% else %>
+        <h1 class="top-form-top-text show-facility-aquarium-first-letter">
+          レビュー <%= @comments_count %>件
+        </h1>
+      <% end %>
+      <ul class="mypage-comment-list">
+        <%= render partial: "comment", collection: @comments %>
+      </ul>
+    </div>
+  </div>
+
+  <div class="facility-back-box">
+    <% if @facility.category.name == "動物園" %>
+      <%= link_to  "動物園の詳細ページに戻る", facility_path(@facility.id), class: "zoo-back-btn" %>
+    <% else %>
+      <%= link_to  "水族館の詳細ページに戻る", facility_path(@facility.id), class: "aquarium-back-btn" %>
+    <% end %>
+  </div>
+</div>
+<%= render "shared/footer" %>

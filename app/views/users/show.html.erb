@@ -54,6 +54,11 @@
           <%= @user.nickname %>のレビューはありません。
         </p>
       <% end %>
+      <% if @pictures_count >= 6 %>
+        <div class="listup-box">
+          <%= link_to usercommentlist_user_path(@user.id), class: "listup-btn" do %>もっと<br>見る<% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 
@@ -79,6 +84,11 @@
         <p class="show-comment-picture-nil-text">
           <%= @user.nickname %>のベストショットはありません。
         </p>
+      <% end %>
+      <% if @pictures_count >= 13 %>
+        <div class="listup-box">
+          <%= link_to userpicturelist_user_path(@user.id), class: "listup-btn" do %>もっと<br>見る<% end %>
+        </div>
       <% end %>
     </div>
   </div>
