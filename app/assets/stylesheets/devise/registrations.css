@@ -159,20 +159,21 @@
   justify-content: center;
   width: 15%;
   margin: 0 auto;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0 2rem 0;
 }
 
 .listup-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 130px;
-  height: 130px;
+  width: 90px;
+  height: 90px;
   background: #444242;
   border: 0.4rem outset #696563;
   border-radius: 10rem;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
+  font-family: 'Kosugi Maru', sans-serif;
   text-align: center;
   cursor: pointer;
 }

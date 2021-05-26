@@ -28,9 +28,37 @@
           いいね <%= @goods_count %>件
         </h2>
       <% end %>
-      <ul class="top-picture-list">
-        <%= render partial: "picture-good", collection: @goods, as: :good_picture %>
-      </ul>
+      <% if current_user.gender.name == "男性" %>
+        <div class="kaminari-men">
+          <%= paginate @goods %>
+        </div>
+        <ul class="top-picture-list">
+          <%= render partial: "picture-good", collection: @goods, as: :good_picture %>
+        </ul>
+        <div class="kaminari-men">
+          <%= paginate @goods %>
+        </div>
+      <% elsif current_user.gender.name == "女性" %>
+        <div class="kaminari-woman">
+          <%= paginate @goods %>
+        </div>
+        <ul class="top-picture-list">
+          <%= render partial: "picture-good", collection: @goods, as: :good_picture %>
+        </ul>
+        <div class="kaminari-woman">
+          <%= paginate @goods %>
+        </div>
+      <% else %>
+        <div class="kaminari-other">
+          <%= paginate @goods %>
+        </div>
+        <ul class="top-picture-list">
+          <%= render partial: "picture-good", collection: @goods, as: :good_picture %>
+        </ul>
+        <div class="kaminari-other">
+          <%= paginate @goods %>
+        </div>
+      <% end %>
       <% if @goods_count == 0 %>
         <p class="good-picture-nil-text">
           いいねをしていません。

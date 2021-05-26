@@ -32,9 +32,37 @@
           レビュー <%= @comments_count %>件
         </h2>
       <% end %>
-      <ul class="mypage-comment-list">
-        <%= render partial: "comment", collection: @comments %>
-      </ul>
+      <% if @user.gender.name == "男性" %>
+        <div class="kaminari-men">
+          <%= paginate @comments %>
+        </div>
+        <ul class="mypage-comment-list">
+          <%= render partial: "comment", collection: @comments %>
+        </ul>
+        <div class="kaminari-men">
+          <%= paginate @comments %>
+        </div>
+      <% elsif @user.gender.name == "女性" %>
+        <div class="kaminari-woman">
+          <%= paginate @comments %>
+        </div>
+        <ul class="mypage-comment-list">
+          <%= render partial: "comment", collection: @comments %>
+        </ul>
+        <div class="kaminari-woman">
+          <%= paginate @comments %>
+        </div>
+      <% else %>
+        <div class="kaminari-other">
+          <%= paginate @comments %>
+        </div>
+        <ul class="mypage-comment-list">
+          <%= render partial: "comment", collection: @comments %>
+        </ul>
+        <div class="kaminari-other">
+          <%= paginate @comments %>
+        </div>
+      <% end %>
     </div>
   </div>
 

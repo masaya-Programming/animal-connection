@@ -54,7 +54,7 @@
           <%= @user.nickname %>のレビューはありません。
         </p>
       <% end %>
-      <% if @pictures_count >= 6 %>
+      <% if @pictures_count >= 4 %>
         <div class="listup-box">
           <%= link_to usercommentlist_user_path(@user.id), class: "listup-btn" do %>もっと<br>見る<% end %>
         </div>

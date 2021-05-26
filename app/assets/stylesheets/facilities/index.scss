@@ -231,3 +231,141 @@
   font-size: 1.4rem;
   color: rgb(48, 38, 38);
 }
+
+.kaminari-top {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.kaminari-top a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #a1d3bf;
+  background-color: #fff;
+  margin: 0 0.6rem;
+  padding: 7px 15px;
+  border: 0.3rem outset #a1d3bf;
+  border-radius: 20px;
+}
+
+.kaminari-top .current {
+  font-size: 1.6rem;
+  color: #404240;
+}
+
+.kaminari-zoo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.kaminari-zoo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgb(9, 156, 100);
+  background-color: #fff;
+  margin: 0 0.6rem;
+  padding: 7px 15px;
+  border: 0.3rem outset rgb(9, 156, 100);
+  border-radius: 20px;
+}
+
+.kaminari-zoo .current {
+  font-size: 1.6rem;
+  color: #404240;
+}
+
+.kaminari-aquarium {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.kaminari-aquarium a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgb(10, 138, 197);
+  background-color: #fff;
+  margin: 0 0.6rem;
+  padding: 7px 15px;
+  border: 0.3rem outset rgb(10, 138, 197);
+  border-radius: 20px;
+}
+
+.kaminari-aquarium .current {
+  font-size: 1.6rem;
+  color: #404240;
+}
+
+.kaminari-men {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.kaminari-men a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgb(79, 102, 204);
+  background-color: #fff;
+  margin: 0 0.6rem;
+  padding: 7px 15px;
+  border: 0.3rem outset rgb(79, 102, 204);
+  border-radius: 20px;
+}
+
+.kaminari-men .current {
+  font-size: 1.6rem;
+  color: #404240;
+}
+
+.kaminari-woman {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.kaminari-woman a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgb(233, 84, 84);
+  background-color: #fff;
+  margin: 0 0.6rem;
+  padding: 7px 15px;
+  border: 0.3rem outset rgb(233, 84, 84);
+  border-radius: 20px;
+}
+
+.kaminari-woman .current {
+  font-size: 1.6rem;
+  color: #404240;
+}
+
+.kaminari-other {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.kaminari-other a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgb(199, 120, 214);
+  background-color: #fff;
+  margin: 0 0.6rem;
+  padding: 7px 15px;
+  border: 0.3rem outset rgb(199, 120, 214);
+  border-radius: 20px;
+}
+
+.kaminari-other .current {
+  font-size: 1.6rem;
+  color: #404240;
+}

@@ -7,19 +7,19 @@ class UsersController < ApplicationController
   end
 
   def show
-    @comments = Comment.where(user_id: @user.id).order('id DESC').limit(5)
+    @comments = Comment.where(user_id: @user.id).order('id DESC').limit(3)
     @comments_count = Comment.where(user_id: @user.id).count
     @pictures = Picture.where(user_id: @user.id).order('id DESC').limit(12)
     @pictures_count = Picture.where(user_id: @user.id).count
   end
 
   def usercommentlist
-    @comments = Comment.where(user_id: @user.id).order('id DESC')
+    @comments = Comment.where(user_id: @user.id).order('id DESC').page(params[:page]).per(20)
     @comments_count = Comment.where(user_id: @user.id).count
   end
 
   def userpicturelist
-    @pictures = Picture.where(user_id: @user.id).order('id DESC')
+    @pictures = Picture.where(user_id: @user.id).order('id DESC').page(params[:page]).per(20)
     @pictures_count = Picture.where(user_id: @user.id).count
   end
 
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   end
 
   def goodlist
-    @goods = Good.where(user_id: current_user.id).order('id DESC')
+    @goods = Good.where(user_id: current_user.id).order('id DESC').page(params[:page]).per(20)
     @goods_count = Good.where(user_id: current_user.id).count
   end
 

@@ -32,9 +32,37 @@
           ベストショット <%= @pictures_count %>件
         </h2>
       <% end %>
-      <ul class="top-picture-list">
-        <%= render partial: "picture", collection: @pictures %>
-      </ul>
+      <% if @user.gender.name == "男性" %>
+        <div class="kaminari-men">
+          <%= paginate @pictures %>
+        </div>
+        <ul class="top-picture-list">
+          <%= render partial: "picture", collection: @pictures %>
+        </ul>
+        <div class="kaminari-men">
+          <%= paginate @pictures %>
+        </div>
+      <% elsif @user.gender.name == "女性" %>
+        <div class="kaminari-woman">
+          <%= paginate @pictures %>
+        </div>
+        <ul class="top-picture-list">
+          <%= render partial: "picture", collection: @pictures %>
+        </ul>
+        <div class="kaminari-woman">
+          <%= paginate @pictures %>
+        </div>
+      <% else %>
+        <div class="kaminari-other">
+          <%= paginate @pictures %>
+        </div>
+        <ul class="top-picture-list">
+          <%= render partial: "picture", collection: @pictures %>
+        </ul>
+        <div class="kaminari-other">
+          <%= paginate @pictures %>
+        </div>
+      <% end %>
     </div>
   </div>
 

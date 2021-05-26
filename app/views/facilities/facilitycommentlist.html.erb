@@ -30,9 +30,27 @@
           レビュー <%= @comments_count %>件
         </h1>
       <% end %>
-      <ul class="mypage-comment-list">
-        <%= render partial: "comment", collection: @comments %>
-      </ul>
+      <% if @facility.category.name == "動物園" %>
+        <div class="kaminari-zoo">
+          <%= paginate @comments %>
+        </div>
+        <ul class="mypage-comment-list">
+          <%= render partial: "comment", collection: @comments %>
+        </ul>
+        <div class="kaminari-zoo">
+          <%= paginate @comments %>
+        </div>
+      <% else %>
+        <div class="kaminari-aquarium">
+          <%= paginate @comments %>
+        </div>
+        <ul class="mypage-comment-list">
+          <%= render partial: "comment", collection: @comments %>
+        </ul>
+        <div class="kaminari-aquarium">
+          <%= paginate @comments %>
+        </div>
+      <% end %>
     </div>
   </div>
 

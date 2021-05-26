@@ -30,9 +30,27 @@
           ベストショット <%= @pictures_count %>件
         </h1>
       <% end %>
-      <ul class="top-picture-list">
-        <%= render partial: "picture", collection: @pictures %>
-      </ul>
+      <% if @facility.category.name == "動物園" %>
+        <div class="kaminari-zoo">
+          <%= paginate @pictures %>
+        </div>
+        <ul class="top-picture-list">
+          <%= render partial: "picture", collection: @pictures %>
+        </ul>
+        <div class="kaminari-zoo">
+          <%= paginate @pictures %>
+        </div>
+      <% else %>
+        <div class="kaminari-aquarium">
+          <%= paginate @pictures %>
+        </div>
+        <ul class="top-picture-list">
+          <%= render partial: "picture", collection: @pictures %>
+        </ul>
+        <div class="kaminari-aquarium">
+          <%= paginate @pictures %>
+        </div>
+      <% end %>
     </div>
   </div>
 

@@ -5,12 +5,12 @@ class FacilitiesController < ApplicationController
   end
 
   def toppicturelist
-    @pictures = Picture.order(id: :DESC)
+    @pictures = Picture.order(id: :DESC).page(params[:page]).per(20)
   end
 
   def show
     @facility = Facility.find(params[:id])
-    @comments = Comment.where(facility_id: @facility.id).order('id DESC').limit(5)
+    @comments = Comment.where(facility_id: @facility.id).order('id DESC').limit(3)
     @comments_count = Comment.where(facility_id: @facility.id).count
     @pictures = Picture.where(facility_id: @facility.id).order('id DESC').limit(12)
     @pictures_count = Picture.where(facility_id: @facility.id).count
@@ -19,13 +19,13 @@ class FacilitiesController < ApplicationController
 
   def facilitycommentlist
     @facility = Facility.find(params[:id])
-    @comments = Comment.where(facility_id: @facility.id).order('id DESC')
+    @comments = Comment.where(facility_id: @facility.id).order('id DESC').page(params[:page]).per(20)
     @comments_count = Comment.where(facility_id: @facility.id).count
   end
 
   def facilitypicturelist
     @facility = Facility.find(params[:id])
-    @pictures = Picture.where(facility_id: @facility.id).order('id DESC')
+    @pictures = Picture.where(facility_id: @facility.id).order('id DESC').page(params[:page]).per(20)
     @pictures_count = Picture.where(facility_id: @facility.id).count
   end
 

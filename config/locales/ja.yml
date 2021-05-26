@@ -36,3 +36,10 @@ ja:
         title: タイトル
         description: 画像説明文
         image: ベストショット
+  views:
+    pagination:
+      first: "&Lt;"
+      last: "&Gt;"
+      previous: "&lt;"
+      next: "&gt;"
+      truncate: "..."
