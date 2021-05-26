@@ -4,11 +4,19 @@
 
 <div class="search-main">
   <div class="search-wrap">
-    <h1 class="search-top-text"><%= current_user.nickname %>のお気に入り</h1>
-    <p class="search-sab-text"><%= @favorites.length %>件</p>
+    <div class="favorite-header">
+    <% if current_user.gender.name == "男性" %>
+      <h1 class="mypage-nickname-men mypage-top"><%= current_user.nickname %></h1>
+      <p class="favorite-text">お気に入り<%= @favorites.length %>件</p>
+    <% elsif current_user.gender.name == "女性" %>
+      <h1 class="mypage-nickname-woman mypage-top"><%= current_user.nickname %>のお気に入り</h1>
+    <% else %>
+      <h1 class="mypage-nickname-other mypage-top"><%= current_user.nickname %>のお気に入り</h1>
+    <% end %>
+    </div>
     
     <% if @favorites.length == 0 %>
-      <p class="search-non-text">お気に入り情報がありません。</p>
+      <p class="good-picture-nil-text">お気に入り情報がありません。</p>
     <% end %>
 
     <ul class="facilities-list">
