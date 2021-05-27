@@ -3,22 +3,23 @@
   <img width="204" alt="アプリアイコン" src="https://user-images.githubusercontent.com/77490765/119881291-15e89480-bf68-11eb-998c-56177644f0ce.png">
   
 # アプリケーション概要
+  ## 動物園・水族館の検索
   <p>日本全国281ヶ所の動物園・水族館を3つの検索方法で探すことができます。</p>
   <p>「キーワード検索」>> 漢字,ひらがな,カタカナで探せる。</p>
   <p>「カテゴリー検索」>> 2つの条件(都道府県,動物園or水族館)を選択して探せる。</p>
   <p>「エリア・地図検索」>> エリア名・地図をクリックorタップして探せる。</p>
   <img width="783" alt="トップページ" src="https://user-images.githubusercontent.com/77490765/119881521-57793f80-bf68-11eb-9e50-3158fedb4d32.png">
-  <p></p>
-  <p>キーワード検索の結果</p>
-  <img width="1627" alt="キーワード検索" src="https://user-images.githubusercontent.com/77490765/119883842-f3a44600-bf6a-11eb-8c20-11bf89564e45.png">
-  <p></p>
-  <p>カテゴリー検索の結果</p>
-  <img width="1609" alt="カテゴリー検索" src="https://user-images.githubusercontent.com/77490765/119884326-75946f00-bf6b-11eb-868a-2dfa61aa1ce1.png">
-  <p></p>
-  <p>エリア・地図検索の結果</p>
-  <img width="1678" alt="エリア・地図検索" src="https://user-images.githubusercontent.com/77490765/119884390-8cd35c80-bf6b-11eb-8fc3-d1d42026aa9a.png">
-  <p></p>
 
+  ### キーワード検索の結果
+  <img width="1627" alt="キーワード検索" src="https://user-images.githubusercontent.com/77490765/119883842-f3a44600-bf6a-11eb-8c20-11bf89564e45.png">
+
+  ### カテゴリー検索の結果
+  <img width="1609" alt="カテゴリー検索" src="https://user-images.githubusercontent.com/77490765/119884326-75946f00-bf6b-11eb-868a-2dfa61aa1ce1.png">
+
+  ### エリア・地図検索の結果
+  <img width="1678" alt="エリア・地図検索" src="https://user-images.githubusercontent.com/77490765/119884390-8cd35c80-bf6b-11eb-8fc3-d1d42026aa9a.png">
+
+  ## 動物園・水族館の詳細ページ
   施設詳細ページでは、訪問時の参考情報となる所在地と地図を表示しています。
   さらに、訪問意欲を掻き立てる「施設概要」「いきもの情報」を閲覧できます。
   
