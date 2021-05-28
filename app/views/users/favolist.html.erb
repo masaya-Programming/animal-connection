@@ -20,35 +20,17 @@
     <% end %>
 
     <% if current_user.gender.name == "男性" %>
-      <div class="kaminari-men">
-        <%= paginate @favorites %>
-      </div>
       <ul class="facilities-list">
         <%= render partial: "facility", collection: @favorites %>
       </ul>
-      <div class="kaminari-men">
-        <%= paginate @favorites %>
-      </div>
     <% elsif current_user.gender.name == "女性" %>
-      <div class="kaminari-woman">
-        <%= paginate @favorites %>
-      </div>
       <ul class="facilities-list">
         <%= render partial: "facility", collection: @favorites %>
       </ul>
-      <div class="kaminari-woman">
-        <%= paginate @favorites %>
-      </div>
     <% else %>
-      <div class="kaminari-other">
-        <%= paginate @favorites %>
-      </div>
       <ul class="facilities-list">
         <%= render partial: "facility", collection: @favorites %>
       </ul>
-      <div class="kaminari-other">
-        <%= paginate @favorites %>
-      </div>
     <% end %>
 
     <div class="mypage-Back-box">

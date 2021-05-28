@@ -29,8 +29,7 @@ class UsersController < ApplicationController
   end
 
   def favolist
-    @favorites = Favorite.where(user_id: current_user.id)
-    @favorites = @favorites.reverse
+    @favorites = Favorite.where(user_id: current_user.id).order('id DESC')
   end
 
   def goodlist

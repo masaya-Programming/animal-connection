@@ -1,11 +1,11 @@
 <%# CSS・・・assets/stylesheets/facilities/show.css %>
 <li class="mypage-comment-li">
-  <p class="comment-created-data">投稿日:<%= comment.created_at.to_s(:datetime_jp) %></p>
+  <p class="comment-created-data">投稿日 : <%= comment.created_at.to_s(:datetime_jp) %></p>
   <div class="comment-speech-balloon">
     <p><%= simple_format(comment.text) %></p>
   </div>
   <p class="comment-user-created-data">
-    投稿者:<%= link_to truncate(comment.user.nickname, length: 11, separator: "・"), user_path(comment.user_id) %>
+    投稿者 : <%= link_to truncate(comment.user.nickname, length: 11, separator: "・"), user_path(comment.user_id) %>
   </p>
   <% if user_signed_in? && comment.user_id == current_user.id %>
     <%= link_to "レビュー編集 / 削除", edit_user_comment_path(comment.user, comment), class: "mypage-comment-edit-link", data: {confirm: "レビュー編集/削除ページに進みますか?"} %>

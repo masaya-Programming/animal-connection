@@ -4,7 +4,7 @@
     <div class="top-picture-box picture-box-zoo">
       <%= link_to user_picture_path(picture.user, picture) do %>
         <p class="picture-created-data">
-        投稿日:<%= picture.created_at.to_s(:datetime_jp) %>
+        投稿日 : <%= picture.created_at.to_s(:datetime_jp) %>
         </p>
         <%= image_tag picture.image, class: "top-picture-image" %>
         <h2 class="top-picture-title">
@@ -16,7 +16,7 @@
     <div class="top-picture-box picture-box-aquarium">
       <%= link_to user_picture_path(picture.user, picture) do %>
         <p class="picture-created-data">
-        投稿日:<%= picture.created_at.to_s(:datetime_jp) %>
+        投稿日 : <%= picture.created_at.to_s(:datetime_jp) %>
         </p>
         <%= image_tag picture.image, class: "top-picture-image" %>
         <h2 class="top-picture-title">
