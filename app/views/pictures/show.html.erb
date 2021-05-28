@@ -1,4 +1,5 @@
 <%# CSS・・・assets/stylesheets/pictures/show.css %>
+<% set_meta_tags noindex: true %>
 <%= render "shared/header" %>
 <% if user_signed_in? && @user == current_user %>
   <% breadcrumb :show_mypicture, @picture %>
