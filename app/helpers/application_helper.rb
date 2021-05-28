@@ -19,7 +19,7 @@ module ApplicationHelper
         description: :description,
         type: 'website',
         url: request.original_url,
-        image: asset_path("animal-connection-rogo-meta.png"),
+        image: asset_path("og-image.png"),
         local: 'ja-JP',
       }
     }
