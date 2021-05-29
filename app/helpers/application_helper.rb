@@ -21,6 +21,13 @@ module ApplicationHelper
         url: request.original_url,
         image: asset_path("og-image.png"),
         local: 'ja-JP',
+      },
+      twitter: {
+        card: 'summary',
+        site: '@WanWan_RAMroad',
+        image: asset_path("animal-connection-rogo-meta.png"),
+        width: 100,
+        height: 100
       }
     }
   end
