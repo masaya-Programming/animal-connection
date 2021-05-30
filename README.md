@@ -112,8 +112,14 @@
   <p>◆パンくずリスト</p>
   <p>[Gem:gretel]</p>
 
-  <p>◆お問い合わせフォーム(Googleフォーム)</p>  
-  
+  <p>◆お問い合わせフォーム(Googleフォーム)</p>
+
+  <p>◆SEO対策metaタグ</p>
+  <p>[Gem:meta-tags]</p>
+
+  <p>◆SEO対策サイトマップ</p>
+  <p>[Gem:sitemap_generator]</p>
+
 # 開発環境・使用技術
   ## 開発環境
    <p>Ruby：2.6.5</p> 
