@@ -139,18 +139,18 @@
 
   ## 本番環境
    <p>デプロイツール：Capistrano</p>
-   <p>デプロイ：AWS(EC2)</p>
-   <p>ストレージ：AWS(S3)</p>
    <p>アプリケーションサーバー：Unicorn</p>
    <p>Webサーバー：Nginx</p>
+   <p>インフラ：AWS(EC2)</p>
+   <p>ストレージ：AWS(S3)</p>
    <p>ドメイン取得：AWS(Route53)</p>
    <p>SSL証明書：AWS(ACM)</p>
 
-  ## ソースコード管理
+  ## バージョン管理
    <p>GitHub</p> 
    <p>GitHub Desktop</p> 
 
-  ## 言語テストツール
+  ## コードテスト
    <p>RSpec</p> 
 
   ## テキストエヂィタ
