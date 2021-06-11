@@ -1,3 +1,4 @@
+## bundle exec rspec spec/models/facility_spec.rb
 require 'rails_helper'
 
 RSpec.describe Facility, type: :model do

@@ -1,3 +1,4 @@
+## bundle exec rspec spec/models/comment_spec.rb
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do

@@ -1,3 +1,4 @@
+## bundle exec rspec spec/models/picture_spec.rb
 require 'rails_helper'
 
 RSpec.describe Picture, type: :model do

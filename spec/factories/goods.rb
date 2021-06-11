@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :good do
-    user_id { nil }
-    picture_id { nil }
+    association :user
+    association :picture
   end
 end
