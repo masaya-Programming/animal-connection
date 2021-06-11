@@ -21,10 +21,10 @@
   <p>「キーワード検索」>> 漢字,ひらがな,カタカナで探せる。</p>
   <p>「カテゴリー検索」>> 2つの条件(都道府県,動物園or水族館)を選択して探せる。</p>
   <p>「エリア・地図検索」>> エリア名・地図をクリックorタップして探せる。</p>
-  <img width="263" alt="トップページ" src="https://user-images.githubusercontent.com/77490765/121620595-926d8e00-caa5-11eb-998c-c6fb41b94450.png">
+  <img width="243" alt="トップページ" src="https://user-images.githubusercontent.com/77490765/121620820-f1330780-caa5-11eb-9453-06c345ea8b92.png">
 
   ### キーワード検索の結果
-  <img width="825" alt="キーワード検索" src="https://user-images.githubusercontent.com/77490765/121620632-a2856d80-caa5-11eb-8017-cc44a1d822a2.png">
+  <img width="695" alt="キーワード検索" src="https://user-images.githubusercontent.com/77490765/121620896-1293f380-caa6-11eb-85fd-a9a8f36553e3.png">
 
   ### カテゴリー検索の結果
   <img width="1609" alt="カテゴリー検索" src="https://user-images.githubusercontent.com/77490765/119884326-75946f00-bf6b-11eb-868a-2dfa61aa1ce1.png">
