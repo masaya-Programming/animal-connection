@@ -27,10 +27,10 @@
   <img width="478" alt="キーワード検索" src="https://user-images.githubusercontent.com/77490765/121621163-951cb300-caa6-11eb-8e8d-6fdb274f52f5.png">
 
   ### カテゴリー検索の結果
-  <img width="1609" alt="カテゴリー検索" src="https://user-images.githubusercontent.com/77490765/119884326-75946f00-bf6b-11eb-868a-2dfa61aa1ce1.png">
+  <img width="460" alt="カテゴリー検索" src="https://user-images.githubusercontent.com/77490765/121634386-6828ca00-cabf-11eb-9d87-fb3f04378fae.png">
 
   ### エリア・地図検索の結果
-  <img width="1678" alt="エリア・地図検索" src="https://user-images.githubusercontent.com/77490765/119884390-8cd35c80-bf6b-11eb-8fc3-d1d42026aa9a.png">
+  <img width="474" alt="エリア・地図検索" src="https://user-images.githubusercontent.com/77490765/121634408-71b23200-cabf-11eb-9b8f-dcef0ecd0a44.png">
 
   ## 動物園・水族館の詳細ページ
   <p>施設の詳細ページでは、以下の概要情報を確認することができます。</p>
@@ -39,7 +39,7 @@
   <p>「いきもの情報」>> [飼育規模]と[注目生物(4種)]</p>
   <p>「所在地」>> [住所]と[Google Map]</p>
   <p>「公式Webページリンク」>> 公式情報へすぐにアクセスできる。</p>
-  <img width="1680" alt="施設詳細ページ" src="https://user-images.githubusercontent.com/77490765/119889053-176a8a80-bf71-11eb-9eca-94df6a228c8a.png">
+  <img width="493" alt="施設詳細ページ" src="https://user-images.githubusercontent.com/77490765/121634425-7971d680-cabf-11eb-93de-591d367950d1.png">
 
   ## ログイン後のユーザー機能
   <p>ログインしたユーザーは以下の機能を利用することができます。</p>
@@ -49,16 +49,16 @@
   <p>「ベストショットいいね機能」>> 良いと感じた写真を評価できる。</p>
 
   ### レビュー投稿機能
-  <img width="1665" alt="レビュー投稿機能" src="https://user-images.githubusercontent.com/77490765/119926970-72bd6c80-bfb3-11eb-9d0e-631aa54a3113.png">
+  <img width="565" alt="レビュー投稿機能" src="https://user-images.githubusercontent.com/77490765/121634538-b50ca080-cabf-11eb-92ef-168e10e0b0b5.png">
 
   ### ベストショット投稿機能
-  <img width="1658" alt="ベストショット投稿機能" src="https://user-images.githubusercontent.com/77490765/119927006-81a41f00-bfb3-11eb-9043-dc443487c7c7.png">
+  <img width="480" alt="ベストショット投稿機能" src="https://user-images.githubusercontent.com/77490765/121634567-c05fcc00-cabf-11eb-9dd3-507a7068ec07.png">
 
   ### 施設お気に入り機能
-  <img width="1570" alt="施設お気に入り機能" src="https://user-images.githubusercontent.com/77490765/119927715-ed3abc00-bfb4-11eb-98a7-157ec7e25753.png">
+  <img width="492" alt="施設お気に入り機能" src="https://user-images.githubusercontent.com/77490765/121634588-ca81ca80-cabf-11eb-9edf-ac4f0cef9997.png">
 
   ### ベストショットいいね機能
-  <img width="1626" alt="ベストショットいいね機能" src="https://user-images.githubusercontent.com/77490765/119927739-fb88d800-bfb4-11eb-8011-a98302b95164.png">
+  <img width="465" alt="ベストショットいいね機能" src="https://user-images.githubusercontent.com/77490765/121634604-d1104200-cabf-11eb-8829-aa8cb41c995c.png">
 
 # 目指した課題解決
   ### 「多種多様な生物との出会い」で安らぎと癒しを感じて欲しい。
