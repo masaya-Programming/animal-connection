@@ -21,7 +21,7 @@
   <p>「キーワード検索」>> 漢字,ひらがな,カタカナで探せる。</p>
   <p>「カテゴリー検索」>> 2つの条件(都道府県,動物園or水族館)を選択して探せる。</p>
   <p>「エリア・地図検索」>> エリア名・地図をクリックorタップして探せる。</p>
-  <img width="783" alt="トップページ" src="https://user-images.githubusercontent.com/77490765/119881521-57793f80-bf68-11eb-9e50-3158fedb4d32.png">
+  <img width="445" alt="トップページ" src="https://user-images.githubusercontent.com/77490765/121619715-fc853380-caa3-11eb-8ea3-023933378a8b.png">
 
   ### キーワード検索の結果
   <img width="1627" alt="キーワード検索" src="https://user-images.githubusercontent.com/77490765/119883842-f3a44600-bf6a-11eb-8c20-11bf89564e45.png">
