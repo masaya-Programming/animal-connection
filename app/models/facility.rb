@@ -27,7 +27,7 @@ class Facility < ApplicationRecord
   end
 
   def self.keysearch(keyword)
-    Facility.where(['name LIKE(?) OR kananame LIKE(?) OR hiraname LIKE(?)', "%#{keyword}%", "%#{keyword}%", "%#{keyword}%"])
+    Facility.where(['name LIKE(?) OR kananame LIKE(?) OR hiraname LIKE(?)', "%#{sanitize_sql_like(keyword)}%", "%#{sanitize_sql_like(keyword)}%", "%#{sanitize_sql_like(keyword)}%"])
   end
 
   has_many :comments, dependent: :destroy
