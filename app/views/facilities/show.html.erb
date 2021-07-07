@@ -1,5 +1,5 @@
 <%# CSS・・・assets/stylesheets/facilities/show.css %>
-<% set_meta_tags title: @facility.name, description: @facility.attention_point %>
+<% set_meta_tags title: @facility.name, description: @facility.attention_point, keywords: @facility.name %>
 <%= render "shared/header" %>
 <% breadcrumb :show_facility, @facility %>
 <%= breadcrumbs separator: " &#x27A4; ", class: "logo" %>
