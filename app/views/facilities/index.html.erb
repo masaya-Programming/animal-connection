@@ -1,20 +1,45 @@
 <%# CSS・・・assets/stylesheets/facilities/index.scss %>
-<%= render "shared/header" %>
 <% breadcrumb :root %>
 <%= breadcrumbs separator:" &#x27A4; ", class: "logo" %>
 
+<div class="top-line"></div>
 <div class="main">
   <div class="top-contents">
-    <h1 class="top-message">
-      あにまるコネクションへようこそ‼︎
-    </h1>
-    <p class="top-explain">
-      多種多様な生物との出会いをつくり、
-    </p>
-    <p class="top-explain">
-      その[思い出]を記録することができます。
-    </p>
-  </div>  
+    <ul class="top-lists-UserAction">
+      <% if user_signed_in? %>
+        <% if current_user.gender_id == 1 %>
+          <li><%= link_to current_user.nickname, mypage_user_path(current_user), class: "user-nickname-men top-header-btn" %></li>
+        <% elsif current_user.gender_id == 2 %>
+          <li><%= link_to current_user.nickname, mypage_user_path(current_user), class: "user-nickname-woman top-header-btn" %></li>
+        <% else %>
+          <li><%= link_to current_user.nickname, mypage_user_path(current_user), class: "user-nickname-other top-header-btn" %></li>
+        <% end %>
+        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout top-header-btn" %></li>
+      <% else %>
+        <li><%= link_to "ログイン", new_user_session_path, class: "login top-header-btn" %></li>
+        <li><%= link_to "新規登録", new_user_registration_path, class: "sign-up top-header-btn" %></li>
+      <% end %>
+    </ul>
+
+    <div class="top-message-box">
+      <div class="top-icon-box"><%= image_tag "animal-connection-rogo.png", class:"top-icon" %></div>
+      <h1 class="top-title">あにまるコネクションへようこそ‼︎</h1>
+      <p class="top-explain">日本全国281箇所のいきものスポットを掲載しています。</p>
+      <p class="top-explain">様々な動物と出会い,その思い出を共有しましょう。</p>
+      <p class="top-explain">完全無料で利用できる「動物園・水族館の検索アプリ」です。</p>
+      <ul class="top-navber">
+        <li class="top-navber-contents"><%= link_to root_path, class: "color-white" do %>トップページ<% end %></li>
+        <div class="top-navber-separation"></div>
+        <li class="top-navber-contents"><%= link_to root_path, class: "color-white" do %>便利な使い方<% end %></li>
+        <div class="top-navber-separation"></div>
+        <li class="top-navber-contents"><%= link_to root_path, class: "color-white" do %>利用規約<% end %></li>
+        <div class="top-navber-separation"></div>
+        <li class="top-navber-contents"><%= link_to root_path, class: "color-white" do %>プライバシー<br>ポリシー<% end %></li>
+        <div class="top-navber-separation"></div>
+        <li class="top-navber-contents"><%= link_to root_path, class: "color-white" do %>アプリ運営<br>管理者<% end %></li>
+      </ul>
+    </div>
+  </div>
 
   <%= form_with model: @facility, url: keysearch_facilities_path, method: :get, class: "top-registration-main", local: true do |f| %>
     <div class="top-form-wrap">

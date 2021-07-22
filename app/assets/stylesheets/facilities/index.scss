@@ -1,34 +1,97 @@
+.top-line {
+  padding:3px ;
+  background: linear-gradient(to left, #b3ffab, #12fff7);
+}
+
 .main {
   background: #e9e7e7;
 }
 
 .top-contents {
   width: 100%;
-  background-image: image-url('header-ber5.jpg');
+  background-image: image-url('top-background.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  background-color:aliceblue;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 3rem 4rem 5rem 4rem;
-  color: #fff;
+  color: rgb(19, 18, 18);
 }
 
-.top-message {
+.top-lists-UserAction {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 20px 0 0;
+}
+
+.top-header-btn {
+  padding: 0.8rem 1rem;
+  border-radius: 2rem;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: 'Kosugi Maru', sans-serif;
+  text-decoration: none;
+  text-shadow:1px 0 1px black;
+}
+
+.top-message-box {
+  background-color: rgba(211, 243, 238, 0.479);
+  color: rgb(0, 0, 0);
+  margin: 40px 40px 0 40px;
+  padding-top: 30px;
+}
+
+.top-icon-box {
+  display: flex;
+  justify-content: center;
+}
+
+.top-icon {
+  width: 17rem;
+}
+
+.top-title {
   font-size: 1.8rem;
+  font-family: 'Kosugi Maru', sans-serif;
   height: 2rem;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-  margin-bottom: 1rem;
+  margin: 1.5rem 0 0.5rem 3rem;
 }
 
 .top-explain {
   font-size: 1.5rem;
+  font-family: 'Kosugi Maru', sans-serif;
   height: 1.8rem;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-  margin-left: 1rem;
+  margin-left: 5rem;
+}
+
+.top-navber {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Kosugi Maru', sans-serif;
+  text-decoration: none;
+  background-color: rgba(238, 147, 72, 0.603);
+}
+
+.top-navber-contents {
+  padding: 1rem 1.2rem;
+  align-self: center;
+  text-align: center;
+}
+
+.color-white {
+  color: rgb(255, 249, 249);
+  text-shadow:1px 0 1px black;
+}
+
+.top-navber-separation {
+  margin: 5px 0;
+  border: 1.8px solid white;
+  border-radius: 1rem;
 }
 
 .top-registration-main {
